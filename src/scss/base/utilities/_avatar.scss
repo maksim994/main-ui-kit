@@ -1,0 +1,67 @@
+/* utilities/_avatar.scss */
+@use "../mixins" as m;     // для @include m.media()
+@use "../variables" as vars;
+
+
+/* =========================================
+   Avatar
+   ========================================= */
+
+.avatar {
+  --avatar-size: 48px;
+
+  inline-size: var(--avatar-size);
+  block-size: var(--avatar-size);
+  border-radius: 999px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  background-color: var(--color-bg-muted);
+  color: var(--color-text-primary);
+
+  &.--text {
+    background-color: var(--color-brand);
+    color: var(--color-text-inverse);
+    font-weight: 700;
+    font-size: calc(var(--avatar-size) * .42);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    inline-size: 100%;
+    block-size: 100%;
+    display: block;
+  }
+
+  &-sm {
+    --avatar-size: 32px;
+
+    &.--text {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &-lg {
+    --avatar-size: 56px;
+
+    &.--text {
+      font-size: 22px;
+      font-weight: 700;
+    }
+  }
+
+  &-xl {
+    --avatar-size: 144px;
+
+    &.--text {
+      font-size: 56px;
+      font-weight: 700;
+    }
+  }
+}

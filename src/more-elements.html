@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "UI Kit - Элементы"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+    <div class="wrapper">
+        <div class="topic">
+            <div class="topic__heading">
+                @include('partials/base/breadcrumb.html')
+                <div class="topic__heading-top">
+                    <h1 class="topic__title">UI Kit - Элементы</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper-content">
+            <div class="right_block">
+
+                <section class="section">
+                    <div class="section-top">
+                        <h2 class="section-title">Цвета</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="grid-list grid-list-items-2">
+
+                            <div class="d-f fd-c gap">
+                                <div class="d-f gap-8">
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-primary-900);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-primary-800);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-primary-700);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-primary-600);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-primary-500);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-primary-400);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-primary-300);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-primary-200);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-primary-100);"></div>
+                                </div>
+
+                                <div class="d-f gap-8">
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-900);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-800);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-700);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-600);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-500);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-400);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-300);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-200);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-100);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-neutral-50);"></div>
+                                </div>
+
+                                <div class="d-f gap-8">
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-success-900);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-success-700);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-success-500);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-success-100);"></div>
+                                </div>
+                            </div>
+
+                            <div class="d-f fd-c gap">
+
+                                <div class="d-f gap-8">
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-error-900);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-error-700);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-error-500);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-error-100);"></div>
+                                </div>
+
+                                <div class="d-f gap-8">
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-warning-900);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-warning-700);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-warning-500);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-warning-100);"></div>
+                                </div>
+
+                                <div class="d-f gap-8">
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-info-900);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-info-700);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-info-500);"></div>
+                                    <div class="color w--64 h--64 rounded-full" style="background-color: var(--color-info-100);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-top">
+                        <h2 class="section-title">Пагинация</h2>
+                        <div class="section-preview text-reset">
+                            Демонстрационная страница для вариантов пагинации, выравнивания, состояний и размеров.
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="grid-list grid-list-items-2">
+                            <!-- Default -->
+                            <div class="test-block border p-32">
+                                <h3>Стандартная пагинация</h3>
+
+                                <nav class="pagination" aria-label="Пагинация">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev pagination__item--disabled">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">Назад</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">1</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">2</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">3</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Вперёд</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Center -->
+                            <div class="test-block border p-32">
+                                <h3>Пагинация по центру</h3>
+
+                                <nav class="pagination pagination--center" aria-label="Пагинация">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Назад</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">1</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">2</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">3</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Вперёд</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- End aligned -->
+                            <div class="test-block border p-32">
+                                <h3>Пагинация с выравниванием по правому краю</h3>
+
+                                <nav class="pagination pagination--end" aria-label="Пагинация">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Назад</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">4</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">5</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">6</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Вперёд</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Between -->
+                            <div class="test-block border p-32">
+                                <h3>Выравнивание по краям</h3>
+
+                                <nav class="pagination pagination--between" aria-label="Пагинация">
+                                    <div class="text-sm text-secondary">Страница 3 из 18</div>
+
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Назад</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">2</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">3</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">4</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Вперёд</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- With ellipsis -->
+                            <div class="test-block border p-32">
+                                <h3>Пагинация с многоточием</h3>
+
+                                <nav class="pagination pagination--center" aria-label="Пагинация">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Назад</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">1</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">2</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item--ellipsis">
+                                            <span class="pagination__text">…</span>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">8</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">9</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">10</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Вперёд</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Disabled states -->
+                            <div class="test-block border p-32">
+                                <h3>Отключённые состояния</h3>
+
+                                <nav class="pagination pagination--center" aria-label="Пагинация">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev pagination__item--disabled">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">Назад</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">1</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">2</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">3</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Вперёд</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                <nav class="pagination pagination--center" aria-label="Пагинация" style="margin-top: 16px;">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Назад</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">8</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">9</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">10</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next pagination__item--disabled">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">Вперёд</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Small -->
+                            <div class="test-block border p-32">
+                                <h3>Маленькая пагинация</h3>
+
+                                <nav class="pagination pagination--center pagination--sm" aria-label="Пагинация">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Назад</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">1</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">2</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">3</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Вперёд</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Large -->
+                            <div class="test-block border p-32">
+                                <h3>Большая пагинация</h3>
+
+                                <nav class="pagination pagination--center pagination--lg" aria-label="Пагинация">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Назад</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">11</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link">
+                                                <span class="pagination__text">12</span>
+                                            </span>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">13</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text">Вперёд</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Many pages -->
+                            <div class="test-block border p-32">
+                                <h3>Много страниц</h3>
+
+                                <nav class="pagination pagination--center" aria-label="Пагинация">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item pagination__item_prev">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text pagination__icons">Назад</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link"><span class="pagination__text">1</span></a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link"><span class="pagination__text">2</span></a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link"><span class="pagination__text">3</span></a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link"><span class="pagination__text">4</span></a>
+                                        </li>
+                                        <li class="pagination__item" aria-current="page">
+                                            <span class="pagination__link"><span class="pagination__text">5</span></span>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link"><span class="pagination__text">6</span></a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link"><span class="pagination__text">7</span></a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link"><span class="pagination__text">8</span></a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link"><span class="pagination__text">9</span></a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link"><span class="pagination__text">10</span></a>
+                                        </li>
+
+                                        <li class="pagination__item pagination__item_next">
+                                            <a href="#" class="pagination__link">
+                                                <span class="pagination__text pagination__icons">Вперёд</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Inverse background -->
+                            <div class="test-block border p-32">
+                                <h3>Пагинация на инверсном фоне</h3>
+
+                                <div class="bg-inverse rounded-md" style="padding: 20px;">
+                                    <nav class="pagination pagination--center" aria-label="Пагинация"
+                                         style="
+                                              --pagi-bg: rgba(255,255,255,.06);
+                                              --pagi-bg-hover: rgba(255,255,255,.12);
+                                              --pagi-bg-active: var(--color-brand);
+                                              --pagi-color: var(--color-text-inverse);
+                                              --pagi-color-hover: var(--color-text-inverse);
+                                              --pagi-color-active: var(--color-text-inverse);
+                                              --pagi-border: rgba(255,255,255,.16);
+                                              --pagi-border-hover: rgba(255,255,255,.28);
+                                              --pagi-border-active: var(--color-brand);
+                                             ">
+                                        <ul class="pagination__list">
+                                            <li class="pagination__item pagination__item_prev">
+                                                <a href="#" class="pagination__link">
+                                                    <span class="pagination__text">Назад</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="pagination__item">
+                                                <a href="#" class="pagination__link">
+                                                    <span class="pagination__text">1</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="pagination__item" aria-current="page">
+                                                <span class="pagination__link">
+                                                    <span class="pagination__text">2</span>
+                                                </span>
+                                            </li>
+
+                                            <li class="pagination__item">
+                                                <a href="#" class="pagination__link">
+                                                    <span class="pagination__text">3</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="pagination__item pagination__item_next">
+                                                <a href="#" class="pagination__link">
+                                                    <span class="pagination__text ">Вперёд</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-top">
+                        <h2 class="section-title">Уведомления</h2>
+                        <div class="section-preview text-reset">
+                            Демонстрационная страница для семантических уведомлений, размеров, использования иконок, действий и модификаторов.
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="grid-list grid-list-items-2">
+
+                            <!-- Basic semantic alerts -->
+                            <div class="test-block border p-32">
+                                <h3>Базовые семантические уведомления</h3>
+
+                                <div class="alert alert-brand">
+                                    <div class="alert__body">
+                                        <p class="alert-desc">Фирменное уведомление для выделенной информации о продукте или системе.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-success">
+                                    <div class="alert__body">
+                                        <p class="alert-desc">Уведомление об успехе. Данные были успешно сохранены.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning">
+                                    <div class="alert__body">
+                                        <p class="alert-desc">Предупреждение. Пожалуйста, проверьте настройки перед продолжением.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-error">
+                                    <div class="alert__body">
+                                        <p class="alert-desc">Уведомление об ошибке. Что-то пошло не так при обработке запроса.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info">
+                                    <div class="alert__body">
+                                        <p class="alert-desc">Информационное уведомление. Для вашего проекта доступно новое обновление.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Title + description -->
+                            <div class="test-block border p-32">
+                                <h3>Заголовок и описание</h3>
+
+                                <div class="alert alert-success">
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Изменения сохранены</h4>
+                                        <p class="alert-desc">
+                                            Ваши настройки были успешно обновлены и применены к текущему рабочему пространству.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning">
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Проверьте обязательные поля</h4>
+                                        <p class="alert-desc">
+                                            Некоторые поля заполнены не полностью. Пожалуйста, проверьте форму перед повторной отправкой.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- With icons -->
+                            <div class="test-block border p-32">
+                                <h3>С иконками</h3>
+
+                                <div class="alert alert-success">
+                                    <div class="alert__icon" aria-hidden="true">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                            <path d="M5 12.5L9.5 17L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Сообщение об успехе</h4>
+                                        <p class="alert-desc">Всё выполнено успешно.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning">
+                                    <div class="alert__icon" aria-hidden="true">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 8v5M12 16h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Предупреждающее сообщение</h4>
+                                        <p class="alert-desc">Пожалуйста, проверьте настройки вашей учётной записи.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-error">
+                                    <div class="alert__icon" aria-hidden="true">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M15 9L9 15M9 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Сообщение об ошибке</h4>
+                                        <p class="alert-desc">Операция не выполнена. Попробуйте позже.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info">
+                                    <div class="alert__icon" aria-hidden="true">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M12 10v5M12 7h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Информационное сообщение</h4>
+                                        <p class="alert-desc">Это информационное сообщение для пользователя.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- With actions -->
+                            <div class="test-block border p-32">
+                                <h3>С действиями</h3>
+
+                                <div class="alert alert-info alert--center">
+                                    <div class="alert__icon" aria-hidden="true">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M12 10v5M12 7h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Доступна новая версия</h4>
+                                        <p class="alert-desc">Новое обновление системы готово к установке.</p>
+                                    </div>
+
+                                    <div class="alert__actions">
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning alert--center">
+                                    <div class="alert__icon" aria-hidden="true">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 8v5M12 16h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Подписка скоро истекает</h4>
+                                        <p class="alert-desc">Продлите ваш тариф, чтобы сохранить доступ ко всем премиум-функциям.</p>
+                                    </div>
+
+                                    <div class="alert__actions">
+                                        <a href="#">Продлить сейчас</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Soft -->
+                            <div class="test-block border p-32">
+                                <h3>Мягкие уведомления</h3>
+
+                                <div class="alert alert-brand alert--soft">
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Мягкое фирменное уведомление</h4>
+                                        <p class="alert-desc">Используется для ненавязчивого акцента на фирменной информации.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-success alert--soft">
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Мягкое уведомление об успехе</h4>
+                                        <p class="alert-desc">Подходит для менее навязчивых подтверждений.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info alert--soft">
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Мягкое информационное уведомление</h4>
+                                        <p class="alert-desc">Хорошо подходит для второстепенных информационных сообщений.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Outline -->
+                            <div class="test-block border p-32">
+                                <h3>Контурные уведомления</h3>
+
+                                <div class="alert alert-brand alert--outline">
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Контурное фирменное уведомление</h4>
+                                        <p class="alert-desc">Прозрачный фон с акцентной рамкой.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning alert--outline">
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Контурное предупреждение</h4>
+                                        <p class="alert-desc">Полезно, когда в интерфейсе уже используются цветные поверхности.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-error alert--outline">
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Контурное уведомление об ошибке</h4>
+                                        <p class="alert-desc">Более лёгкий стиль для деструктивного сообщения.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sizes -->
+                            <div class="test-block border p-32">
+                                <h3>Размеры</h3>
+
+                                <div class="alert alert-info alert-sm">
+                                    <div class="alert__body">
+                                        <p class="alert-desc">Маленькое уведомление для компактных интерфейсов.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info">
+                                    <div class="alert__body">
+                                        <p class="alert-desc">Стандартный размер уведомления для большинства интерфейсов.</p>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info alert-lg">
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Большое уведомление</h4>
+                                        <p class="alert-desc">Полезно на страницах настроек, в онбординге и на дашбордах.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Rich content -->
+                            <div class="test-block border p-32">
+                                <h3>Расширенное содержимое</h3>
+
+                                <div class="alert alert-brand">
+                                    <div class="alert__icon" aria-hidden="true">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M12 10v5M12 7h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+
+                                    <div class="alert__body">
+                                        <h4 class="alert-title">Заметка дизайн-системы</h4>
+                                        <p class="alert-desc">
+                                            Это уведомление может содержать <a href="#">ссылки</a>, более длинные описания и несколько строк текста.
+                                        </p>
+                                    </div>
+
+                                    <div class="alert__actions">
+                                        <a href="#">Открыть документацию</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-top">
+                        <h2 class="section-title">Бейджи</h2>
+                        <div class="section-preview text-reset">
+                            Демонстрационная страница для вариантов бейджей, размеров и типичных сценариев использования в интерфейсе.
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <div class="grid-list grid-list-items-2">
+                            <!-- Default / variants -->
+                            <div class="test-block border p-32">
+                                <h3>Варианты бейджей</h3>
+
+                                <div class="badge-row">
+                                    <span class="badge badge--neutral">Нейтральный</span>
+                                    <span class="badge badge--brand">Фирменный</span>
+                                    <span class="badge badge--info">Инфо</span>
+                                    <span class="badge badge--success">Успех</span>
+                                    <span class="badge badge--warning">Предупреждение</span>
+                                    <span class="badge badge--error">Ошибка</span>
+                                </div>
+                            </div>
+
+                            <!-- Sizes -->
+                            <div class="test-block border p-32">
+                                <h3>Размеры бейджей</h3>
+
+                                <div class="badge-row">
+                                    <span class="badge badge--neutral badge--sm">Маленький</span>
+                                    <span class="badge badge--neutral">Стандартный</span>
+                                    <span class="badge badge--neutral badge--lg">Большой</span>
+                                </div>
+                            </div>
+
+                            <!-- Product labels -->
+                            <div class="test-block border p-32">
+                                <h3>Метки товаров</h3>
+
+                                <div class="badge-row">
+                                    <span class="badge badge--warning">Акция</span>
+                                    <span class="badge badge--brand">Новинка</span>
+                                    <span class="badge badge--success">В наличии</span>
+                                    <span class="badge badge--info">Под заказ</span>
+                                    <span class="badge badge--error">Нет в наличии</span>
+                                </div>
+                            </div>
+
+                            <!-- Status examples -->
+                            <div class="test-block border p-32">
+                                <h3>Примеры статусов</h3>
+
+                                <div class="badge-row">
+                                    <span class="badge badge--success">Опубликовано</span>
+                                    <span class="badge badge--warning">В ожидании</span>
+                                    <span class="badge badge--error">Отклонено</span>
+                                    <span class="badge badge--info">На проверке</span>
+                                    <span class="badge badge--neutral">Черновик</span>
+                                </div>
+                            </div>
+
+                            <div class="d-f fd-c gap-8">
+                                <!-- In text -->
+                                <div class="test-block border p-32">
+                                    <h3>Бейджи внутри контента</h3>
+
+                                    <p>
+                                        Статус товара:
+                                        <span class="badge badge--success">В наличии</span>
+                                    </p>
+
+                                    <p>
+                                        Акция:
+                                        <span class="badge badge--warning">Распродажа</span>
+                                    </p>
+
+                                    <p>
+                                        Состояние публикации:
+                                        <span class="badge badge--neutral">Черновик</span>
+                                    </p>
+
+
+                                </div>
+
+                                <!-- Mixed usage -->
+                                <div class="test-block border p-32">
+                                    <h3>Смешанное использование</h3>
+
+                                    <div class="badge-row">
+                                        <span class="badge badge--brand badge--sm">UI</span>
+                                        <span class="badge badge--info badge--sm">Дизайн-система</span>
+                                        <span class="badge badge--success">Готово</span>
+                                        <span class="badge badge--warning badge--lg">Требует проверки</span>
+                                        <span class="badge badge--error badge--lg">Критично</span>
+                                    </div>
+                                </div>
+
+                                <!-- On inverse background -->
+                                <div class="test-block border p-32">
+                                    <h3>Бейджи на инверсном фоне</h3>
+
+                                    <div class="bg-inverse rounded-md" style="padding: 20px;">
+                                        <div class="badge-row">
+                                            <span class="badge badge--neutral">Нейтральный</span>
+                                            <span class="badge badge--brand">Фирменный</span>
+                                            <span class="badge badge--success">Успех</span>
+                                            <span class="badge badge--warning">Предупреждение</span>
+                                            <span class="badge badge--error">Ошибка</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- In cards -->
+                            <div class="test-block border p-32">
+                                <h3>Бейджи внутри карточек</h3>
+
+                                <div class="d-f fd-c gap-8">
+                                    <article class="card border rounded-md bg-surface p-20">
+                                        <div class="badge-row" style="margin-bottom: 12px;">
+                                            <span class="badge badge--warning">Акция</span>
+                                            <span class="badge badge--brand">Хит</span>
+                                        </div>
+                                        <h4>Промышленный насос X100</h4>
+                                        <p class="text-secondary">Надёжное оборудование для промышленного использования.</p>
+                                    </article>
+
+                                    <article class="card border rounded-md bg-surface p-20">
+                                        <div class="badge-row" style="margin-bottom: 12px;">
+                                            <span class="badge badge--success">В наличии</span>
+                                        </div>
+                                        <h4>Металлическая рама A-44</h4>
+                                        <p class="text-secondary">Доступна для быстрой отгрузки.</p>
+                                    </article>
+
+                                    <article class="card border rounded-md bg-surface p-20">
+                                        <div class="badge-row" style="margin-bottom: 12px;">
+                                            <span class="badge badge--info">Под заказ</span>
+                                        </div>
+                                        <h4>Компрессор Z-21</h4>
+                                        <p class="text-secondary">Индивидуальный заказ и увеличенный срок поставки.</p>
+                                    </article>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+</main>
+@include('partials/component/footer.html')

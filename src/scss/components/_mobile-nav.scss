@@ -1,0 +1,113 @@
+.mobile-nav {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--color-bg-surface);
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    background: var(--color-bg-surface);
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--color-border-default);
+
+    &--has-children {
+      position: static;
+    }
+
+    &.is-open > .mobile-nav__submenu {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 20px;
+    color: var(--color-text-primary);
+    background: transparent;
+    border: 0;
+    text-align: left;
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+    transition: var(--transition-base);
+
+    &:hover {
+      color: var(--color-brand);
+      background: var(--color-bg-muted);
+    }
+
+    &--toggle {
+      font-weight: 500;
+    }
+  }
+
+  &__arrow {
+    flex: none;
+    color: var(--color-text-secondary);
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &__submenu {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-surface);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform .28s ease, opacity .2s ease, visibility .2s ease;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: -8px 0 24px rgba(15, 23, 42, 0.06);
+  }
+
+  &__submenu-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 56px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--color-border-default);
+    background: var(--color-bg-surface);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  &__back {
+    flex: none;
+    border: 0;
+    background: transparent;
+    color: var(--color-brand);
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  &__submenu-title {
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__submenu > .mobile-nav__list {
+    display: grid;
+    background: var(--color-bg-surface);
+  }
+}

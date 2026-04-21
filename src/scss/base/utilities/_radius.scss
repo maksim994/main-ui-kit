@@ -1,0 +1,27 @@
+/* utilities/_radius.scss */
+@use "../mixins" as m;     // для @include m.media()
+@use "../variables" as vars;
+
+/* =========================================
+   Radius utilities
+   ========================================= */
+
+$rounded: (
+        none: 0,
+        xs: var(--radius-xs),
+        sm: var(--radius-sm),
+        md: var(--radius-md),
+        lg: var(--radius-lg),
+        xl: var(--radius-xl),
+        full: 999px
+);
+
+.rounded {
+  border-radius: var(--radius-sm);
+
+  @each $name, $value in $rounded {
+    &-#{$name} {
+      border-radius: $value;
+    }
+  }
+}

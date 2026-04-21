@@ -1,0 +1,31 @@
+@use "../mixins" as m;
+
+/* Базовая сетка */
+.grid-list{
+  display: grid;
+  gap: var(--layout-gap);
+
+  @include m.media(sm){ gap: calc(var(--layout-gap) / 2); }
+}
+
+/* Генератор колонок: базовые + брейкпоинты */
+$counts: 1, 2, 3, 4, 5, 6;
+$bps: ("": null, "xl": xl, "lg": lg, "md": md, "sm": sm);
+
+/* База: .grid-list--items-N */
+@each $n in $counts {
+  .grid-list-items-#{$n} { grid-template-columns: repeat(#{$n}, 1fr); }
+}
+
+/* Варианты для брейкпоинтов: .grid-list-xl-items-N и т.д. */
+@each $suffix, $bp in $bps {
+  @if $bp == null {
+    // уже сгенерили базовые выше
+  } @else {
+    @include m.media(#{$bp}) {
+      @each $n in $counts {
+        .grid-list-#{$suffix}-items-#{$n} { grid-template-columns: repeat(#{$n}, 1fr); }
+      }
+    }
+  }
+}

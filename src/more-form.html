@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "UI Kit - Элементы формы"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+    <div class="wrapper">
+        <div class="topic">
+            <div class="topic__heading">
+                @include('partials/base/breadcrumb.html')
+                <div class="topic__heading-top">
+                    <h1 class="topic__title">UI Kit - Элементы формы</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper-content">
+            <div class="right_block">
+
+                <h2>Элементы формы</h2>
+
+                <!-- Default form -->
+                <form class="form" action="#" method="post">
+                    <div class="grid-list grid-list-items-2">
+                        <div class="test-block">
+                            <h3>Текстовые поля</h3>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-name">
+                                    Имя
+                                    <span class="form-required">*</span>
+                                </label>
+                                <input id="input-name" type="text" placeholder="Введите ваше имя" />
+                                <div class="form-hint">Вспомогательный текст для поля</div>
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-email">Электронная почта</label>
+                                <input id="input-email" type="email" placeholder="name@example.com" />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-phone">Телефон</label>
+                                <input id="input-phone" type="tel" placeholder="+7 (999) 123-45-67" />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-password">Пароль</label>
+                                <input id="input-password" type="password" placeholder="Введите пароль" />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-search">Поиск</label>
+                                <input id="input-search" type="search" placeholder="Поиск..." />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-number">Число</label>
+                                <input id="input-number" type="number" placeholder="10" />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-date">Дата</label>
+                                <input id="input-date" type="date" />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-url">Сайт</label>
+                                <input id="input-url" type="url" placeholder="https://example.com" />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-time">Время</label>
+                                <input id="input-time" type="time" />
+                            </div>
+                        </div>
+
+                        <div class="d-f fd-c gap">
+                            <div class="test-block">
+                                <h3>Текстовая область</h3>
+
+                                <div class="form-control">
+                                    <label class="form-label" for="input-message">
+                                        Сообщение
+                                        <span class="form-required">*</span>
+                                    </label>
+                                    <textarea id="input-message" placeholder="Напишите ваше сообщение"></textarea>
+                                    <div class="form-hint">Минимум 20 символов</div>
+                                </div>
+                            </div>
+
+                            <div class="test-block">
+                                <h3>Список выбора</h3>
+
+                                <div class="form-control">
+                                    <label class="form-label" for="input-select">Категория</label>
+                                    <select id="input-select">
+                                        <option value="" selected disabled>Выберите вариант</option>
+                                        <option value="design">Дизайн</option>
+                                        <option value="development">Разработка</option>
+                                        <option value="marketing">Маркетинг</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="test-block">
+                                <h3>Загрузка файла</h3>
+
+                                <div class="form-control">
+                                    <label class="form-label" for="input-file">Прикрепить файл</label>
+                                    <input id="input-file" type="file" />
+                                    <div class="form-hint">PDF, DOCX, PNG до 10 МБ</div>
+                                </div>
+                            </div>
+
+                            <div class="test-block">
+                                <h3>Ползунок</h3>
+
+                                <div class="form-control">
+                                    <label class="form-label" for="input-range">Бюджет</label>
+                                    <input id="input-range" type="range" min="0" max="100" value="50" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-block">
+                            <h3>Состояния валидации</h3>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-error">Поле с ошибкой</label>
+                                <input id="input-error" class="is-error" type="text" value="Неверное значение" aria-invalid="true" />
+                                <div class="form-message form-message--error">Пожалуйста, введите корректное значение</div>
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-success">Поле с успешной проверкой</label>
+                                <input id="input-success" class="is-success" type="text" value="Корректное значение" />
+                                <div class="form-message form-message--success">Всё выглядит хорошо</div>
+                            </div>
+                        </div>
+
+                        <div class="test-block">
+                            <h3>Отключённые и только для чтения</h3>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-disabled">Отключённое поле</label>
+                                <input id="input-disabled" type="text" value="Отключённое значение" disabled />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="input-readonly">Поле только для чтения</label>
+                                <input id="input-readonly" type="text" value="Значение только для чтения" readonly />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="form-label" for="select-disabled">Отключённый список</label>
+                                <select id="select-disabled" disabled>
+                                    <option selected>Отключённый вариант</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="test-block">
+                            <h3>Флажки</h3>
+
+                            <div style="display:grid; gap:12px;">
+                                <label class="form-choice">
+                                    <input type="checkbox" checked />
+                                    <span class="form-choice__text">
+                                        Я согласен с политикой конфиденциальности
+                                        <span class="form-choice__hint">Дополнительное описание варианта</span>
+                                    </span>
+                                </label>
+
+                                <label class="form-choice">
+                                    <input type="checkbox" />
+                                    <span class="form-choice__text">Подписаться на рассылку</span>
+                                </label>
+
+                                <label class="form-choice">
+                                    <input type="checkbox" disabled />
+                                    <span class="form-choice__text">Отключённый флажок</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="test-block">
+                            <h3>Переключатели выбора</h3>
+
+                            <div style="display:grid; gap:12px;">
+                                <label class="form-choice">
+                                    <input type="radio" name="plan" checked />
+                                    <span class="form-choice__text">
+                                        Базовый тариф
+                                        <span class="form-choice__hint">Для небольших проектов</span>
+                                    </span>
+                                </label>
+
+                                <label class="form-choice">
+                                    <input type="radio" name="plan" />
+                                    <span class="form-choice__text">
+                                        Pro тариф
+                                        <span class="form-choice__hint">Для растущих команд</span>
+                                    </span>
+                                </label>
+
+                                <label class="form-choice">
+                                    <input type="radio" name="plan" disabled />
+                                    <span class="form-choice__text">Отключённый вариант</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="test-block">
+                            <h3>Переключатель</h3>
+
+                            <div style="display:grid; gap:14px;">
+                                <label class="switch">
+                                    <input class="switch__input" type="checkbox" checked />
+                                    <span class="switch__control"></span>
+                                    <span class="switch__label">Включить уведомления</span>
+                                </label>
+
+                                <label class="switch">
+                                    <input class="switch__input" type="checkbox" />
+                                    <span class="switch__control"></span>
+                                    <span class="switch__label">Публичный профиль</span>
+                                </label>
+
+                                <label class="switch">
+                                    <input class="switch__input" type="checkbox" checked disabled />
+                                    <span class="switch__control"></span>
+                                    <span class="switch__label">Отключённый переключатель</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="test-block">
+                            <h3>Две колонки</h3>
+
+                            <div class="form-row form-row--2">
+                                <div class="form-control">
+                                    <label class="form-label" for="first-name">Имя</label>
+                                    <input id="first-name" type="text" placeholder="Иван" />
+                                </div>
+
+                                <div class="form-control">
+                                    <label class="form-label" for="last-name">Фамилия</label>
+                                    <input id="last-name" type="text" placeholder="Иванов" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-block">
+                            <h3>Три колонки</h3>
+
+                            <div class="form-row form-row--3">
+                                <div class="form-control">
+                                    <label class="form-label" for="city">Город</label>
+                                    <input id="city" type="text" placeholder="Москва" />
+                                </div>
+
+                                <div class="form-control">
+                                    <label class="form-label" for="zip">Индекс</label>
+                                    <input id="zip" type="text" placeholder="101000" />
+                                </div>
+
+                                <div class="form-control">
+                                    <label class="form-label" for="country">Страна</label>
+                                    <select id="country">
+                                        <option selected disabled>Выберите страну</option>
+                                        <option>Россия</option>
+                                        <option>Германия</option>
+                                        <option>Франция</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-block">
+                            <h3>Компактная форма</h3>
+
+                            <div class="form form--sm">
+                                <div class="form-control">
+                                    <label class="form-label" for="compact-name">Компактное поле</label>
+                                    <input id="compact-name" type="text" placeholder="Поле небольшого размера" />
+                                </div>
+
+                                <div class="form-control">
+                                    <label class="form-label" for="compact-select">Компактный список</label>
+                                    <select id="compact-select">
+                                        <option selected disabled>Выберите вариант</option>
+                                        <option>Вариант 1</option>
+                                        <option>Вариант 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="test-block">
+                            <h3>Крупная форма</h3>
+
+                            <div class="form form--lg">
+                                <div class="form-control">
+                                    <label class="form-label" for="large-name">Крупное поле</label>
+                                    <input id="large-name" type="text" placeholder="Поле большого размера" />
+                                </div>
+
+                                <div class="form-control">
+                                    <label class="form-label" for="large-textarea">Крупная текстовая область</label>
+                                    <textarea id="large-textarea" placeholder="Большая текстовая область"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+@include('partials/component/footer.html')

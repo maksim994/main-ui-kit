@@ -1,0 +1,54 @@
+// === Глобальные настройки грида/утилит ===
+
+// Кол-во колонок и шаг генерации (2 → col-2, col-4, ...)
+// Чем больше шаг — тем меньше итоговый CSS.
+$columns-count: 12 !default;
+$columns-step: 1 !default;
+
+// Генерировать ли offset и order-классы
+$gen-offset: false !default;
+$gen-order:  false !default;
+
+// Отступ контейнера (используется в .row/.wrapper)
+$container-offset: 10px !default;
+
+// Брейкпоинты (max-width). Можешь выключать/добавлять ключи.
+$breakpoints: (
+  //xxl: 1367px,
+  xl: 1200px,
+  lg: 992px,
+  md: 768px,
+  sm: 576px,
+  // small: 360px,
+) !default;
+
+// Для каких брейкпоинтов генерить utility-классы (.d-*, .ai-* и т.п.)
+$utility-breakpoints: (xxl, xl, lg, md, sm) !default;
+
+// Предрасчёт ширины одной колонки
+$width: calc(100% / $columns-count) !default;
+
+// (пример карты z-index; если не нужна — можно удалить)
+$z-index: (
+  dropdown: 1000,
+  modal: 1050,
+  overlay: 1100
+) !default;
+
+// Прочие размеры (как у тебя было)
+$sizes: (
+    0: 0,
+    4: 4px,
+    8: 8px,
+    12: 12px,
+    16: 16px,
+    20: 20px,
+    24: 24px,
+    28: 28px,
+    32: 32px,
+    36: 36px,
+    40: 40px,
+    44: 44px,
+    48: 48px,
+    64: 64px,
+) !default;

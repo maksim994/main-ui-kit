@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+    "title": "Список страниц"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+
+    <div class="wrapper">
+        <div class="topic">
+            <div class="topic__heading">
+                @include('partials/base/breadcrumb.html')
+                <div class="topic__heading-top">
+                    <h1 class="topic__title">Список страниц</h1>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-content content-layout content-layout--aside-left">
+            <div class="right_block content-layout__main">
+                <ul>
+                    <li><a href="./blog.html">Раздел "Блог"</a></li>
+                    <li><a href="./blog-detail.html">Детальная страница статьи</a></li>
+                    <li><a href="./page-reviews.html">Раздел "Отзывы"</a></li>
+                    <li><a href="./page-reviews.html">Раздел "Лицензии"/ "Документы" v1</a></li>
+                    <li><a href="./page-licenses-v2.html">Раздел "Лицензии"/ "Документы" v2</a></li>
+                    <li><a href="./page-faq.html">Раздел "Вопросы ответы" v1</a></li>
+                    <li><a href="./page-faq.html">Раздел "Вопросы ответы" v2</a></li>
+                    <li><a href="./pages-projects.html">Выполненые проекты</a></li>
+                    <li><a href="./pages-contact.html">Страница контактов</a></li>
+                    <li><a href="./pages-contact-v2.html">Страница контактов v2</a></li>
+                    <li><a href="./pages-product-detail.html">Продуктовая карточка</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="./more-typography.html">UI Kit — Типографика</a></li>
+                    <li><a href="./more-btn.html">UI Kit — Кнопки</a></li>
+                    <li><a href="./more-form.html">UI Kit — Элементы формы</a></li>
+                    <li><a href="./more-elements.html">UI Kit — Базовые элементы</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+@include('partials/component/footer.html')

@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+    "title": "UI Demo"
+})
+
+@include('partials/component/header.html')
+
+<div class="wrapper">
+
+
+    <section class="ui-test-section">
+        <div class="container">
+            <h1>Utilities / tags / icons / avatars</h1>
+            <p class="text-secondary">
+                Test page for tags, shadow helpers, radius helpers, icon sizing and avatar variants.
+            </p>
+
+            <!-- Tags -->
+            <div class="test-block">
+                <h3>Tags</h3>
+
+                <div class="tags">
+                    <a href="#" class="tag">Default tag</a>
+                    <a href="#" class="tag">Industrial</a>
+                    <a href="#" class="tag">Automation</a>
+                    <a href="#" class="tag tag--brand">Brand tag</a>
+                    <a href="#" class="tag tag--sm">Small tag</a>
+                    <a href="#" class="tag tag--lg">Large tag</a>
+                </div>
+            </div>
+
+            <!-- Shadows -->
+            <div class="test-block">
+                <h3>Shadows</h3>
+
+                <div class="demo-grid">
+                    <div class="demo-box shadow">.shadow</div>
+                    <div class="demo-box shadow-sm">.shadow-sm</div>
+                    <div class="demo-box shadow-md">.shadow-md</div>
+                    <div class="demo-box shadow-lg">.shadow-lg</div>
+                    <div class="demo-box shadow-xl">.shadow-xl</div>
+                    <div class="demo-box shadow-2xl">.shadow-2xl</div>
+                    <div class="demo-box shadow-inner">.shadow-inner</div>
+                </div>
+            </div>
+
+            <!-- Radius -->
+            <div class="test-block">
+                <h3>Radius utilities</h3>
+
+                <div class="demo-grid">
+                    <div class="demo-box rounded-none">.rounded-none</div>
+                    <div class="demo-box rounded-xs">.rounded-xs</div>
+                    <div class="demo-box rounded-sm">.rounded-sm</div>
+                    <div class="demo-box rounded-md">.rounded-md</div>
+                    <div class="demo-box rounded-lg">.rounded-lg</div>
+                    <div class="demo-box rounded-xl">.rounded-xl</div>
+                    <div class="demo-box rounded-full">.rounded-full</div>
+                </div>
+            </div>
+
+            <!-- Icons -->
+            <div class="test-block">
+                <h3>Icon sizes</h3>
+
+                <div class="icon-row">
+        <span class="icon icon--8" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+                    <span class="icon icon--12" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+                    <span class="icon icon--16" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+                    <span class="icon icon--18" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+                    <span class="icon icon--20" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+                    <span class="icon icon--24" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+                    <span class="icon icon--32" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+                    <span class="icon icon--48" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+                    <span class="icon icon--64" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+                </div>
+            </div>
+
+            <!-- Fill / Stroke -->
+            <div class="test-block">
+                <h3>Fill and stroke helpers</h3>
+
+                <div class="icon-row">
+        <span class="icon icon--32 fill-current">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"></circle>
+          </svg>
+        </span>
+
+                    <span class="icon icon--32 fill-text">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"></circle>
+          </svg>
+        </span>
+
+                    <span class="icon icon--32 fill-brand">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"></circle>
+          </svg>
+        </span>
+
+                    <span class="icon icon--32 stroke-current">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke-width="2"></circle>
+          </svg>
+        </span>
+
+                    <span class="icon icon--32 stroke-text">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke-width="2"></circle>
+          </svg>
+        </span>
+
+                    <span class="icon icon--32 stroke-brand">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke-width="2"></circle>
+          </svg>
+        </span>
+                </div>
+            </div>
+
+            <!-- Inline icon usage -->
+            <div class="test-block">
+                <h3>Inline icon in text</h3>
+
+                <p>
+        <span class="icon icon--16" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+                    Add new item
+                </p>
+
+                <p class="text-brand">
+        <span class="icon icon--16 fill-current" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3l2.7 5.47 6.03.88-4.36 4.25 1.03 6-5.4-2.84-5.4 2.84 1.03-6L3.27 9.35l6.03-.88L12 3z"></path>
+          </svg>
+        </span>
+                    Brand-colored inline icon
+                </p>
+            </div>
+
+            <!-- Legacy icons -->
+            <div class="test-block">
+                <h3>Legacy icons support</h3>
+
+                <div class="icon-row">
+        <span class="icons icons-24">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+                    <span class="icons icons-32 icons-color-theme">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+                </div>
+            </div>
+
+            <!-- Avatars -->
+            <div class="test-block">
+                <h3>Avatar image</h3>
+
+                <div class="avatar-row">
+        <span class="avatar avatar-sm">
+          <img src="https://webrunner.ru/img.php?w=64&h=64" alt="User avatar small" />
+        </span>
+
+                    <span class="avatar">
+          <img src="https://webrunner.ru/img.php?w=96&h=96" alt="User avatar default" />
+        </span>
+
+                    <span class="avatar avatar-lg">
+          <img src="https://webrunner.ru/img.php?w=128&h=128" alt="User avatar large" />
+        </span>
+
+                    <span class="avatar avatar-xl">
+          <img src="https://webrunner.ru/img.php?w=320&h=320" alt="User avatar extra large" />
+        </span>
+                </div>
+            </div>
+
+            <!-- Text avatars -->
+            <div class="test-block">
+                <h3>Avatar text</h3>
+
+                <div class="avatar-row">
+                    <span class="avatar avatar-sm --text" aria-label="Maxim">M</span>
+                    <span class="avatar --text" aria-label="Anna">A</span>
+                    <span class="avatar avatar-lg --text" aria-label="Priority">P</span>
+                    <span class="avatar avatar-xl --text" aria-label="Design system">DS</span>
+                </div>
+            </div>
+
+            <!-- Mixed example -->
+            <div class="test-block">
+                <h3>Mixed example</h3>
+
+                <div class="demo-card shadow-md rounded-lg">
+                    <div class="demo-card__header">
+                        <span class="avatar --text" aria-label="Maxim">M</span>
+
+                        <div>
+                            <div class="fw-600">Maxim</div>
+                            <div class="text-sm text-secondary">UI Designer</div>
+                        </div>
+                    </div>
+
+                    <div class="tags" style="margin-top: 16px;">
+                        <span class="tag tag--brand">Design system</span>
+                        <span class="tag">UI</span>
+                        <span class="tag">Tokens</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        .ui-test-section {
+            padding: 40px 0;
+            background: var(--color-bg-page);
+        }
+
+        .ui-test-section .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .test-block {
+            padding: 24px;
+            border: 1px solid var(--color-border-default);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-surface);
+        }
+
+        .test-block + .test-block {
+            margin-top: 24px;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+        }
+
+        .demo-box {
+            min-height: 80px;
+            padding: 16px;
+            border: 1px solid var(--color-border-default);
+            background: var(--color-bg-surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .icon-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .avatar-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .demo-card {
+            padding: 20px;
+            border: 1px solid var(--color-border-default);
+            background: var(--color-bg-surface);
+        }
+
+        .demo-card__header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    </style>
+
+
+    <section class="ui-test-section">
+        <div class="container">
+            <h1>Color utilities</h1>
+            <p class="text-secondary">
+                Demo page for utility classes: background, text, border and hover states.
+            </p>
+
+            <!-- Background utilities -->
+            <div class="test-block">
+                <h3>Background utilities</h3>
+
+                <div class="demo-grid">
+                    <div class="demo-swatch bg-page border">
+                        <strong>.bg-page</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-surface border">
+                        <strong>.bg-surface</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-surface-hover border">
+                        <strong>.bg-surface-hover</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-muted border">
+                        <strong>.bg-muted</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-inverse text-inverse">
+                        <strong>.bg-inverse</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-brand text-inverse">
+                        <strong>.bg-brand</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-brand-subtle text-brand border border-brand">
+                        <strong>.bg-brand-subtle</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-success text-inverse">
+                        <strong>.bg-success</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-success-subtle text-success border border-success">
+                        <strong>.bg-success-subtle</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-warning text-primary">
+                        <strong>.bg-warning</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-warning-subtle text-warning border border-warning">
+                        <strong>.bg-warning-subtle</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-error text-inverse">
+                        <strong>.bg-error</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-error-subtle text-error border border-error">
+                        <strong>.bg-error-subtle</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-info text-inverse">
+                        <strong>.bg-info</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-info-subtle text-info border border-info">
+                        <strong>.bg-info-subtle</strong>
+                    </div>
+
+                    <div class="demo-swatch bg-transparent border">
+                        <strong>.bg-transparent</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text utilities -->
+            <div class="test-block">
+                <h3>Text utilities</h3>
+
+                <div class="demo-list">
+                    <p class="text-primary"><strong>.text-primary</strong> — primary content color</p>
+                    <p class="text-secondary"><strong>.text-secondary</strong> — secondary text color</p>
+                    <p class="text-muted"><strong>.text-muted</strong> — muted text color</p>
+                    <p class="text-brand"><strong>.text-brand</strong> — brand accent color</p>
+                    <p class="text-success"><strong>.text-success</strong> — success semantic color</p>
+                    <p class="text-warning"><strong>.text-warning</strong> — warning semantic color</p>
+                    <p class="text-error"><strong>.text-error</strong> — error semantic color</p>
+                    <p class="text-info"><strong>.text-info</strong> — info semantic color</p>
+                </div>
+
+                <div class="demo-surface bg-inverse" style="margin-top: 20px;">
+                    <p class="text-inverse"><strong>.text-inverse</strong> — text on dark/inverse surface</p>
+                </div>
+            </div>
+
+            <!-- Border utilities -->
+            <div class="test-block">
+                <h3>Border utilities</h3>
+
+                <div class="demo-grid">
+                    <div class="demo-swatch border">
+                        <strong>.border</strong>
+                    </div>
+
+                    <div class="demo-swatch border border-default">
+                        <strong>.border-default</strong>
+                    </div>
+
+                    <div class="demo-swatch border border-strong">
+                        <strong>.border-strong</strong>
+                    </div>
+
+                    <div class="demo-swatch border border-brand">
+                        <strong>.border-brand</strong>
+                    </div>
+
+                    <div class="demo-swatch border border-success">
+                        <strong>.border-success</strong>
+                    </div>
+
+                    <div class="demo-swatch border border-warning">
+                        <strong>.border-warning</strong>
+                    </div>
+
+                    <div class="demo-swatch border border-error">
+                        <strong>.border-error</strong>
+                    </div>
+
+                    <div class="demo-swatch border border-info">
+                        <strong>.border-info</strong>
+                    </div>
+
+                    <div class="demo-swatch border border-transparent bg-muted">
+                        <strong>.border-transparent</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Side-specific borders -->
+            <div class="test-block">
+                <h3>Side borders</h3>
+
+                <div class="demo-grid">
+                    <div class="demo-swatch border-t">.border-t</div>
+                    <div class="demo-swatch border-b">.border-b</div>
+                    <div class="demo-swatch border-l">.border-l</div>
+                    <div class="demo-swatch border-r">.border-r</div>
+                </div>
+            </div>
+
+            <!-- Hover utilities -->
+            <div class="test-block">
+                <h3>Hover utilities</h3>
+
+                <div class="demo-grid">
+                    <a href="#" class="demo-card border hover:bg-surface-hover">
+                        <strong>.hover:bg-surface-hover</strong>
+                        <span class="text-secondary">Hover this card</span>
+                    </a>
+
+                    <a href="#" class="demo-card border hover:bg-muted">
+                        <strong>.hover:bg-muted</strong>
+                        <span class="text-secondary">Hover this card</span>
+                    </a>
+
+                    <a href="#" class="demo-card border hover:border-strong">
+                        <strong>.hover:border-strong</strong>
+                        <span class="text-secondary">Hover this card</span>
+                    </a>
+
+                    <a href="#" class="demo-card border hover:border-brand">
+                        <strong>.hover:border-brand</strong>
+                        <span class="text-secondary">Hover this card</span>
+                    </a>
+
+                    <a href="#" class="demo-card border text-secondary hover:text-primary">
+                        <strong>.hover:text-primary</strong>
+                        <span class="text-secondary">Hover this card</span>
+                    </a>
+
+                    <a href="#" class="demo-card border text-secondary hover:text-brand">
+                        <strong>.hover:text-brand</strong>
+                        <span class="text-secondary">Hover this card</span>
+                    </a>
+
+                    <a href="#" class="demo-card border text-muted hover:text-secondary">
+                        <strong>.hover:text-secondary</strong>
+                        <span class="text-muted">Hover this card</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Combined examples -->
+            <div class="test-block">
+                <h3>Combined examples</h3>
+
+                <div class="demo-grid">
+                    <article class="demo-panel bg-surface border border-default">
+                        <h4 class="text-primary">Default surface</h4>
+                        <p class="text-secondary">Neutral card with default border.</p>
+                    </article>
+
+                    <article class="demo-panel bg-brand-subtle border border-brand">
+                        <h4 class="text-brand">Brand message</h4>
+                        <p class="text-secondary">Soft accent background with brand border.</p>
+                    </article>
+
+                    <article class="demo-panel bg-success-subtle border border-success">
+                        <h4 class="text-success">Success state</h4>
+                        <p class="text-secondary">Used for positive states and confirmations.</p>
+                    </article>
+
+                    <article class="demo-panel bg-warning-subtle border border-warning">
+                        <h4 class="text-warning">Warning state</h4>
+                        <p class="text-secondary">Used for cautionary notices.</p>
+                    </article>
+
+                    <article class="demo-panel bg-error-subtle border border-error">
+                        <h4 class="text-error">Error state</h4>
+                        <p class="text-secondary">Used for errors and destructive notices.</p>
+                    </article>
+
+                    <article class="demo-panel bg-info-subtle border border-info">
+                        <h4 class="text-info">Info state</h4>
+                        <p class="text-secondary">Used for neutral system messages.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Dark/inverse examples -->
+            <div class="test-block">
+                <h3>Inverse usage</h3>
+
+                <div class="demo-grid">
+                    <div class="demo-panel bg-inverse text-inverse">
+                        <h4 class="text-inverse">Inverse block</h4>
+                        <p class="text-inverse">Text on dark background.</p>
+                    </div>
+
+                    <div class="demo-panel bg-brand text-inverse">
+                        <h4 class="text-inverse">Brand block</h4>
+                        <p class="text-inverse">Brand surface with inverse text.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        .ui-test-section {
+            padding: 40px 0;
+            background: var(--color-bg-page);
+        }
+
+        .ui-test-section .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .test-block {
+            padding: 24px;
+            border: 1px solid var(--color-border-default);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-surface);
+        }
+
+        .test-block + .test-block {
+            margin-top: 24px;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .demo-list > * + * {
+            margin-top: 10px;
+        }
+
+        .demo-swatch {
+            min-height: 96px;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .demo-surface {
+            padding: 20px;
+            border-radius: var(--radius-sm);
+        }
+
+        .demo-card {
+            min-height: 110px;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            background: var(--color-bg-surface);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: var(--transition-base);
+        }
+
+        .demo-panel {
+            padding: 20px;
+            border-radius: var(--radius-md);
+        }
+
+        .demo-panel h4 {
+            margin: 0 0 8px;
+        }
+
+        .demo-panel p {
+            margin: 0;
+        }
+    </style>
+
+    <section class="ui-test-section">
+        <div class="container">
+            <h1>Images / media wrapper</h1>
+            <p class="text-secondary">
+                Demo page for image, picture and video wrappers with ratio, fit, radius and hover modifiers.
+            </p>
+
+            <!-- Default -->
+            <div class="test-block">
+                <h3>Default image</h3>
+
+                <div class="demo-grid">
+                    <figure class="img img--default">
+                        <img src="https://webrunner.ru/img.php?w=800&h=500" alt="Default image example" />
+                    </figure>
+
+                    <figure class="img img--default img--radius-lg">
+                        <img src="https://webrunner.ru/img.php?w=800&h=500" alt="Default image with larger radius" />
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Ratios -->
+            <div class="test-block">
+                <h3>Aspect ratios</h3>
+
+                <div class="demo-grid">
+                    <figure class="img img--1-1">
+                        <img src="https://webrunner.ru/img.php?w=800&h=800" alt="1 by 1 image example" />
+                    </figure>
+
+                    <figure class="img img--3-2">
+                        <img src="https://webrunner.ru/img.php?w=900&h=600" alt="3 by 2 image example" />
+                    </figure>
+
+                    <figure class="img img--4-3">
+                        <img src="https://webrunner.ru/img.php?w=800&h=600" alt="4 by 3 image example" />
+                    </figure>
+
+                    <figure class="img img--3-4">
+                        <img src="https://webrunner.ru/img.php?w=600&h=800" alt="3 by 4 image example" />
+                    </figure>
+
+                    <figure class="img img--16-9">
+                        <img src="https://webrunner.ru/img.php?w=1280&h=720" alt="16 by 9 image example" />
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Cover -->
+            <div class="test-block">
+                <h3>Cover mode</h3>
+
+                <div class="demo-grid">
+                    <figure class="img img--3-2 img--cover">
+                        <img src="https://webrunner.ru/img.php?w=1280&h=800" alt="Cover image example" />
+                    </figure>
+
+                    <figure class="img img--1-1 img--cover">
+                        <img src="https://webrunner.ru/img.php?w=1280&h=800" alt="Square cover image example" />
+                    </figure>
+
+                    <figure class="img img--16-9 img--cover">
+                        <img src="https://webrunner.ru/img.php?w=900&h=1200" alt="Portrait source inside 16 by 9 cover frame" />
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Contain -->
+            <div class="test-block">
+                <h3>Contain mode</h3>
+
+                <div class="demo-grid">
+                    <figure class="img img--3-2 img--contain">
+                        <img src="https://placehold.co/900x400" alt="Contain image example" />
+                    </figure>
+
+                    <figure class="img img--1-1 img--contain">
+                        <img src="https://placehold.co/500x900" alt="Portrait contain image example" />
+                    </figure>
+
+                    <figure class="img img--16-9 img--contain">
+                        <img src="https://placehold.co/700x300" alt="Wide contain image example" />
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Round -->
+            <div class="test-block">
+                <h3>Round images</h3>
+
+                <div class="avatar-row">
+                    <figure class="img img--1-1 img--round" style="max-width: 80px;">
+                        <img src="https://placehold.co/400x400" alt="Round avatar small" />
+                    </figure>
+
+                    <figure class="img img--1-1 img--round" style="max-width: 120px;">
+                        <img src="https://placehold.co/500x500" alt="Round avatar medium" />
+                    </figure>
+
+                    <figure class="img img--1-1 img--round" style="max-width: 180px;">
+                        <img src="https://placehold.co/700x700" alt="Round avatar large" />
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Radius modifiers -->
+            <div class="test-block">
+                <h3>Radius modifiers</h3>
+
+                <div class="demo-grid">
+                    <figure class="img img--4-3 img--cover img--radius-none">
+                        <img src="https://placehold.co/800x600" alt="No radius image" />
+                    </figure>
+
+                    <figure class="img img--4-3 img--cover img--radius-sm">
+                        <img src="https://placehold.co/800x600" alt="Small radius image" />
+                    </figure>
+
+                    <figure class="img img--4-3 img--cover img--radius-md">
+                        <img src="https://placehold.co/800x600" alt="Medium radius image" />
+                    </figure>
+
+                    <figure class="img img--4-3 img--cover img--radius-lg">
+                        <img src="https://placehold.co/800x600" alt="Large radius image" />
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Zoom -->
+            <div class="test-block">
+                <h3>Zoom on hover</h3>
+
+                <div class="demo-grid">
+                    <figure class="img img--3-2 img--cover img--zoom" style="--img-zoom: .4;">
+                        <img src="https://placehold.co/1000x700" alt="Zoom image light" />
+                    </figure>
+
+                    <figure class="img img--3-2 img--cover img--zoom" style="--img-zoom: .8;">
+                        <img src="https://placehold.co/1000x700" alt="Zoom image medium" />
+                    </figure>
+
+                    <figure class="img img--3-2 img--cover img--zoom" style="--img-zoom: 1;">
+                        <img src="https://placehold.co/1000x700" alt="Zoom image strong" />
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Picture -->
+            <div class="test-block">
+                <h3>Picture element</h3>
+
+                <div class="demo-grid">
+                    <figure class="img img--16-9 img--cover">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="https://placehold.co/1200x675" />
+                            <img src="https://placehold.co/800x450" alt="Picture cover example" />
+                        </picture>
+                    </figure>
+
+                    <figure class="img img--16-9 img--contain">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="https://placehold.co/900x350" />
+                            <img src="https://placehold.co/700x280" alt="Picture contain example" />
+                        </picture>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Video -->
+            <div class="test-block">
+                <h3>Video wrapper</h3>
+
+                <div class="demo-grid">
+                    <div class="img img--16-9 img--cover">
+                        <video controls poster="https://placehold.co/1280x720" preload="metadata">
+                            <source src="" type="video/mp4" />
+                        </video>
+                    </div>
+
+                    <div class="img img--4-3 img--contain">
+                        <video controls poster="https://placehold.co/800x600" preload="metadata">
+                            <source src="" type="video/mp4" />
+                        </video>
+                    </div>
+                </div>
+
+                <p class="caption" style="margin-top: 12px;">
+                    Replace empty video sources with real demo files when needed.
+                </p>
+            </div>
+
+            <!-- Mixed card usage -->
+            <div class="test-block">
+                <h3>Card examples</h3>
+
+                <div class="demo-grid">
+                    <article class="demo-card border rounded-md bg-surface">
+                        <figure class="img img--4-3 img--cover img--zoom img--radius-md" style="--img-zoom: .6;">
+                            <img src="https://placehold.co/900x700" alt="Article preview" />
+                        </figure>
+                        <h4 style="margin-top: 16px;">Blog card image</h4>
+                        <p class="text-secondary">4:3 cover image with hover zoom for article cards.</p>
+                    </article>
+
+                    <article class="demo-card border rounded-md bg-surface">
+                        <figure class="img img--16-9 img--contain img--radius-md">
+                            <img src="https://placehold.co/1000x300" alt="Logo or scheme preview" />
+                        </figure>
+                        <h4 style="margin-top: 16px;">Logo / scheme card</h4>
+                        <p class="text-secondary">16:9 contain mode works well for logos, UI shots and diagrams.</p>
+                    </article>
+
+                    <article class="demo-card border rounded-md bg-surface">
+                        <figure class="img img--1-1 img--round" style="max-width: 120px; margin: 0 auto;">
+                            <img src="https://placehold.co/500x500" alt="Team member avatar" />
+                        </figure>
+                        <h4 style="margin-top: 16px; text-align: center;">Team profile</h4>
+                        <p class="text-secondary text-center">Square ratio plus round modifier for profile images.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Inline style tokens -->
+            <div class="test-block">
+                <h3>Custom tokens from markup</h3>
+
+                <div class="demo-grid">
+                    <figure class="img img--3-2 img--cover" style="--img-radius: 6px;">
+                        <img src="https://placehold.co/900x600" alt="Custom small radius" />
+                    </figure>
+
+                    <figure class="img img--3-2" style="--img-radius: 20px; --img-fit: contain;">
+                        <img src="https://placehold.co/700x300" alt="Custom contain and large radius" />
+                    </figure>
+
+                    <figure class="img img--3-2 img--zoom" style="--img-radius: 16px; --img-zoom: .9;">
+                        <img src="https://placehold.co/900x600" alt="Custom radius and zoom" />
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        .ui-test-section {
+            padding: 40px 0;
+            background: var(--color-bg-page);
+        }
+
+        .ui-test-section .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .test-block {
+            padding: 24px;
+            border: 1px solid var(--color-border-default);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-surface);
+        }
+
+        .test-block + .test-block {
+            margin-top: 24px;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .avatar-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .demo-card {
+            padding: 16px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+
+    <section class="ui-test-section">
+        <div class="container">
+            <h2>Accordion</h2>
+
+            @include('./partials/component/accordion.html', {
+            'txt': [
+            {
+            'title': 'Lorem ipsum dolor sit amet, consectetuer adipiscing',
+            'text': '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>'
+            },
+            {
+            'title': 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore',
+            'text': '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>'
+            },
+            {
+            'title': 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore sed diam nonummy nibh euismod tincidunt ut laoreet dolore',
+            'text': '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>'
+            },
+            {
+            'title': 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore',
+            'text': '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>'
+            },
+            {
+            'title': 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore',
+            'text': '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>'
+            },
+            ]
+            })
+        </div>
+    </section>
+
+
+
+    <style>
+        .ui-test-section {
+            padding: 40px 0;
+            background: var(--color-bg-page);
+        }
+
+        .ui-test-section .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .test-block {
+            padding: 24px;
+            border: 1px solid var(--color-border-default);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-surface);
+        }
+
+        .test-block + .test-block {
+            margin-top: 24px;
+        }
+    </style>
+
+    <section class="ui-test-section">
+        <div class="container">
+            <h1>Breadcrumbs</h1>
+            <p class="text-secondary">
+                Demo page for breadcrumb variants, long labels and horizontal overflow behavior.
+            </p>
+
+            <!-- Default slash -->
+            <div class="test-block">
+                <h3>Default slash separator</h3>
+
+                <div class="breadcrumbs-wrap">
+                    <ol class="breadcrumbs" aria-label="Breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Catalog</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Industrial equipment</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__item-name">Pumps and compressors</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Chevron -->
+            <div class="test-block">
+                <h3>Chevron separator</h3>
+
+                <div class="breadcrumbs-wrap">
+                    <ol class="breadcrumbs breadcrumbs--icon" aria-label="Breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Services</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">SEO promotion</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__item-name">Technical optimization</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Slash icon -->
+            <div class="test-block">
+                <h3>Slash icon separator</h3>
+
+                <div class="breadcrumbs-wrap">
+                    <ol class="breadcrumbs breadcrumbs--icon-slash" aria-label="Breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Blog</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Design systems</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__item-name">Buttons and form controls</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Long labels -->
+            <div class="test-block">
+                <h3>Long labels with truncation</h3>
+
+                <div class="breadcrumbs-wrap">
+                    <ol class="breadcrumbs breadcrumbs--icon" aria-label="Breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Home page of the company website</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Very long catalog section with a descriptive title for users</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Another category with a long detailed name for testing purposes</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__item-name">Current page with a very long title that should be truncated correctly</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Minimal -->
+            <div class="test-block">
+                <h3>Minimal breadcrumbs</h3>
+
+                <div class="breadcrumbs-wrap">
+                    <ol class="breadcrumbs" aria-label="Breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Home</span>
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__item-name">Contacts</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Many items -->
+            <div class="test-block">
+                <h3>Many items / horizontal overflow</h3>
+
+                <div class="breadcrumbs-wrap">
+                    <ol class="breadcrumbs breadcrumbs--icon" aria-label="Breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#"><span class="breadcrumbs__item-name">Home</span></a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#"><span class="breadcrumbs__item-name">Catalog</span></a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#"><span class="breadcrumbs__item-name">Electronics</span></a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#"><span class="breadcrumbs__item-name">Audio systems</span></a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#"><span class="breadcrumbs__item-name">Studio equipment</span></a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#"><span class="breadcrumbs__item-name">Monitors</span></a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#"><span class="breadcrumbs__item-name">Professional line</span></a>
+                        </li>
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__item-name">Model X200 Mark II</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- In card -->
+            <div class="test-block">
+                <h3>Breadcrumbs inside a card</h3>
+
+                <div class="bg-surface border rounded-md" style="padding: 20px;">
+                    <div class="breadcrumbs-wrap">
+                        <ol class="breadcrumbs" aria-label="Breadcrumbs">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    <span class="breadcrumbs__item-name">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    <span class="breadcrumbs__item-name">Projects</span>
+                                </a>
+                            </li>
+
+                            <li class="breadcrumbs__item" aria-current="page">
+                                <span class="breadcrumbs__item-name">Priority redesign</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- On inverse background -->
+            <div class="test-block">
+                <h3>Breadcrumbs on inverse background</h3>
+
+                <div class="bg-inverse rounded-md" style="padding: 20px;">
+                    <div class="breadcrumbs-wrap">
+                        <ol class="breadcrumbs" aria-label="Breadcrumbs"
+                            style="--bc-color: var(--color-text-inverse); --bc-color-muted: rgba(255,255,255,.72); --bc-separator-color: rgba(255,255,255,.28);">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    <span class="breadcrumbs__item-name">Home</span>
+                                </a>
+                            </li>
+
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">
+                                    <span class="breadcrumbs__item-name">Solutions</span>
+                                </a>
+                            </li>
+
+                            <li class="breadcrumbs__item" aria-current="page">
+                                <span class="breadcrumbs__item-name">Enterprise platform</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- With separate separator element -->
+            <div class="test-block">
+                <h3>Compatibility example with separator element</h3>
+
+                <div class="breadcrumbs-wrap">
+                    <ol class="breadcrumbs" aria-label="Breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Home</span>
+                            </a>
+                        </li>
+
+                        <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                <span class="breadcrumbs__item-name">Case studies</span>
+                            </a>
+                        </li>
+
+                        <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+
+                        <li class="breadcrumbs__item" aria-current="page">
+                            <span class="breadcrumbs__item-name">Industrial automation project</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .ui-test-section {
+            padding: 40px 0;
+            background: var(--color-bg-page);
+        }
+
+        .ui-test-section .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .test-block {
+            padding: 24px;
+            border: 1px solid var(--color-border-default);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-surface);
+        }
+
+        .test-block + .test-block {
+            margin-top: 24px;
+        }
+    </style>
+
+
+    <div class="tabs" data-tabs>
+        <ul class="tabs-nav" role="tablist" aria-label="Content tabs">
+            <li>
+                <button
+                        class="tabs-btn is-active"
+                        type="button"
+                        role="tab"
+                        id="tab-1"
+                        aria-selected="true"
+                        aria-controls="panel-1">
+                    Overview
+                </button>
+            </li>
+
+            <li>
+                <button
+                        class="tabs-btn"
+                        type="button"
+                        role="tab"
+                        id="tab-2"
+                        aria-selected="false"
+                        aria-controls="panel-2">
+                    Features
+                </button>
+            </li>
+
+            <li>
+                <button
+                        class="tabs-btn"
+                        type="button"
+                        role="tab"
+                        id="tab-3"
+                        aria-selected="false"
+                        aria-controls="panel-3">
+                    Pricing
+                </button>
+            </li>
+        </ul>
+
+        <div class="tabs-panels">
+            <div
+                    class="tabs-panel is-active"
+                    id="panel-1"
+                    role="tabpanel"
+                    aria-labelledby="tab-1"
+                    aria-hidden="false">
+                Content for overview tab
+            </div>
+
+            <div
+                    class="tabs-panel"
+                    id="panel-2"
+                    role="tabpanel"
+                    aria-labelledby="tab-2"
+                    aria-hidden="true">
+                Content for features tab
+            </div>
+
+            <div
+                    class="tabs-panel"
+                    id="panel-3"
+                    role="tabpanel"
+                    aria-labelledby="tab-3"
+                    aria-hidden="true">
+                Content for pricing tab
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="topic">
+        <div class="topic__breadcrumbs">
+            <div class="breadcrumbs-wrap">
+                <ol class="breadcrumbs" aria-label="Breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="/">
+                            <span class="breadcrumbs__item-name">Home</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item" aria-current="page">
+                        <span class="breadcrumbs__item-name">Services</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="topic__heading">
+            <div class="topic__heading-top">
+                <h1 id="pagetitle" class="topic__title">SEO promotion</h1>
+            </div>
+        </div>
+
+        <div class="topic__text">
+            <p>
+                Introductory text for the page. This block is used for the page header area
+                and helps explain the content before the main sections begin.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="ui-test-section">
+        <div class="container">
+            <h1>Swiper / slider</h1>
+            <p class="text-secondary">
+                Demo page for different slider layouts based on the unified Swiper shell.
+            </p>
+
+            <!-- ===================================== -->
+            <!-- Blog / cards slider -->
+            <!-- ===================================== -->
+            <div class="test-block">
+                <h3>Blog cards slider</h3>
+
+                <section class="section swiper-shell">
+                    <div class="section__header d-f gap-8 jc-sb" style="margin-bottom: 16px;">
+                        <div class="section-header__title flex-1">
+                            <h2 class="section__title mt-0">New blog posts</h2>
+                        </div>
+
+                        <div class="section-header__navigation slider-button__inner">
+                            <button
+                                    class="slider-button slider-button-prev blog-slider-prev swiper-button-prev"
+                                    type="button"
+                                    aria-label="Previous slide"
+                            >
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+
+                            <button
+                                    class="slider-button slider-button-next blog-slider-next swiper-button-next"
+                                    type="button"
+                                    aria-label="Next slide"
+                            >
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                            class="swiper js-slider"
+                            data-swiper='{
+            "slidesPerView": 3,
+            "spaceBetween": 12,
+            "navigation": {
+              "nextEl": ".swiper-button-next",
+              "prevEl": ".swiper-button-prev"
+            },
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "breakpoints": {
+              "0": { "slidesPerView": 1.2 },
+              "576": { "slidesPerView": 1.8 },
+              "768": { "slidesPerView": 2.2 },
+              "991": { "slidesPerView": 3 },
+              "1200": { "slidesPerView": 4 }
+            }
+          }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="demo-card">
+                                    <div class="img img--4-3 img--cover img--radius-md">
+                                        <img src="https://placehold.co/800x600" alt="Post image 1">
+                                    </div>
+                                    <h4>How to build a scalable design system</h4>
+                                    <p class="text-secondary">A practical guide to tokens, components and documentation.</p>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="demo-card">
+                                    <div class="img img--4-3 img--cover img--radius-md">
+                                        <img src="https://placehold.co/800x600" alt="Post image 2">
+                                    </div>
+                                    <h4>Better forms for conversion</h4>
+                                    <p class="text-secondary">Patterns for fields, validation, states and accessibility.</p>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="demo-card">
+                                    <div class="img img--4-3 img--cover img--radius-md">
+                                        <img src="https://placehold.co/800x600" alt="Post image 3">
+                                    </div>
+                                    <h4>Pagination and table UX</h4>
+                                    <p class="text-secondary">How to keep complex interfaces readable and consistent.</p>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="demo-card">
+                                    <div class="img img--4-3 img--cover img--radius-md">
+                                        <img src="https://placehold.co/800x600" alt="Post image 4">
+                                    </div>
+                                    <h4>Dark theme done right</h4>
+                                    <p class="text-secondary">How to choose background, text and border values for dark UI.</p>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="demo-card">
+                                    <div class="img img--4-3 img--cover img--radius-md">
+                                        <img src="https://placehold.co/800x600" alt="Post image 5">
+                                    </div>
+                                    <h4>Component naming rules</h4>
+                                    <p class="text-secondary">Keep your CSS readable and scalable from the start.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </section>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Product slider -->
+            <!-- ===================================== -->
+            <div class="test-block">
+                <h3>Product slider</h3>
+
+                <section class="section swiper-shell">
+                    <div class="section__header d-f gap-8 jc-sb" style="margin-bottom: 16px;">
+                        <h2 class="section__title mt-0">Popular products</h2>
+
+                        <div class="slider-button__inner">
+                            <button class="slider-button slider-button-prev products-prev swiper-button-prev" type="button" aria-label="Previous slide">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+
+                            <button class="slider-button slider-button-next products-next swiper-button-next" type="button" aria-label="Next slide">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                            class="swiper js-slider"
+                            data-swiper='{
+            "slidesPerView": 1.25,
+            "spaceBetween": 12,
+            "navigation": {
+              "nextEl": ".swiper-button-next",
+              "prevEl": ".swiper-button-prev"
+            },
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "breakpoints": {
+              "576": { "slidesPerView": 2 },
+              "768": { "slidesPerView": 3 },
+              "1200": { "slidesPerView": 4 }
+            }
+          }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="product-card">
+                                    <div class="img img--1-1 img--contain img--radius-md">
+                                        <img src="https://placehold.co/600x600" alt="Product 1">
+                                    </div>
+                                    <h4>Motor 3kW</h4>
+                                    <p class="text-secondary">Industrial equipment</p>
+                                    <strong>89 900 ₽</strong>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="product-card">
+                                    <div class="img img--1-1 img--contain img--radius-md">
+                                        <img src="https://placehold.co/600x600" alt="Product 2">
+                                    </div>
+                                    <h4>Pump X100</h4>
+                                    <p class="text-secondary">Water systems</p>
+                                    <strong>45 000 ₽</strong>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="product-card">
+                                    <div class="img img--1-1 img--contain img--radius-md">
+                                        <img src="https://placehold.co/600x600" alt="Product 3">
+                                    </div>
+                                    <h4>Valve K21</h4>
+                                    <p class="text-secondary">Automation</p>
+                                    <strong>12 500 ₽</strong>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="product-card">
+                                    <div class="img img--1-1 img--contain img--radius-md">
+                                        <img src="https://placehold.co/600x600" alt="Product 4">
+                                    </div>
+                                    <h4>Compressor Z-21</h4>
+                                    <p class="text-secondary">Air systems</p>
+                                    <strong>64 300 ₽</strong>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </section>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Hero slider -->
+            <!-- ===================================== -->
+            <div class="test-block">
+                <h3>Hero slider</h3>
+
+                <section class="section swiper-shell">
+                    <div
+                            class="swiper js-slider"
+                            data-swiper='{
+            "slidesPerView": 1,
+            "spaceBetween": 0,
+            "loop": true,
+            "navigation": {
+              "nextEl": ".swiper-button-next",
+              "prevEl": ".swiper-button-prev"
+            },
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            }
+          }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="hero-slide">
+                                    <div class="hero-slide__content">
+                                        <h2>Engineering solutions for modern production</h2>
+                                        <p>Reliable equipment, fast delivery and technical support for B2B projects.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="hero-slide hero-slide--alt">
+                                    <div class="hero-slide__content">
+                                        <h2>Design systems for scalable digital products</h2>
+                                        <p>Tokens, components and documentation that keep interfaces consistent.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="hero-slide hero-slide--muted">
+                                    <div class="hero-slide__content">
+                                        <h2>Automation and optimization</h2>
+                                        <p>Process engineering and software support for industrial teams.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="slider-button slider-button-prev swiper-button-prev" type="button" aria-label="Previous slide">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+
+                    <button class="slider-button slider-button-next swiper-button-next" type="button" aria-label="Next slide">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+
+                    <div class="swiper-pagination"></div>
+                </section>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Logo / brand slider -->
+            <!-- ===================================== -->
+            <div class="test-block">
+                <h3>Logo slider</h3>
+
+                <section class="section swiper-shell">
+                    <div
+                            class="swiper js-slider"
+                            data-swiper='{
+            "slidesPerView": 2.2,
+            "spaceBetween": 12,
+            "loop": true,
+            "autoplay": {
+              "delay": 2200,
+              "disableOnInteraction": false
+            },
+            "breakpoints": {
+              "576": { "slidesPerView": 3.2 },
+              "768": { "slidesPerView": 4.2 },
+              "1200": { "slidesPerView": 6 }
+            }
+          }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><div class="logo-card">LOGO 1</div></div>
+                            <div class="swiper-slide"><div class="logo-card">LOGO 2</div></div>
+                            <div class="swiper-slide"><div class="logo-card">LOGO 3</div></div>
+                            <div class="swiper-slide"><div class="logo-card">LOGO 4</div></div>
+                            <div class="swiper-slide"><div class="logo-card">LOGO 5</div></div>
+                            <div class="swiper-slide"><div class="logo-card">LOGO 6</div></div>
+                            <div class="swiper-slide"><div class="logo-card">LOGO 7</div></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Progressbar pagination -->
+            <!-- ===================================== -->
+            <div class="test-block">
+                <h3>Slider with progressbar pagination</h3>
+
+                <section class="section swiper-shell has-pagination">
+                    <div
+                            class="swiper js-slider"
+                            data-swiper='{
+            "slidesPerView": 1.1,
+            "spaceBetween": 12,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "progressbar"
+            },
+            "breakpoints": {
+              "768": { "slidesPerView": 2.2 },
+              "1200": { "slidesPerView": 3 }
+            }
+          }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="demo-card">
+                                    <h4>Case 01</h4>
+                                    <p class="text-secondary">Production process redesign with measurable KPI growth.</p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="demo-card">
+                                    <h4>Case 02</h4>
+                                    <p class="text-secondary">Unified UI system for internal enterprise dashboards.</p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="demo-card">
+                                    <h4>Case 03</h4>
+                                    <p class="text-secondary">Content architecture and design tokens for product teams.</p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="demo-card">
+                                    <h4>Case 04</h4>
+                                    <p class="text-secondary">Responsive component library and visual QA rules.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </section>
+            </div>
+
+            <!-- ===================================== -->
+            <!-- Mobile cards slider -->
+            <!-- ===================================== -->
+            <div class="test-block">
+                <h3>Compact mobile-first slider</h3>
+
+                <section class="section swiper-shell">
+                    <div
+                            class="swiper js-slider"
+                            data-swiper='{
+            "slidesPerView": 1.15,
+            "spaceBetween": 10,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "breakpoints": {
+              "768": { "slidesPerView": 2.3 },
+              "1200": { "slidesPerView": 3.3 }
+            }
+          }'
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="mini-card">
+                                    <h4>Fast launch</h4>
+                                    <p class="text-secondary">Good for mobile cards and short content blocks.</p>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="mini-card">
+                                    <h4>Reusable layout</h4>
+                                    <p class="text-secondary">A compact presentation for repeated content units.</p>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="mini-card">
+                                    <h4>Flexible config</h4>
+                                    <p class="text-secondary">All settings come from <code>data-swiper</code>.</p>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <article class="mini-card">
+                                    <h4>UI consistency</h4>
+                                    <p class="text-secondary">Uses the same arrows and pagination tokens.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .ui-test-section {
+            padding: 40px 0;
+            background: var(--color-bg-page);
+        }
+
+        .ui-test-section .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .test-block {
+            padding: 24px;
+            border: 1px solid var(--color-border-default);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-surface);
+        }
+
+        .test-block + .test-block {
+            margin-top: 24px;
+        }
+
+        .demo-card,
+        .product-card,
+        .mini-card {
+            height: 100%;
+            padding: 16px;
+            border: 1px solid var(--color-border-default);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-surface);
+        }
+
+        .demo-card h4,
+        .product-card h4,
+        .mini-card h4 {
+            margin: 12px 0 8px;
+        }
+
+        .demo-card p,
+        .product-card p,
+        .mini-card p {
+            margin: 0 0 8px;
+        }
+
+        .hero-slide {
+            min-height: 320px;
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, var(--color-brand), var(--color-primary-700));
+            color: var(--color-text-inverse);
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .hero-slide--alt {
+            background: linear-gradient(135deg, var(--color-info-700), var(--color-primary-500));
+        }
+
+        .hero-slide--muted {
+            background: linear-gradient(135deg, var(--color-neutral-700), var(--color-neutral-900));
+        }
+
+        .hero-slide__content {
+            max-width: 640px;
+        }
+
+        .hero-slide__content h2 {
+            margin: 0 0 12px;
+            color: inherit;
+        }
+
+        .hero-slide__content p {
+            margin: 0;
+            color: inherit;
+            opacity: .9;
+        }
+
+        .logo-card {
+            min-height: 96px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--color-border-default);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-surface);
+            color: var(--color-text-secondary);
+            font-weight: 700;
+            letter-spacing: .04em;
+        }
+    </style>
+
+</div>
+
+

@@ -1,0 +1,65 @@
+/* utilities/_tags.scss */
+@use "../mixins" as m;     // для @include m.media()
+@use "../variables" as vars;
+
+
+/* =========================================
+   Tags
+   ========================================= */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: m.em(8);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: m.em(8) m.em(12);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-size: 14px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: var(--transition-base);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-surface-hover);
+    border-color: var(--color-border-strong);
+  }
+
+  &:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--color-brand) 24%, transparent);
+    outline-offset: 2px;
+  }
+
+  &--brand {
+    background-color: var(--color-brand-subtle);
+    border-color: transparent;
+    color: var(--color-brand);
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--color-brand-subtle) 75%, var(--color-brand) 10%);
+      color: var(--color-brand);
+    }
+  }
+
+  &--sm {
+    min-height: 28px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  &--lg {
+    min-height: 36px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}

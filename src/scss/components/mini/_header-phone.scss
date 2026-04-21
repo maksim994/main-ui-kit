@@ -1,0 +1,72 @@
+/* =========================================
+   Header phone
+   ========================================= */
+
+.header-phone {
+  position: relative;
+
+  &__trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  &__arrow {
+    transition: var(--transition-base);
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 320px;
+    padding: 16px;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4px);
+    transition: var(--transition-base);
+    z-index: 30;
+  }
+
+  &.is-open &__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &.is-open &__arrow {
+    transform: rotate(180deg);
+  }
+
+  &__group {
+    display: grid;
+    gap: 12px;
+  }
+
+  &__label {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  &__value {
+    color: var(--color-text-primary);
+    font-size: 15px;
+    line-height: 1.45;
+  }
+}

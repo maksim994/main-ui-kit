@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+    "title": "Список страниц"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+    <div class="wrapper">
+        <div class="topic">
+
+            <div class="topic__heading">
+                <h1 id="pagetitle" class="switcher-title">Контакты</h1>
+            </div>
+
+            <div id="navigation">
+                <div class="breadcrumbs breadcrumbs--icon">
+                    <div class="breadcrumbs__item" id="bx_breadcrumb_0">
+                        <a href="/" class="breadcrumbs__link">Главная</a>
+                    </div>
+
+                    <div class="breadcrumbs__item">
+                        <span class="breadcrumbs__item-name">Контакты</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="grid-list grid-list-items-2 grid-list-lg-items-1 mb-48">
+            <div class="item d-f fd-c gap-32">
+                <picture class="img">
+                    <img src="https://priority2-demo.ru/images/mediacontent/branch-2.jpg" alt="">
+                </picture>
+
+                <div class="grid-list grid-list-items-2 grid-list-lg-items-1 grid-list-md-items-1">
+                    <div class="item">
+                        <div class="text-grey">Телефон</div>
+                        <div class="value text-xl">
+                            г. Москва, ул. Пушкина 19
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text-grey">Телефон</div>
+                        <div class="value text-xl">
+                            <a href="#" class="dark-link d-b">+7 000 000-00-00</a>
+                            <a href="#" class="dark-link d-b">+7 (000) 000-00-10</a>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="text-grey">E-mail</div>
+                        <div class="value text-xl">
+                            <a href="#" class="dark-link d-b">info@priority2-demo.ru</a>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="text-grey">Режим работы</div>
+                        <div class="value text-xl">
+                            Пн. – Пт.: с 9:00 до 18:00
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text text-reset">
+                    <p>Основной офис компании находится в Москве. Обязательно приходите к нам на чашку ароматного кофе. Совместно обсудим ваши проекты и предложим рекомендации!</p>
+                </div>
+            </div>
+            <div class="item">
+                <div id="map" class="maps w-full h-full h-lg-280 mt-lg-48"></div>
+            </div>
+        </div>
+    </div>
+</main>
+@include('partials/component/footer.html')

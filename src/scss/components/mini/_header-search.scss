@@ -1,0 +1,51 @@
+/* =========================================
+   Header search
+   ========================================= */
+
+.header-search {
+  position: relative;
+
+  &__form {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 52px 0 16px;
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-surface);
+    color: var(--color-text-primary);
+  }
+
+  &__submit {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    inline-size: 32px;
+    block-size: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+  }
+
+  &--overlay {
+    display: none;
+  }
+
+  &--overlay.is-open {
+    display: block;
+    position: absolute;
+    inset: 100% 0 auto 0;
+    padding: 16px 0;
+    background: var(--color-bg-surface);
+    border-top: 1px solid var(--color-border-default);
+    z-index: 35;
+  }
+}

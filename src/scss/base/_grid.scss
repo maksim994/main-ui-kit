@@ -1,0 +1,96 @@
+@use "sass:list";
+@use "./mixins" as m;
+@use "variables" as vars;
+
+/* Grid base styles (без брейкпоинтов) */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-0.5 * vars.$container-offset);
+  margin-left:  calc(-0.5 * vars.$container-offset);
+
+  > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: vars.$container-offset;
+    padding-left:  vars.$container-offset;
+
+    @media (max-width: 576px) {
+      padding-inline: calc(0.5 * vars.$container-offset);
+    }
+  }
+
+  &-list { row-gap: var(--layout-gap); }
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: clamp(1024px, 90vw, var(--container-width));
+
+  padding-inline: clamp(10px, 2vw, 20px);
+
+  @media (min-width: 1920px) { max-width: 1680px; }
+
+  @include m.media(sm) { padding: 0 20px; }
+}
+
+
+
+// Базовые (без суффикса брейкпоинта)
+@include m.grid();
+@include m.project-classes();
+
+// Responsive: только по тем брейкпоинтам, что указаны в конфиге
+@each $bp, $val in vars.$breakpoints {
+  @media (max-width: $val) {
+
+    // Сетка .col-{$bp}-N, .order-{$bp}-N, .off-{$bp}-N
+    @include m.grid($bp);
+
+    // Утилиты на выбранных брейкпоинтах
+    @if list.index(vars.$utility-breakpoints, $bp) {
+      @include m.project-classes($bp);
+    }
+  }
+}
+
+
+/* Пример твоих кастомных блоков */
+//.wrapper-content {
+//  display: flex;
+//  flex-direction: row;
+//  min-width: 0;
+//
+//  @include m.media(md) { flex-direction: column; }
+//
+//  &.aside-pos-right {
+//    .aside_block { order: 2; padding-left: var(--layout-gap); }
+//    .right_block { order: 1; }
+//  }
+//
+//  &.aside-pos-left {
+//    .aside_block {
+//      padding-right: var(--layout-gap);
+//      @include m.media(md) { order: 2; }
+//    }
+//  }
+//
+//  .aside_block {
+//    width: m.em(304);
+//    flex-shrink: 0;
+//
+//    @include m.media(md) {
+//      margin-top: 20px;
+//      width: 100%;
+//      padding: 0 !important
+//    }
+//  }
+//
+//  .right_block {
+//    width: 100%;
+//    min-width: 0;
+//    > p { margin-top: 0; }
+//  }
+//}

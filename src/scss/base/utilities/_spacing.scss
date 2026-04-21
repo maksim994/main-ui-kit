@@ -1,0 +1,71 @@
+/* utilities/_spacing.scss */
+@use "../mixins" as m;     // для @include m.media()
+@use "../variables" as vars;
+
+/*
+  Ожидаем в vars:
+  $sizes: (0: 0, 4: 4px, 8: 8px, 12: 12px, 16: 16px, 20: 20px, 24: 24px, 32: 32px, 40: 40px);
+  $breakpoints: (xl: 1200px, lg: 992px, md: 768px, sm: 576px);
+*/
+
+/* Генератор spacing-утилит */
+@mixin gen-spacing($bp: "") {
+  $suf: if($bp == "" or $bp == null, "", "-#{$bp}");
+
+  @each $key, $val in vars.$sizes {
+    /* все стороны */
+    .m#{$suf}-#{$key}  { margin: $val !important; }
+    .p#{$suf}-#{$key}  { padding: $val !important; }
+
+    /* оси */
+    .mx#{$suf}-#{$key} { margin-inline: $val !important; }
+    .my#{$suf}-#{$key} { margin-block: $val !important; }
+    .px#{$suf}-#{$key} { padding-inline: $val !important; }
+    .py#{$suf}-#{$key} { padding-block: $val !important; }
+
+    /* стороны (логические свойства — корректно в RTL/LTR) */
+    .mt#{$suf}-#{$key} { margin-block-start: $val !important; }
+    .mr#{$suf}-#{$key} { margin-inline-end:  $val !important; }
+    .mb#{$suf}-#{$key} { margin-block-end:   $val !important; }
+    .ml#{$suf}-#{$key} { margin-inline-start:$val !important; }
+
+    .pt#{$suf}-#{$key} { padding-block-start: $val !important; }
+    .pr#{$suf}-#{$key} { padding-inline-end:  $val !important; }
+    .pb#{$suf}-#{$key} { padding-block-end:   $val !important; }
+    .pl#{$suf}-#{$key} { padding-inline-start:$val !important; }
+  }
+
+  /* явные нули */
+  .m#{$suf}-0 { margin: 0 !important; }
+  .p#{$suf}-0 { padding: 0 !important; }
+
+}
+
+/* gap-утилиты */
+@mixin gen-gap($bp: "") {
+  $suf: if($bp == "" or $bp == null, "", "-#{$bp}");
+
+  @each $key, $val in vars.$sizes {
+    .gap#{$suf}-#{$key}      { gap: $val !important; }
+    .row-gap#{$suf}-#{$key}  { row-gap: $val !important; }
+    .col-gap#{$suf}-#{$key}  { column-gap: $val !important; }
+
+    .w-#{$suf}-#{$key} { width: $val}
+    .h-#{$suf}-#{$key} { height: $val}
+  }
+
+  /* «умолчательный» gap из переменной темы */
+  .gap#{$suf} { gap: var(--layout-gap) !important; }
+}
+
+/* Базовые (без брейкпоинтов) */
+@include gen-spacing();
+@include gen-gap();
+
+/* Адаптивные версии: .mt-md-16, .px-sm-12, .gap-lg-24 и т.д. */
+@each $bp, $w in vars.$breakpoints {
+  @media (max-width: $w) {
+    @include gen-spacing($bp);
+    @include gen-gap($bp);
+  }
+}

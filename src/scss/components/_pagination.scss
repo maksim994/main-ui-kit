@@ -1,0 +1,195 @@
+@use "../base/mixins" as m;
+
+/* =========================================
+   Pagination
+   ========================================= */
+
+.pagination {
+  --pagi-h: 32px;
+  --pagi-radius: var(--radius-sm);
+  --pagi-gap: 8px;
+
+  --pagi-bg: var(--color-bg-surface);
+  --pagi-bg-hover: var(--color-brand-subtle);
+  --pagi-bg-active: var(--color-brand);
+
+  --pagi-color: var(--color-text-primary);
+  --pagi-color-hover: var(--color-brand);
+  --pagi-color-active: var(--color-text-inverse);
+
+  --pagi-border: var(--color-border-default);
+  --pagi-border-hover: var(--color-brand);
+  --pagi-border-active: var(--color-brand);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: m.em(16);
+  margin-top: m.em(32);
+
+  &--center  { justify-content: center; }
+  &--between { justify-content: space-between; }
+  &--end     { justify-content: flex-end; }
+
+  @include m.media(sm) {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: var(--pagi-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li{
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &__item {
+    inline-size: var(--pagi-h);
+    block-size: var(--pagi-h);
+    flex: 0 0 auto;
+    border-radius: var(--pagi-radius);
+    overflow: hidden;
+
+    &--active,
+    &[aria-current="page"] {
+      .pagination__link {
+        background-color: var(--pagi-bg-active);
+        border-color: var(--pagi-border-active);
+        color: var(--pagi-color-active);
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+
+    &--ellipsis {
+      inline-size: auto;
+      min-inline-size: 32px;
+
+      .pagination__text {
+        padding-inline: 8px;
+      }
+    }
+
+    &--disabled {
+      .pagination__link {
+        pointer-events: none;
+        opacity: .5;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 100%;
+    block-size: 100%;
+    border: 1px solid var(--pagi-border);
+    border-radius: var(--pagi-radius);
+    background-color: var(--pagi-bg);
+    color: var(--pagi-color);
+    text-decoration: none;
+    line-height: 1;
+    transition: var(--transition-base);
+
+    &:hover {
+      background-color: var(--pagi-bg-hover);
+      border-color: var(--pagi-border-hover);
+      color: var(--pagi-color-hover);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-brand) 18%, transparent);
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 100%;
+    block-size: 100%;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__icons{
+    overflow: hidden;
+    display: none;
+  }
+
+  /* =========================================
+     Prev / Next
+     ========================================= */
+
+  &__item_prev,
+  &__item_next {
+    inline-size: var(--pagi-h);
+    block-size: var(--pagi-h);
+
+    .pagination__text{
+      display: none;
+    }
+
+    .pagination__link {
+      position: relative;
+      font-size: 0;
+
+      &::after {
+        content: "";
+        inline-size: 18px;
+        block-size: 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath d='M15 19L8 12l7-7' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+
+      &:hover::after {
+        opacity: .9;
+      }
+    }
+  }
+
+  &__item_next .pagination__link::after {
+    transform: rotate(180deg);
+  }
+
+  :dir(rtl) & {
+    &__item_prev .pagination__link::after {
+      transform: rotate(180deg);
+    }
+
+    &__item_next .pagination__link::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  /* =========================================
+     Sizes
+     ========================================= */
+
+  &--sm {
+    --pagi-h: 28px;
+    --pagi-gap: 6px;
+  }
+
+  &--lg {
+    --pagi-h: 40px;
+    --pagi-gap: 10px;
+  }
+}

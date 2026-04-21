@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+    "title": "Список страниц"
+})
+
+@include('partials/component/header.html')
+
+<div class="main">
+    <div class="wrapper">
+        <div class="topic">
+            <div class="topic__heading">
+                @include('partials/base/breadcrumb.html')
+                <div class="topic__heading-top">
+                    <h1 class="topic__title">Заголовок h1</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper-content content-layout content-layout--aside-left">
+            <aside class="aside_block">
+                <div class="aside-scroll-block">
+                    <div class="article-aside-card">
+                        <div class="article-aside-card__title">Рубрики блога</div>
+
+                        <ul class="side-menu aside-block">
+                            <li class="side-menu-item">
+                        <span class="side-menu-top-level">
+                            <a href="/blog/avtomobili/" class="dark-link">Автомобили</a>
+                        </span>
+                            </li>
+                            <li class="side-menu-item">
+                        <span class="side-menu-top-level">
+                            <a href="/blog/zdorove/" class="dark-link">Здоровье</a>
+                        </span>
+                            </li>
+                            <li class="side-menu-item active">
+                        <span class="side-menu-top-level">
+                            <a href="/blog/krasota/" class="dark-link" aria-current="page">Красота</a>
+                        </span>
+                            </li>
+                            <li class="side-menu-item">
+                        <span class="side-menu-top-level">
+                            <a href="/blog/otdykh/" class="dark-link">Отдых</a>
+                        </span>
+                            </li>
+                            <li class="side-menu-item">
+                        <span class="side-menu-top-level">
+                            <a href="/blog/remont/" class="dark-link">Ремонт</a>
+                        </span>
+                            </li>
+                            <li class="side-menu-item">
+                        <span class="side-menu-top-level">
+                            <a href="/blog/stroitelstvo/" class="dark-link">Строительство</a>
+                        </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="right_block content-layout__main">
+                <article class="article-detail">
+                    <header class="article-detail__header">
+
+                        <div class="article-detail__lead text-lg text-secondary">
+                            Простая и безопасная схема вечернего ухода: как вводить активы поэтапно, не сорвать барьер кожи и получить результат без раздражения.
+                        </div>
+
+                        <div class="article-detail__meta">
+                            <div class="article-meta">
+                                <div class="article-detail__category">
+                                    <a href="/blog/krasota/" class="badge badge-info">Красота</a>
+                                </div>
+                                <span class="article-meta__item">02 октября 2025</span>
+                                <span class="article-meta__item">2 мин.</span>
+                                <span class="article-meta__item">402 просмотра</span>
+                                <span class="article-meta__item">Обновлено 08 октября 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="article-detail__cover">
+                            <picture class="img img--16-9">
+                                <img src="https://usp-ek.ru/uploadedFiles/catalogimages/big/izgotovlenie-metallokonstruktsij.jpg" alt="Ночная рутина для кожи">
+                            </picture>
+                        </div>
+                    </header>
+
+                    <div class="article-detail__body">
+                        <div class="article-toc" data-toc>
+                            <button class="article-toc__toggle" type="button" aria-expanded="true" aria-controls="article-toc-list">
+                                <span class="article-toc__title">Содержание</span>
+                                <span class="article-toc__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 20 20" width="20" height="20" fill="none">
+                                        <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <div class="article-toc__body" id="article-toc-list">
+                                <ol class="article-toc__list">
+                                    <li><a href="#base-night-routine">База ночной рутины</a></li>
+                                    <li><a href="#active-compatibility">Матрица активов и совместимость</a></li>
+                                    <li><a href="#retinoid-sandwich">Правило «сэндвича» для ретиноида</a></li>
+                                    <li><a href="#four-week-plan">План на 4 недели</a></li>
+                                    <li><a href="#layers-order">Порядок нанесения</a></li>
+                                    <li><a href="#skin-type">Подбор под тип кожи</a></li>
+                                    <li><a href="#safety-checklist">Чек-лист безопасности</a></li>
+                                    <li><a href="#common-mistakes">Типичные ошибки</a></li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="article-content text-reset">
+                            <p>
+                                Ночью кожа восстанавливается быстрее, чем днём. Поэтому именно вечерний уход чаще всего даёт самый заметный результат — если не перегружать кожу и правильно сочетать активные средства.
+                            </p>
+
+                            <p>
+                                Главный принцип простой: в одну ночь — один сильный актив. Всё остальное должно помогать коже восстанавливаться, а не конкурировать между собой.
+                            </p>
+
+                            <h2 id="base-night-routine">База ночной рутины</h2>
+                            <p>Минимальная рабочая схема выглядит так:</p>
+
+                            <ul>
+                                <li>мягкое очищение;</li>
+                                <li>при необходимости лёгкий увлажняющий слой;</li>
+                                <li>один актив: ретиноид, кислота или пептиды;</li>
+                                <li>крем для восстановления барьера.</li>
+                            </ul>
+
+                            <blockquote>
+                                Ночная рутина должна быть не агрессивной, а регулярной.
+                                <small>Именно регулярность даёт стабильный результат.</small>
+                            </blockquote>
+
+                            <h2 id="active-compatibility">Матрица активов и совместимость</h2>
+
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Актив</th>
+                                        <th>Задача</th>
+                                        <th>Старт</th>
+                                        <th>Совместим</th>
+                                        <th>Осторожно</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Ретиноид</td>
+                                        <td>Текстура, морщины, пост-акне</td>
+                                        <td>2 раза в неделю</td>
+                                        <td>Ниацинамид, пептиды, крем</td>
+                                        <td>Кислоты в ту же ночь</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AHA</td>
+                                        <td>Тусклость, рельеф</td>
+                                        <td>1–2 раза в неделю</td>
+                                        <td>Увлажняющий уход</td>
+                                        <td>Ретиноид в ту же ночь</td>
+                                    </tr>
+                                    <tr>
+                                        <td>BHA</td>
+                                        <td>Поры, комедоны</td>
+                                        <td>1–3 раза в неделю</td>
+                                        <td>Лёгкий крем</td>
+                                        <td>Ретиноид в ту же ночь</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Пептиды</td>
+                                        <td>Поддержка барьера</td>
+                                        <td>Каждый вечер</td>
+                                        <td>Почти со всем</td>
+                                        <td>—</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 id="retinoid-sandwich">Правило «сэндвича» для ретиноида</h2>
+                            <ol>
+                                <li>Нанеси тонкий слой крема.</li>
+                                <li>Подожди 5–10 минут.</li>
+                                <li>Добавь горошину ретиноида.</li>
+                                <li>Сверху ещё один тонкий слой крема.</li>
+                            </ol>
+
+                            <h2 id="four-week-plan">План на 4 недели</h2>
+
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Неделя</th>
+                                        <th>Пн</th>
+                                        <th>Вт</th>
+                                        <th>Ср</th>
+                                        <th>Чт</th>
+                                        <th>Пт</th>
+                                        <th>Сб</th>
+                                        <th>Вс</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>База</td>
+                                        <td>База</td>
+                                        <td>AHA/BHA</td>
+                                        <td>База</td>
+                                        <td>Ретиноид</td>
+                                        <td>База</td>
+                                        <td>База</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Пептиды</td>
+                                        <td>Ретиноид</td>
+                                        <td>База</td>
+                                        <td>AHA/BHA</td>
+                                        <td>База</td>
+                                        <td>Ретиноид</td>
+                                        <td>База</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 id="layers-order">Порядок нанесения</h2>
+                            <p>
+                                Логика простая: от более лёгкого к более плотному. Исключение — «сэндвич» с ретиноидом, где крем используется и до, и после актива.
+                            </p>
+
+                            <h2 id="skin-type">Подбор под тип кожи</h2>
+                            <p>
+                                Для сухой кожи лучше мягкий старт с акцентом на восстановление. Для жирной и комбинированной можно чаще использовать BHA. Для чувствительной кожи лучше растягивать интервалы и не вводить несколько новинок одновременно.
+                            </p>
+
+                            <h2 id="safety-checklist">Чек-лист безопасности</h2>
+                            <ul>
+                                <li>не сочетать сильные кислоты и ретиноид в одну ночь;</li>
+                                <li>не наносить активы на влажную раздражённую кожу;</li>
+                                <li>не увеличивать частоту резко;</li>
+                                <li>обязательно использовать SPF днём.</li>
+                            </ul>
+
+                            <h2 id="common-mistakes">Типичные ошибки</h2>
+                            <p>
+                                Самая частая ошибка — желание ускорить результат и нанести всё сразу. В реальности так чаще всего получают раздражение, шелушение и откат по уходу.
+                            </p>
+
+                            <div class="alert alert-info alert--soft">
+                                <div class="alert-title">Совет</div>
+                                <div class="alert-desc">
+                                    Если кожа стала чувствительной, вернись на 3–5 дней к базовой схеме: очищение, увлажнение и защита барьера.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="article-author-card">
+                        <div class="article-author-card__avatar avatar avatar-lg">
+                            <img src="https://corporate.hubsup.ru/upload/iblock/8ee/ir7xpvneo40dnqdekqhztkyqixjvfdo0.jpg" alt="Анна Литвинова">
+                        </div>
+
+                        <div class="article-author-card__content">
+                            <div class="article-author-card__label">Автор материала</div>
+                            <a href="#" class="article-author-card__name dark-link">Анна Литвинова</a>
+                            <div class="article-author-card__text text-reset">
+                                <p>Анна объясняет сложные темы ухода за кожей простым языком: без крайностей, лишней паники и перегруза терминами.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-share-card">
+                        <div class="article-share-card__left">
+                            <div class="article-share-card__title">Поделиться статьёй</div>
+                            <div class="article-share-card__text">Сохрани себе или отправь тому, кому это сейчас пригодится.</div>
+                        </div>
+
+                        <div class="article-share-card__right">
+                            <button type="button" class="btn btn-primary btn-sm">Поделиться</button>
+                            <button type="button" class="btn btn-secondary btn-sm btn-outline">Скопировать ссылку</button>
+                        </div>
+                    </section>
+
+                    <section class="article-related swiper-shell">
+                        <div class="article-related__head d-f ai-c jc-sb gap">
+                            <div class="article-related__title h2">Популярные статьи</div>
+
+                            <div class="section-header__navigation slider-button__inner">
+                                <button class="slider-button slider-button-prev blog-slider-prev swiper-button-prev" type="button" aria-label="Previous slide">
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="32.000000" fill="none">
+                                        <path d="M14 15.9608C13.4981 15.9608 12.9964 15.7692 12.6138 15.3868L0.574397 3.34729C-0.191466 2.58143 -0.191466 1.33972 0.574397 0.574164C1.33995 -0.191388 2.58142 -0.191388 3.34734 0.574164L14 11.2274L24.6526 0.574535C25.4185 -0.191018 26.6598 -0.191018 27.4253 0.574535C28.1916 1.34009 28.1916 2.5818 27.4253 3.34767L15.3861 15.3872C15.0033 15.7697 14.5016 15.9608 14 15.9608Z" fill="currentColor" fill-rule="nonzero" transform="matrix(0,1,-1,0,24,2)" />
+                                    </svg>
+                                </button>
+
+                                <button class="slider-button slider-button-next blog-slider-next swiper-button-next" type="button" aria-label="Next slide">
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.000000" height="32.000000" fill="none">
+                                        <path d="M14 15.9608C13.4981 15.9608 12.9964 15.7692 12.6138 15.3868L0.574397 3.3473C-0.191466 2.58143 -0.191466 1.33972 0.574397 0.574164C1.33995 -0.191388 2.58142 -0.191388 3.34734 0.574164L14 11.2274L24.6526 0.574535C25.4185 -0.191018 26.6598 -0.191018 27.4253 0.574535C28.1916 1.34009 28.1916 2.5818 27.4253 3.34767L15.3861 15.3872C15.0033 15.7697 14.5016 15.9608 14 15.9608Z" fill="currentColor" fill-rule="nonzero" transform="matrix(0,-1,1,0,8,30)" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div style="min-width: 0">
+                            <div class="swiper js-slider" data-swiper='{"slidesPerView": 3, "spaceBetween": 12, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" }, "pagination": { "el": ".swiper-pagination", "clickable": true }, "breakpoints": { "0": { "slidesPerView": 1.2 }, "576": { "slidesPerView": 1.2 }, "768": { "slidesPerView": 1.5 }, "991": { "slidesPerView": 2.3 }, "1200": { "slidesPerView": 3 } }}' >
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        @include('./partials/element/card/card-article.html', {
+                                        'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                                        'date': '5 февраля 2026',
+                                        'section': 'Маркетинг',
+                                        'name': 'Улучшите клиентский опыт',
+                                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                                        })
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        @include('./partials/element/card/card-article.html', {
+                                        'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                                        'date': '5 февраля 2026',
+                                        'section': 'Маркетинг',
+                                        'name': 'Улучшите клиентский опыт',
+                                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                                        })
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        @include('./partials/element/card/card-article.html', {
+                                        'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                                        'date': '5 февраля 2026',
+                                        'section': 'Маркетинг',
+                                        'name': 'Улучшите клиентский опыт',
+                                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                                        })
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        @include('./partials/element/card/card-article.html', {
+                                        'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                                        'date': '5 февраля 2026',
+                                        'section': 'Маркетинг',
+                                        'name': 'Улучшите клиентский опыт',
+                                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                                        })
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        @include('./partials/element/card/card-article.html', {
+                                        'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                                        'date': '5 февраля 2026',
+                                        'section': 'Маркетинг',
+                                        'name': 'Улучшите клиентский опыт',
+                                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                                        })
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        @include('./partials/element/card/card-article.html', {
+                                        'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                                        'date': '5 февраля 2026',
+                                        'section': 'Маркетинг',
+                                        'name': 'Улучшите клиентский опыт',
+                                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                                        })
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <div class="article-detail__footer-nav">
+                        <a href="/blog/" class="dark-link d-f ai-c gap-4">← Назад к списку</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</main>
+@include('partials/component/footer.html')

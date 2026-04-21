@@ -1,0 +1,118 @@
+/* utilities/_tags.scss */
+@use "../mixins" as m;     // для @include m.media()
+@use "../variables" as vars;
+
+/* =========================================
+   SVG / Icon
+   ========================================= */
+
+.svg {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: auto;
+  min-height: auto;
+
+  > svg {
+    inline-size: 100%;
+    block-size: 100%;
+    display: block;
+  }
+}
+
+.icon {
+  color: currentColor;
+  inline-size: 1em;
+  block-size: 1em;
+  display: inline-block;
+  flex: none;
+
+  > svg {
+    inline-size: 100%;
+    block-size: 100%;
+    display: block;
+  }
+}
+
+$icon-sizes: (8, 12, 16, 18, 20, 24, 32, 48, 64);
+
+@each $s in $icon-sizes {
+  .icon--#{$s} {
+    inline-size: $s * 1px;
+    block-size: $s * 1px;
+  }
+
+  /* legacy support */
+  .icons.icons-#{$s} {
+    inline-size: $s * 1px;
+    block-size: $s * 1px;
+  }
+}
+
+.icons {
+  color: var(--color-text-secondary);
+  inline-size: auto;
+  block-size: auto;
+
+  .svg,
+  svg {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  &.icons-color-theme {
+    svg {
+      color: var(--color-brand);
+    }
+  }
+}
+
+/* =========================================
+   Fill / Stroke helpers
+   ========================================= */
+
+.fill-current,
+.fill-current * {
+  fill: currentColor;
+}
+
+.fill-text,
+.fill-text * {
+  fill: var(--color-text-primary);
+}
+
+.fill-brand,
+.fill-brand * {
+  fill: var(--color-brand);
+}
+
+.stroke-current,
+.stroke-current * {
+  stroke: currentColor;
+}
+
+.stroke-text,
+.stroke-text * {
+  stroke: var(--color-text-primary);
+}
+
+.stroke-brand,
+.stroke-brand * {
+  stroke: var(--color-brand);
+}
+
+/* legacy aliases */
+.fill-theme svg *,
+.fill-theme-svg,
+.fill-theme-use-svg svg {
+  fill: var(--color-brand);
+}
+
+.stroke-theme *,
+.stroke-theme-use-svg svg,
+.stroke-theme-svg {
+  stroke: var(--color-brand);
+}

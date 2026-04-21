@@ -1,0 +1,39 @@
+@use "base/mixins" as m;
+
+.detail-authors{
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 40px;
+
+  @include m.media(md){
+    grid-template-columns: 1fr;
+  }
+
+  // .detail-authors-images
+  &-images{
+
+    @include m.media(md){
+      max-width: 400px;
+    }
+
+  }
+
+  // .detail-authors-inner
+  &-inner{
+
+  }
+
+  // .detail-authors-name
+  &-names{
+    h1{
+      margin: 0;
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+
+  // .detail-authors-post
+  &-post{
+    display: inline-block;
+  }
+}

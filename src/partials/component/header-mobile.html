@@ -1,0 +1,154 @@
+<header class="header-mobile js-header-mobile">
+    <div class="wrapper">
+        <div class="header-mobile__inner">
+            <button class="header-mobile__burger burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+                <span class="burger__lines" aria-hidden="true">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </span>
+            </button>
+
+            <div class="header-mobile__logo">
+                @include('./logo/logo-svg.html')
+            </div>
+
+            <div class="header-mobile__actions">
+                <button class="btn btn-icon btn-ghost" type="button" aria-label="Личный кабинет">
+                    <i class="svg" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M7.39517 8.67067C8.58633 8.67067 9.61768 8.24342 10.4606 7.40048C11.3033 6.55772 11.7306 5.52652 11.7306 4.33521C11.7306 3.14426 11.3034 2.11296 10.4605 1.26988C9.61754 0.427218 8.58619 0 7.39517 0C6.20384 0 5.1726 0.427218 4.32984 1.27002C3.48707 2.11282 3.05968 3.14416 3.05968 4.33521C3.05968 5.52652 3.48704 6.55786 4.32987 7.40066C5.17292 8.24332 6.20426 8.67067 7.39514 8.67067H7.39517ZM5.07581 2.01586C5.72248 1.36916 6.48111 1.05483 7.39517 1.05483C8.30909 1.05483 9.06783 1.36916 9.71464 2.01586C10.3613 2.66266 10.6758 3.4214 10.6758 4.33518C10.6758 5.24924 10.3613 6.00787 9.71464 6.65468C9.06783 7.30152 8.30909 7.61585 7.39517 7.61585C6.48136 7.61585 5.72279 7.30138 5.07581 6.65468C4.42898 6.00802 4.1145 5.24927 4.1145 4.33521C4.1145 3.4214 4.42898 2.66266 5.07581 2.01586ZM14.9811 13.8411C14.9567 13.4904 14.9076 13.1077 14.8352 12.7038C14.7622 12.2967 14.6681 11.9119 14.5555 11.5602C14.439 11.1967 14.281 10.8377 14.0853 10.4937C13.8824 10.1367 13.644 9.82573 13.3765 9.5699C13.0968 9.30225 12.7543 9.08706 12.3582 8.93006C11.9635 8.77396 11.5261 8.69486 11.0583 8.69486C10.8745 8.69486 10.6968 8.77024 10.3536 8.99369C10.1097 9.15254 9.86501 9.31028 9.61961 9.46689C9.38382 9.61715 9.06439 9.75791 8.66983 9.88535C8.2849 10.0099 7.89407 10.0731 7.50816 10.0731C7.12257 10.0731 6.73171 10.0099 6.3465 9.88535C5.9524 9.75802 5.63283 9.61729 5.39742 9.46703C5.12426 9.29248 4.87711 9.13319 4.66273 8.99351C4.31982 8.7701 4.1421 8.69469 3.95837 8.69469C3.49034 8.69469 3.0531 8.77393 2.65855 8.93023C2.26276 9.08692 1.92013 9.30211 1.64011 9.57004C1.3726 9.82601 1.13421 10.1368 0.931498 10.4937C0.7361 10.8377 0.577897 11.1965 0.461425 11.5603C0.348925 11.912 0.254882 12.2967 0.181828 12.7038C0.109301 13.1072 0.0602928 13.49 0.0359648 13.8415C0.0120586 14.1852 0 14.543 0 14.9044C0 15.844 0.298687 16.6047 0.887694 17.1657C1.46942 17.7193 2.23903 18 3.17517 18H11.8423C12.7781 18 13.5478 17.7193 14.1296 17.1657C14.7188 16.6051 15.0175 15.8442 15.0175 14.9043C15.0173 14.5416 15.0051 14.1839 14.9811 13.8411ZM13.4023 16.4014C13.0179 16.7673 12.5076 16.9451 11.8421 16.9451H3.1752C2.50959 16.9451 1.99926 16.7673 1.615 16.4016C1.23806 16.0427 1.05486 15.5529 1.05486 14.9044C1.05486 14.5671 1.06597 14.2341 1.08826 13.9144C1.10992 13.6008 1.15428 13.2562 1.2201 12.8901C1.28503 12.5285 1.36768 12.1892 1.46601 11.882C1.56037 11.5874 1.68904 11.2957 1.84862 11.0147C2.00091 10.7469 2.17613 10.5172 2.36949 10.3321C2.55037 10.1589 2.77836 10.0172 3.04695 9.91091C3.29536 9.81255 3.57457 9.75872 3.87766 9.7506C3.91457 9.77029 3.98038 9.80777 4.08694 9.87723C4.30378 10.0186 4.55371 10.1798 4.83004 10.3562C5.14152 10.5548 5.54276 10.7342 6.02218 10.8889C6.5123 11.0474 7.01218 11.1279 7.50834 11.1279C8.00453 11.1279 8.50453 11.0474 8.99439 10.8891C9.4742 10.734 9.87534 10.5548 10.1872 10.356C10.47 10.1753 10.7129 10.0187 10.9297 9.87723C11.0363 9.80787 11.1021 9.77025 11.1391 9.75064C11.4423 9.75872 11.7215 9.81255 11.97 9.91088C12.2385 10.0172 12.4665 10.159 12.6473 10.3321C12.8407 10.517 13.0159 10.7468 13.1682 11.0149C13.3279 11.2957 13.4568 11.5875 13.5509 11.8818C13.6494 12.1895 13.7322 12.5286 13.797 12.8899C13.8627 13.2568 13.9072 13.6015 13.9289 13.9146V13.9149C13.9513 14.2333 13.9625 14.5662 13.9627 14.9044C13.9625 15.5531 13.7793 16.0428 13.4024 16.4014H13.4023Z" fill="currentColor"></path>
+                        </svg>
+                    </i>
+                </button>
+
+                <button class="btn btn-icon btn-ghost" type="button" aria-label="Корзина">
+                    <i class="svg" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M13.3863 16.875H4.61133C2.75508 16.875 1.23633 15.3562 1.23633 13.5V13.3875L1.57383 4.3875C1.63008 2.53125 3.14883 1.125 4.94883 1.125H13.0488C14.8488 1.125 16.3676 2.53125 16.4238 4.3875L16.7613 13.3875C16.8176 14.2875 16.4801 15.1313 15.8613 15.8063C15.2426 16.4813 14.3988 16.875 13.4988 16.875H13.3863ZM4.94883 2.25C3.71133 2.25 2.75508 3.20625 2.69883 4.3875L2.36133 13.5C2.36133 14.7375 3.37383 15.75 4.61133 15.75H13.4988C14.1176 15.75 14.6801 15.4688 15.0738 15.0188C15.4676 14.5688 15.6926 14.0062 15.6926 13.3875L15.3551 4.3875C15.2988 3.15 14.3426 2.25 13.1051 2.25H4.94883Z" fill="currentColor"></path>
+                            <path d="M8.99805 7.875C6.8043 7.875 5.06055 6.13125 5.06055 3.9375C5.06055 3.6 5.28555 3.375 5.62305 3.375C5.96055 3.375 6.18555 3.6 6.18555 3.9375C6.18555 5.5125 7.42305 6.75 8.99805 6.75C10.573 6.75 11.8105 5.5125 11.8105 3.9375C11.8105 3.6 12.0355 3.375 12.373 3.375C12.7105 3.375 12.9355 3.6 12.9355 3.9375C12.9355 6.13125 11.1918 7.875 8.99805 7.875Z" fill="currentColor"></path>
+                        </svg>
+                    </i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-mobile__overlay"></div>
+
+    <div class="header-mobile__panel">
+        <div class="header-mobile__panel-inner">
+            <nav class="mobile-nav" aria-label="Мобильная навигация">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item mobile-nav__item--has-children">
+                        <button class="mobile-nav__link mobile-nav__link--toggle" type="button">
+                            <span>Каталог</span>
+                            <span class="mobile-nav__arrow" aria-hidden="true">›</span>
+                        </button>
+
+                        <div class="mobile-nav__submenu">
+                            <div class="mobile-nav__submenu-head">
+                                <button class="mobile-nav__back" type="button">Назад</button>
+                                <div class="mobile-nav__submenu-title">Каталог</div>
+                            </div>
+
+                            <ul class="mobile-nav__list">
+                                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Телефоны</a></li>
+                                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Ноутбуки</a></li>
+                                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Планшеты</a></li>
+                                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Умные часы</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Услуги</a></li>
+                    <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Акции</a></li>
+                    <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Помощь</a></li>
+
+                    <li class="mobile-nav__item mobile-nav__item--has-children">
+                        <button class="mobile-nav__link mobile-nav__link--toggle" type="button">
+                            <span>Компания</span>
+                            <span class="mobile-nav__arrow" aria-hidden="true">›</span>
+                        </button>
+
+                        <div class="mobile-nav__submenu">
+                            <div class="mobile-nav__submenu-head">
+                                <button class="mobile-nav__back" type="button">Назад</button>
+                                <div class="mobile-nav__submenu-title">Компания</div>
+                            </div>
+
+                            <ul class="mobile-nav__list">
+                                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">О компании</a></li>
+                                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Новости</a></li>
+                                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Статьи</a></li>
+                                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Команда</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Информация</a></li>
+                    <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-mobile__section">
+                <button class="btn btn-primary btn-block">Заказать звонок</button>
+            </div>
+
+            <div class="header-mobile__section">
+                <nav class="mobile-user-nav" aria-label="Личный кабинет и сервисы">
+                    <ul class="mobile-user-nav__list">
+                        <li><a href="#" class="mobile-user-nav__link">Личный кабинет</a></li>
+                        <li><a href="#" class="mobile-user-nav__link">Корзина</a></li>
+                        <li><a href="#" class="mobile-user-nav__link">Избранные товары</a></li>
+                        <li><a href="#" class="mobile-user-nav__link">Сравнение товаров</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-mobile__section">
+                <div class="mobile-contact">
+                    <div class="mobile-contact__title">Контактная информация</div>
+
+                    <div class="mobile-contact__item">
+                        <div class="mobile-contact__label">Адрес</div>
+                        <div class="mobile-contact__value">Челябинск, ул. Лермонтова 21, 3 этаж, офис 4</div>
+                    </div>
+
+                    <div class="mobile-contact__item">
+                        <div class="mobile-contact__label">E-mail</div>
+                        <div class="mobile-contact__value">
+                            <a href="mailto:test@mail.test">test@mail.test</a><br>
+                            <a href="mailto:test@mail.test">test@mail.test</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-mobile__section">
+                <div class="mobile-phone-nav">
+                    <div class="mobile-phone-nav__title">Телефоны</div>
+
+                    <div class="mobile-phone-nav__main">
+                        <a href="tel:88005553535" class="mobile-phone-nav__main-link">8 800 555 35 34</a>
+                        <div class="mobile-phone-nav__caption">Отдел продаж</div>
+                    </div>
+
+                    <ul class="mobile-phone-nav__list">
+                        <li class="mobile-phone-nav__item">
+                            <a href="tel:88005553534" class="mobile-phone-nav__link">8 800 555 35 34</a>
+                            <div class="mobile-phone-nav__caption">Отдел продаж</div>
+                        </li>
+                        <li class="mobile-phone-nav__item">
+                            <a href="tel:88005553535" class="mobile-phone-nav__link">8 800 555 35 35</a>
+                            <div class="mobile-phone-nav__caption">Отдел продаж</div>
+                        </li>
+                        <li class="mobile-phone-nav__item">
+                            <a href="tel:88005553536" class="mobile-phone-nav__link">8 800 555 35 36</a>
+                            <div class="mobile-phone-nav__caption">Отдел продаж</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

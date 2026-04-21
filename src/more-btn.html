@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+    "title": "UI Kit - Кнопки"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+    <div class="wrapper">
+        <div class="topic">
+            <div class="topic__heading">
+                @include('partials/base/breadcrumb.html')
+                <div class="topic__heading-top">
+                    <h1 class="topic__title">UI Kit - Кнопки</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper-content">
+            <div class="right_block">
+
+                <div class="grid-list grid-list-items-2">
+
+                    <div class="test-block">
+                        <h3>Базовые варианты</h3>
+                        <div class="btn-group">
+                            <button class="btn btn-primary">Основная</button>
+                            <button class="btn btn-secondary">Второстепенная</button>
+                            <button class="btn btn-outline">Контурная</button>
+                            <button class="btn btn-ghost">Прозрачная</button>
+                            <button class="btn btn-link">Кнопка-ссылка</button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>Семантические варианты</h3>
+                        <div class="btn-group">
+                            <button class="btn btn-success"><span>Успешно</span></button>
+                            <button class="btn btn-danger"><span>Опасно</span></button>
+                            <button class="btn btn-soft-primary"><span>Мягкая основная</span></button>
+                            <button class="btn btn-soft-danger"><span>Мягкая опасная</span></button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>Размеры</h3>
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-sm"><span>Маленькая</span></button>
+                            <button class="btn btn-primary"><span>Средняя</span></button>
+                            <button class="btn btn-primary btn-lg"><span>Большая</span></button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>Отключённое состояние</h3>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" disabled><span>Основная отключена</span></button>
+                            <button class="btn btn-secondary" disabled><span>Второстепенная отключена</span></button>
+                            <button class="btn btn-outline" disabled><span>Контурная отключена</span></button>
+                            <button class="btn btn-ghost" disabled><span>Прозрачная отключена</span></button>
+                            <button class="btn btn-danger" disabled><span>Опасная отключена</span></button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>Состояние загрузки</h3>
+                        <div class="btn-group">
+                            <button class="btn btn-primary is-loading"><span>Загрузка</span></button>
+                            <button class="btn btn-secondary is-loading"><span>Загрузка</span></button>
+                            <button class="btn btn-danger is-loading"><span>Загрузка</span></button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>С иконкой слева</h3>
+                        <div class="btn-group">
+                            <button class="btn btn-primary">
+                                <svg class="icon icon-left" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>Создать</span>
+                            </button>
+
+                            <button class="btn btn-secondary">
+                                <svg class="icon icon-left" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M4 12h16M12 4l8 8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Открыть</span>
+                            </button>
+
+                            <button class="btn btn-danger">
+                                <svg class="icon icon-left" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M6 7h12M9 7V5h6v2m-7 3v7m4-7v7m4-7v7M8 19h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>Удалить</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>С иконкой справа</h3>
+                        <div class="btn-group">
+                            <button class="btn btn-primary">
+                                <span>Продолжить</span>
+                                <svg class="icon icon-right" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+
+                            <button class="btn btn-outline">
+                                <span>Подробнее</span>
+                                <svg class="icon icon-right" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>Кнопки-иконки</h3>
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-icon" aria-label="Поиск">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M20 20l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+
+                            <button class="btn btn-outline btn-icon" aria-label="Настройки">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M12 3l2 2.2 3-.2.8 2.9 2.6 1.5-1 2.8 1 2.8-2.6 1.5-.8 2.9-3-.2L12 21l-2-2.2-3 .2-.8-2.9L3.6 14.6l1-2.8-1-2.8 2.6-1.5.8-2.9 3 .2L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+                                </svg>
+                            </button>
+
+                            <button class="btn btn-ghost btn-icon" aria-label="Избранное">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+
+                            <button class="btn btn-danger btn-icon" aria-label="Удалить">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M6 7h12M9 7V5h6v2m-7 3v7m4-7v7m4-7v7M8 19h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>Размеры кнопок-иконок</h3>
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-icon btn-sm" aria-label="Маленькая кнопка-иконка">
+                                <i class="svg">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </i>
+                            </button>
+
+                            <button class="btn btn-secondary btn-icon" aria-label="Средняя кнопка-иконка">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+
+                            <button class="btn btn-secondary btn-icon btn-lg" aria-label="Большая кнопка-иконка">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>Блочные кнопки</h3>
+                        <div style="display:grid; gap:16px; max-width:420px;">
+                            <button class="btn btn-primary btn-block"><span>Основная кнопка</span></button>
+                            <button class="btn btn-secondary btn-block"><span>Второстепенная кнопка</span></button>
+                            <button class="btn btn-outline btn-block"><span>Контурная кнопка</span></button>
+                        </div>
+                    </div>
+
+                    <div class="test-block">
+                        <h3>Смешанные примеры</h3>
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-primary">
+                                <span>Начать сейчас</span>
+                            </a>
+
+                            <a href="#" class="btn btn-secondary">
+                                <span>Заказать демо</span>
+                            </a>
+
+                            <a href="#" class="btn btn-link">
+                                <span>Подробнее</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@include('partials/component/footer.html')

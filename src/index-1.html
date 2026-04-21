@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+    "title": "Список страниц"
+})
+
+<div class="mb-48">
+    @include('partials/component/header/header-1.html')
+</div>
+
+<!--<div class="mb-48">-->
+<!--    @include('partials/component/header/header-2.html')-->
+<!--</div>-->
+<!--<div class="mb-48">-->
+<!--    @include('partials/component/header/header-3.html')-->
+<!--</div>-->
+
+<main class="main">
+
+    <div class="wrapper">
+        <section class="section section-bg-surface-2-full">
+            <div class="section-top">
+                <div class="section-top-inner d-f ai-c jc-sb gap-16">
+                    <div class="section-top-left">
+                        <div class="section-subtitle">Подзаголовок</div>
+                        <h2 class="section-title">Заголовок секции</h2>
+                        <div class="section-preview text-reset">
+                            <p>Короткое описание секции с пояснением.</p>
+                        </div>
+                    </div>
+
+                    <div class="section-top-right">
+                        <a href="#" class="section-link">
+                            Все материалы
+                            <span class="section-link-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-content">
+                ...
+            </div>
+
+            <div class="section-bottom">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolorem doloribus ea minus, odit reprehenderit voluptates! Esse inventore obcaecati rerum.
+            </div>
+        </section>
+    </div>
+
+</main>
+<div class="mb-48">
+    @include('partials/component/footer/footer-1.html')
+</div>
+<div class="mb-48">
+    @include('partials/component/footer/footer-2.html')
+</div>
+
+<div class="mb-48">
+    @include('partials/component/footer/footer-3.html')
+</div>
+
+@include('partials/component/footer/footer-4.html')

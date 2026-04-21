@@ -1,0 +1,98 @@
+@use "sass:math";
+@use "sass:map";
+@use "variables" as vars;
+
+$vw-viewport: 1420;
+
+// px → vw (относительно $vw-viewport)
+@function vw($font) {
+  $vw-context: $vw-viewport * 0.01 * 1px;
+  @return math.div($font, $vw-context) * 1vw;
+}
+
+// px → rem (база 16)
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.';
+  }
+}
+
+// px → em (по умолчанию база 16)
+@function em($size, $base: 16) {
+  @return math.div($size, $base) + em;
+}
+
+@mixin color($name, $color) {
+  .bg-#{$name}   { background-color: $color !important; }
+  .color-#{$name}{ color: $color !important; }
+}
+
+// Медиамиксин, использует vars.$breakpoints
+@mixin media($Device) {
+  @media screen and (max-width: map.get(vars.$breakpoints, $Device) - 1px) {
+    @content;
+  }
+}
+
+// z-index по карте из vars.$z-index
+@mixin z-index($key) {
+  z-index: map.get(vars.$z-index, $key);
+}
+
+// если имя пустое → "", иначе → "-{name}"
+@function bp-suffix($name) {
+  @return if($name == "" or $name == null, "", "-#{$name}");
+}
+
+// Утилитарные классы (генератор) — работает и без, и с суффиксом брейкпоинта
+@mixin project-classes($screen-name: "") {
+  $suf: bp-suffix($screen-name);
+
+  .d#{$suf}-n { display: none !important; }
+  .d#{$suf}-b { display: block !important; }
+  .d#{$suf}-f { display: flex !important; }
+
+  .fw#{$suf}-w { flex-wrap: wrap !important; }
+  .fw#{$suf}-n { flex-wrap: nowrap !important; }
+
+  .fd#{$suf}-c { flex-direction: column !important; }
+  .fd#{$suf}-cr { flex-direction: column-reverse !important; }
+  .fd#{$suf}-r { flex-direction: row !important; }
+
+  .fb#{$suf}-100 { flex-basis: 100% !important; }
+
+  .ai#{$suf}-c  { align-items: center !important; }
+  .ai#{$suf}-fs { align-items: flex-start !important; }
+  .ai#{$suf}-fe { align-items: flex-end !important; }
+
+  .as#{$suf}-fs { align-self: flex-start !important; }
+  .as#{$suf}-fe { align-self: flex-end !important; }
+  .as#{$suf}-c  { align-self: center !important; }
+
+  .jc#{$suf}-fe { justify-content: flex-end !important; }
+  .jc#{$suf}-fs { justify-content: flex-start !important; }
+  .jc#{$suf}-c  { justify-content: center !important; }
+  .jc#{$suf}-sb { justify-content: space-between !important; }
+}
+
+// Генератор сеточных классов
+@mixin grid($breakpoint: '') {
+  $prefix: if($breakpoint == '', '', '-');
+
+  @for $i from 1 through vars.$columns-count {
+    @if ($i % vars.$columns-step == 0) {
+      .col#{$prefix}#{$breakpoint}-#{$i} {
+        width: vars.$width * $i;
+        flex: 0 0 auto;
+      }
+      @if vars.$gen-order {
+        .order#{$prefix}#{$breakpoint}-#{$i} { order: $i; }
+      }
+      @if vars.$gen-offset {
+        .off#{$prefix}#{$breakpoint}-#{$i} { margin-left: #{vars.$width * $i}; }
+      }
+    }
+  }
+}

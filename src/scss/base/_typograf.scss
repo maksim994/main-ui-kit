@@ -1,0 +1,320 @@
+@use "./mixins" as m;
+
+/* =========================================
+   Fluid typography
+   ========================================= */
+
+@mixin fluid-type($minPx, $maxPx, $vwMin: 360px, $vwMax: 1200px) {
+  $delta-em: m.em($maxPx - $minPx);
+  font-size: clamp(
+          #{m.em($minPx)},
+          calc(#{m.em($minPx)} + #{$delta-em} * ((100vw - #{$vwMin}) / (#{$vwMax - $vwMin}))),
+          #{m.em($maxPx)}
+  );
+}
+
+@mixin heading($maxPx, $minPx, $lh: 1.2, $mb: 24px) {
+  font-family: var(--font-family-heading), sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--color-text-primary);
+  line-height: $lh;
+  margin: 0 0 $mb;
+  @include fluid-type($minPx, $maxPx);
+}
+
+/* =========================================
+   Headings
+   ========================================= */
+
+.h1, .h2, .h3, .h4, .h5,
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-family-heading), sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--color-text-primary);
+}
+
+h1, .h1 {
+  @include heading(48, 32, 1.05, 18px);
+}
+
+h2, .h2 {
+  @include heading(36, 28, 1.15, 20px);
+}
+
+h3, .h3 {
+  @include heading(30, 24, 1.2, 18px);
+}
+
+h4, .h4 {
+  @include heading(24, 20, 1.3, 16px);
+}
+
+h5, .h5 {
+  @include heading(20, 18, 1.35, 14px);
+}
+
+h6, .h6 {
+  font-family: var(--font-family-heading), sans-serif;
+  font-size: m.em(16);
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 12px;
+}
+
+/* =========================================
+   Paragraphs / content text
+   ========================================= */
+
+p {
+  margin: 0 0 1em;
+  color: inherit;
+}
+
+.lead {
+  font-size: m.em(18);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.small,
+.text-sm {
+  font-size: m.em(14);
+  line-height: 1.5;
+}
+
+.caption,
+.text-xs {
+  font-size: m.em(12);
+  line-height: 1.45;
+  color: var(--color-text-secondary);
+}
+
+/* =========================================
+   Text utilities
+   ========================================= */
+
+.text {
+  &-reset {
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  &-normal {
+    font-size: inherit;
+  }
+
+  &-xxl {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  &-xl {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+
+  &-lg {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  &-sm {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &-xs {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  &-upper {
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
+  &-line-through {
+    text-decoration: line-through;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-primary {
+    color: var(--color-text-primary);
+  }
+
+  &-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  &-muted {
+    color: var(--color-text-muted);
+  }
+
+  &-inverse {
+    color: var(--color-text-inverse);
+  }
+
+  &-brand {
+    color: var(--color-brand);
+  }
+
+  &-success {
+    color: var(--color-state-success);
+  }
+
+  &-warning {
+    color: var(--color-state-warning);
+  }
+
+  &-error {
+    color: var(--color-state-error);
+  }
+
+  &-info {
+    color: var(--color-state-info);
+  }
+}
+
+/* =========================================
+   Font weight utilities
+   ========================================= */
+
+.fw {
+  &-400 { font-weight: 400; }
+  &-500 { font-weight: 500; }
+  &-600 { font-weight: 600; }
+  &-700 { font-weight: 700; }
+
+  &-normal { font-weight: 400; }
+  &-bold { font-weight: 700; }
+}
+
+/* =========================================
+   Lists inside content
+   ========================================= */
+
+ul, ol {
+  margin: 0 0 1.25em;
+  padding-left: 1.25em;
+
+  li:not(:last-child) {
+    margin-bottom: .4em;
+  }
+}
+
+/* =========================================
+   Blockquote
+   ========================================= */
+
+blockquote {
+  margin: m.em(24) 0;
+  padding: m.em(12) m.em(20) m.em(12) m.em(20);
+  position: relative;
+  border: 0;
+  color: var(--color-text-primary);
+  background: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: m.em(4);
+    bottom: m.em(4);
+    left: 0;
+    width: m.em(3);
+    border-radius: 999px;
+    background-color: var(--color-brand);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  small,
+  cite {
+    display: block;
+    margin-top: m.em(10);
+    font-size: m.em(14);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    font-style: normal;
+  }
+}
+
+/* =========================================
+   Links
+   ========================================= */
+
+a {
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: var(--transition-base);
+
+  &:hover {
+    color: var(--color-brand-hover);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--color-brand) 24%, transparent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  &.link-muted {
+    color: var(--color-text-secondary);
+
+    &:hover {
+      color: var(--color-text-primary);
+    }
+  }
+
+  &.link-dark {
+    color: var(--color-text-primary);
+
+    &:hover {
+      color: var(--color-brand);
+    }
+  }
+
+  &.link-inverse{
+    color: var(--color-text-inverse);
+    opacity: .9;
+
+    &:hover{
+      opacity: 1;
+      color: var(--color-brand);
+    }
+
+    &:focus-visible{
+      outline: 2px solid color-mix(in srgb, var(--color-brand) 30%, transparent);
+    }
+  }
+}
+
+/* =========================================
+   Selection
+   ========================================= */
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-brand) 18%, transparent);
+  color: var(--color-text-primary);
+}

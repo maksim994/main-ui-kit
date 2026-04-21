@@ -1,0 +1,83 @@
+.logo {
+  --logo-height: 40px;
+  --logo-max-width: 244px;
+  --logo-gap: 12px;
+
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--logo-gap);
+    min-width: 0;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__media {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    min-width: 0;
+  }
+
+  &__img {
+    display: block;
+    width: auto;
+    max-width: var(--logo-max-width);
+    height: var(--logo-height);
+    max-height: 100%;
+  }
+
+  &--svg {
+    .logo__img {
+      color: var(--color-text-primary);
+    }
+  }
+
+  &--image {
+    .logo__img {
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  &__title {
+    color: var(--color-text-primary);
+    font-size: 18px;
+    line-height: 1.15;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  &__subtitle {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  &--with-text {
+    .logo__img {
+      max-width: 160px;
+    }
+  }
+
+  &--sm {
+    --logo-height: 32px;
+    --logo-max-width: 180px;
+  }
+
+  &--lg {
+    --logo-height: 48px;
+    --logo-max-width: 280px;
+  }
+}

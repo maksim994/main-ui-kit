@@ -1,0 +1,144 @@
+@use "sass:list";
+@use "./mixins" as m;
+
+/* =========================================
+   Images / media wrapper
+   ========================================= */
+
+$img-ratios: (
+        "1-1": (1 1),
+        "3-2": (3 2),
+        "4-3": (4 3),
+        "3-4": (3 4),
+        "16-9": (16 9)
+);
+
+.img {
+  /* local tokens */
+  --img-radius: var(--radius-md);
+  --img-fit: cover;
+  --img-zoom: 0;
+  --img-bg: var(--color-bg-muted);
+
+  position: relative;
+  display: block;
+  inline-size: 100%;
+  overflow: hidden;
+  border-radius: var(--img-radius);
+  background-color: var(--img-bg);
+
+  > img,
+  > picture > img,
+  > video {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    height: auto;
+    max-inline-size: 100%;
+  }
+
+  /* =========================================
+     Default image behavior
+     ========================================= */
+  &--default {
+    > img,
+    > picture > img,
+    > video {
+      inline-size: 100%;
+      block-size: auto;
+      object-fit: initial;
+    }
+  }
+
+  /* =========================================
+     Round image
+     ========================================= */
+  &--round {
+    border-radius: 999px;
+
+    > img,
+    > picture > img,
+    > video {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  /* =========================================
+     Fit modifiers
+     ========================================= */
+  &--cover {
+    --img-fit: cover;
+
+    > img,
+    > picture > img,
+    > video {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &--contain {
+    --img-fit: contain;
+    background-color: var(--img-bg);
+
+    > img,
+    > picture > img,
+    > video {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  /* =========================================
+     Hover zoom
+     ========================================= */
+  &--zoom {
+    > img,
+    > picture > img,
+    > video {
+      transition: transform var(--transition-base);
+      will-change: transform;
+    }
+
+    &:hover > img,
+    &:hover > picture > img,
+    &:hover > video {
+      transform: scale(calc(1 + (var(--img-zoom) * 0.06)));
+    }
+  }
+
+  /* =========================================
+     Radius helpers
+     ========================================= */
+  &--radius-none { --img-radius: 0px; }
+  &--radius-sm   { --img-radius: var(--radius-sm); }
+  &--radius-md   { --img-radius: var(--radius-md); }
+  &--radius-lg   { --img-radius: var(--radius-lg); }
+}
+
+/* =========================================
+   Ratio generators
+   ========================================= */
+@each $key, $pair in $img-ratios {
+  $w: list.nth($pair, 1);
+  $h: list.nth($pair, 2);
+
+  .img--#{$key} {
+    aspect-ratio: #{$w} / #{$h};
+
+    > img,
+    > picture > img,
+    > video {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: var(--img-fit);
+    }
+  }
+}

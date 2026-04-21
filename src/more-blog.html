@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('./partials/base/head.html', {
+    "title": "UI Demo - Элементы формы"
+})
+
+@include('./partials/component/header.html')
+
+<div class="wrapper">
+
+    <div class="wrapper-content">
+        <div class="left_block d-lg-n">
+            <aside class="aside-scroll-block">
+                <div class="aside-block">
+                    <nav class="aside-nav is-open" data-aside-nav>
+                        <div class="aside-nav__head">
+                            <h2 class="aside-nav__title">Каталог</h2>
+
+                            <button
+                                    class="aside-nav__toggle"
+                                    type="button"
+                                    aria-expanded="true"
+                                    aria-controls="aside-nav-catalog"
+                                    aria-label="Свернуть или развернуть меню"
+                            >
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M6 14L12 8L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="aside-nav__body" id="aside-nav-catalog">
+                            <ul class="aside-nav__list">
+
+                                <li class="aside-nav__item is-open is-parent-active" data-aside-item>
+                                    <div class="aside-nav__item-head">
+                                        <a class="aside-nav__link is-active" href="#" aria-current="page">
+                                            Промышленное оборудование
+                                        </a>
+
+                                        <button
+                                                class="aside-nav__item-toggle"
+                                                type="button"
+                                                aria-expanded="true"
+                                                aria-label="Показать подкатегории"
+                                        >
+                                            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <ul class="aside-nav__sublist">
+                                        <li class="aside-nav__item">
+                                            <div class="aside-nav__item-head">
+                                                <a class="aside-nav__link" href="#">Оборудования для очистных сооружений</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="aside-nav__item">
+                                            <div class="aside-nav__item-head">
+                                                <a class="aside-nav__link" href="#">Оборудования для дорожно-строительной техники</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="aside-nav__item" data-aside-item>
+                                    <div class="aside-nav__item-head">
+                                        <a class="aside-nav__link" href="#">Металлопрокат</a>
+                                    </div>
+                                </li>
+
+                                <li class="aside-nav__item" data-aside-item>
+                                    <div class="aside-nav__item-head">
+                                        <a class="aside-nav__link" href="#">Запчасти для автомобилей</a>
+                                    </div>
+                                </li>
+
+                                <li class="aside-nav__item" data-aside-item>
+                                    <div class="aside-nav__item-head">
+                                        <a class="aside-nav__link" href="#">Промышленные системы автоматизации</a>
+                                    </div>
+                                </li>
+
+                                <li class="aside-nav__item" data-aside-item>
+                                    <div class="aside-nav__item-head">
+                                        <a class="aside-nav__link" href="#">Оборудование для нефтегазодобычи</a>
+                                    </div>
+                                </li>
+
+                                <li class="aside-nav__item" data-aside-item>
+                                    <div class="aside-nav__item-head">
+                                        <a class="aside-nav__link" href="#">Металлоконструкции</a>
+                                    </div>
+                                </li>
+
+                                <li class="aside-nav__item" data-aside-item>
+                                    <div class="aside-nav__item-head">
+                                        <a class="aside-nav__link" href="#">Автомобили</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </aside>
+
+            <nav class="aside-nav is-open" data-aside-nav>
+                <div class="aside-nav__head">
+                    <h2 class="aside-nav__title">Каталог</h2>
+
+                    <button class="aside-nav__toggle" type="button" aria-expanded="true" aria-controls="aside-nav-demo">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M6 14L12 8L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="aside-nav__body" id="aside-nav-demo">
+                    <ul class="aside-nav__list">
+
+                        <li class="aside-nav__item is-open is-parent-active" data-aside-item>
+                            <div class="aside-nav__item-head">
+                                <a class="aside-nav__link" href="#">Аренда спецтехники</a>
+
+                                <button class="aside-nav__item-toggle" type="button" aria-expanded="true">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <ul class="aside-nav__sublist">
+
+                                <li class="aside-nav__item is-open is-parent-active" data-aside-item>
+                                    <div class="aside-nav__item-head">
+                                        <a class="aside-nav__link" href="#">Автокраны</a>
+
+                                        <button class="aside-nav__item-toggle" type="button" aria-expanded="true">
+                                            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <ul class="aside-nav__sublist">
+                                        <li class="aside-nav__item">
+                                            <div class="aside-nav__item-head">
+                                                <a class="aside-nav__link is-active" href="#" aria-current="page">Манипуляторы</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="aside-nav__item">
+                                            <div class="aside-nav__item-head">
+                                                <a class="aside-nav__link" href="#">Самосвалы</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="aside-nav__item">
+                                            <div class="aside-nav__item-head">
+                                                <a class="aside-nav__link" href="#">Экскаваторы</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="aside-nav__item">
+                                    <div class="aside-nav__item-head">
+                                        <a class="aside-nav__link" href="#">Автовышки</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="aside-nav__item" data-aside-item>
+                            <div class="aside-nav__item-head">
+                                <a class="aside-nav__link" href="#">Медицинское оборудование</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="right_block">
+            <!-- Blog -->
+            <div class="grid-list grid-list-items-3 grid-list-xl-items-2 grid-list-md-items-1 mb-48">
+                @include('./partials/element/card/card-article.html', {
+                    'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                    'date': '5 февраля 2026',
+                    'section': 'Маркетинг',
+                    'name': 'Улучшите клиентский опыт',
+                    'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                })
+
+                @include('./partials/element/card/card-article.html', {
+                    'images': 'https://bitrix-sl.ru/upload/resize_cache/iblock/aab/800_800_1/cpenmalcb7yas3l6pu5ylj90s633q5m2.jpg',
+                    'date': '5 февраля 2026',
+                    'section': 'Маркетинг',
+                    'name': 'Использование арматуры в строительстве',
+                    'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                })
+
+                @include('./partials/element/card/card-article.html', {
+                    'images': 'https://bitrix-sl.ru/upload/resize_cache/iblock/509/800_800_1/c68k8vd66xuixsa996khybbmk8gh6p4o.jpg',
+                    'date': '5 февраля 2026',
+                    'section': 'Маркетинг',
+                    'name': 'Как увеличить продажи на 30% с помощью триггерных рассылок',
+                    'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                })
+            </div>
+
+            <!-- Product -->
+            <div class="grid-list grid-list-items-3 grid-list-xl-items-2 grid-list-md-items-1 mb-48">
+                @include('./partials/element/card/card-product.html', {
+                    'images': 'https://priority2-demo.ru/upload/iblock/134/2nddmjnd1cir2ygam2tz9egl9y92smr8.jpg',
+                    'name': 'Круг нержавеющий',
+                })
+
+                @include('./partials/element/card/card-product.html', {
+                    'images': 'https://priority2-demo.ru/upload/iblock/018/sw3qvb1l6xnxnndd0z0kanq78j6mq54n.jpg',
+                    'name': 'Погружной канализационный насос MT-3300',
+                })
+
+                @include('./partials/element/card/card-product.html', {
+                    'images': 'https://priority2-demo.ru/upload/iblock/2a3/p8svak9vbabdg19jwzlob708qixddfe3.jpg',
+                    'name': 'Швонарезчик MOST-FS3',
+                })
+            </div>
+
+            <!-- Review -->
+
+            <div class="grid-list grid-list-items-1 mb-48">
+                @include('./partials/element/card/card-review.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/cdd/1yfv3yjwr4510iwwx8e7xwic7mjnsbka.jpg',
+                    'name': 'Борис Кронкарт',
+                    'text': '<p>Заказывали в Allcorp3 систему безопасности для нашего центра. Заказ обработали быстро — уже на следующий день инженеры окружили меня и требовали разрешения начать работу. В течение дня установили видеонаблюдение и сигнализацию. Я думала, что это конец работ, но в течение следующей недели рабочие ежедневно приходили и проверяли работоспособность системы. Когда они убедились, что все работает исправно, предоставили сопроводительную документацию и акты. Я очень довольна работой Allcorp3 и буду сотрудничать с ними в будущем.</p>'
+                })
+
+                @include('./partials/element/card/card-review.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/ed1/aqf716my0o90o50ywixhka3n30zqpls0.jpg',
+                    'name': 'Константин Гридин',
+                    'text': '<p>Боялся, что коммерческая организация не выполнит работу качественно, потому что проекты в бюджетных учреждениях не очень большие и не такие ценные, как на крупных предприятиях. Даже не думал, что Allcorp3 так ответственно возьмется за работу. Всего за один день нам установили турникеты на проходную и видеонаблюдение на территории возле школы. Прошло уже 2 года, но оборудование исправно работает. И инженеры часто приходят и проверяют состояние турникета и камер. Рад, что есть такие компании, как Allcorp3.</p>'
+                })
+            </div>
+
+            <div class="grid-list grid-list-items-2 mb-48">
+                @include('./partials/element/card/card-review-compact.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/cdd/1yfv3yjwr4510iwwx8e7xwic7mjnsbka.jpg',
+                    'name': 'Борис Кронкарт',
+                    'text': '<p>Заказывали в Allcorp3 систему безопасности для нашего центра. Заказ обработали быстро — уже на следующий день инженеры окружили меня и требовали разрешения начать работу. В течение дня установили видеонаблюдение и сигнализацию. Я думала, что это конец работ, но в течение следующей недели рабочие ежедневно приходили и проверяли работоспособность системы. Когда они убедились, что все работает исправно, предоставили сопроводительную документацию и акты. Я очень довольна работой Allcorp3 и буду сотрудничать с ними в будущем.</p>'
+                })
+
+                @include('./partials/element/card/card-review-compact.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/ed1/aqf716my0o90o50ywixhka3n30zqpls0.jpg',
+                    'name': 'Константин Гридин',
+                    'text': '<p>Боялся, что коммерческая организация не выполнит работу качественно, потому что проекты в бюджетных учреждениях не очень большие и не такие ценные, как на крупных предприятиях. Даже не думал, что Allcorp3 так ответственно возьмется за работу. Всего за один день нам установили турникеты на проходную и видеонаблюдение на территории возле школы. Прошло уже 2 года, но оборудование исправно работает. И инженеры часто приходят и проверяют состояние турникета и камер. Рад, что есть такие компании, как Allcorp3.</p>'
+                })
+            </div>
+
+            <!-- Video -->
+
+            <div class="grid-list grid-list-items-3 mb-48">
+                @include('./partials/element/card/card-video.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/cdd/1yfv3yjwr4510iwwx8e7xwic7mjnsbka.jpg',
+                })
+
+                @include('./partials/element/card/card-video.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/ed1/aqf716my0o90o50ywixhka3n30zqpls0.jpg',
+                })
+
+                @include('./partials/element/card/card-video.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/ed1/aqf716my0o90o50ywixhka3n30zqpls0.jpg',
+                })
+            </div>
+
+            <div class="grid-list grid-list-items-3 mb-48">
+                @include('./partials/element/card/card-video-compact.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/cdd/1yfv3yjwr4510iwwx8e7xwic7mjnsbka.jpg',
+                })
+
+                @include('./partials/element/card/card-video-compact.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/ed1/aqf716my0o90o50ywixhka3n30zqpls0.jpg',
+                })
+
+                @include('./partials/element/card/card-video-compact.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/ed1/aqf716my0o90o50ywixhka3n30zqpls0.jpg',
+                })
+            </div>
+
+            <!-- Project -->
+
+            <div class="grid-list grid-list-items-2 mb-48">
+                @include('./partials/element/card/card-project.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/cdd/1yfv3yjwr4510iwwx8e7xwic7mjnsbka.jpg',
+                    'name': 'Борис Кронкарт',
+                    'text': '<p>Заказывали в Allcorp3 систему безопасности для нашего центра. Заказ обработали быстро — уже на следующий день инженеры окружили меня и требовали разрешения начать работу. В течение дня установили видеонаблюдение и сигнализацию. Я думала, что это конец работ, но в течение следующей недели рабочие ежедневно приходили и проверяли работоспособность системы. Когда они убедились, что все работает исправно, предоставили сопроводительную документацию и акты. Я очень довольна работой Allcorp3 и буду сотрудничать с ними в будущем.</p>'
+                })
+
+                @include('./partials/element/card/card-project.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/ed1/aqf716my0o90o50ywixhka3n30zqpls0.jpg',
+                    'name': 'Константин Гридин',
+                    'text': '<p>Боялся, что коммерческая организация не выполнит работу качественно, потому что проекты в бюджетных учреждениях не очень большие и не такие ценные, как на крупных предприятиях. Даже не думал, что Allcorp3 так ответственно возьмется за работу. Всего за один день нам установили турникеты на проходную и видеонаблюдение на территории возле школы. Прошло уже 2 года, но оборудование исправно работает. И инженеры часто приходят и проверяют состояние турникета и камер. Рад, что есть такие компании, как Allcorp3.</p>'
+                })
+            </div>
+
+            <div class="grid-list grid-list-items-3 mb-48">
+                @include('./partials/element/card/card-project-compact.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/cdd/1yfv3yjwr4510iwwx8e7xwic7mjnsbka.jpg',
+                    'name': 'Борис Кронкарт',
+                    'text': '<p>Заказывали в Allcorp3 систему безопасности для нашего центра. Заказ обработали быстро — уже на следующий день инженеры окружили меня и требовали разрешения начать работу. В течение дня установили видеонаблюдение и сигнализацию. Я думала, что это конец работ, но в течение следующей недели рабочие ежедневно приходили и проверяли работоспособность системы. Когда они убедились, что все работает исправно, предоставили сопроводительную документацию и акты. Я очень довольна работой Allcorp3 и буду сотрудничать с ними в будущем.</p>'
+                })
+
+                @include('./partials/element/card/card-project-compact.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/ed1/aqf716my0o90o50ywixhka3n30zqpls0.jpg',
+                    'name': 'Константин Гридин',
+                    'text': '<p>Боялся, что коммерческая организация не выполнит работу качественно, потому что проекты в бюджетных учреждениях не очень большие и не такие ценные, как на крупных предприятиях. Даже не думал, что Allcorp3 так ответственно возьмется за работу. Всего за один день нам установили турникеты на проходную и видеонаблюдение на территории возле школы. Прошло уже 2 года, но оборудование исправно работает. И инженеры часто приходят и проверяют состояние турникета и камер. Рад, что есть такие компании, как Allcorp3.</p>'
+                })
+
+                @include('./partials/element/card/card-project-compact.html', {
+                    'images': 'https://corporate.hubsup.ru/upload/iblock/ed1/aqf716my0o90o50ywixhka3n30zqpls0.jpg',
+                    'name': 'Константин Гридин',
+                    'text': '<p>Боялся, что коммерческая организация не выполнит работу качественно, потому что проекты в бюджетных учреждениях не очень большие и не такие ценные, как на крупных предприятиях. Даже не думал, что Allcorp3 так ответственно возьмется за работу. Всего за один день нам установили турникеты на проходную и видеонаблюдение на территории возле школы. Прошло уже 2 года, но оборудование исправно работает. И инженеры часто приходят и проверяют состояние турникета и камер. Рад, что есть такие компании, как Allcorp3.</p>'
+                })
+            </div>
+
+            <!-- Document -->
+
+            <div class="grid-list grid-list-items-1 mb-48">
+                @include('./partials/element/card/card-document.html')
+                @include('./partials/element/card/card-document.html')
+            </div>
+
+            <div class="grid-list grid-list-items-3 mb-48">
+                @include('./partials/element/card/card-document-compact.html')
+                @include('./partials/element/card/card-document-compact.html')
+                @include('./partials/element/card/card-document-compact.html')
+            </div>
+
+            <div class="grid-list grid-list-items-3 mb-48">
+                @include('./partials/element/card/card-document-centered.html')
+                @include('./partials/element/card/card-document-centered.html')
+                @include('./partials/element/card/card-document-centered.html')
+            </div>
+
+
+            <div class="features features--3 mb-48">
+                @include('./partials/element/card/features-left.html')
+                @include('./partials/element/card/features-left.html')
+                @include('./partials/element/card/features-left.html')
+            </div>
+
+            <div class="features features--3 mb-48">
+                @include('./partials/element/card/features-top.html')
+                @include('./partials/element/card/features-top.html')
+                @include('./partials/element/card/features-top.html')
+            </div>
+
+
+
+
+
+
+            <article class="card card--category card--category-circle-media card--interactive">
+                <div class="card__media">
+                    <picture class="img img--1-1 img--cover">
+                        <img src="https://corporate.hubsup.ru/upload/iblock/602/piz7pzf4893okzla9i7ogzx0zabq5hzz.jpg" alt="Аренда спецтехники" loading="lazy">
+                    </picture>
+                </div>
+
+                <div class="card__body">
+                    <h3 class="card__title">
+                        <a href="#" class="card__title-link">Аренда спецтехники</a>
+                    </h3>
+
+                    <div class="card__meta">12 товаров</div>
+
+                    <div class="card__excerpt text-reset">
+                        <p>Аренда спецтехники для строительных мероприятий любой сложности.</p>
+                    </div>
+                </div>
+
+                <a href="#" class="card__overlay-link" aria-label="Перейти в категорию Аренда спецтехники"></a>
+            </article>
+
+            <article class="card card--category card--category-circle-media card--interactive">
+                <div class="card__media">
+                    <picture class="img img--1-1 img--cover">
+                        <img src="https://corporate.hubsup.ru/upload/iblock/421/qi8t9hyjraxs088k9wmju050bgthal87.jpg" alt="Контроль доступа" loading="lazy">
+                    </picture>
+                </div>
+
+                <div class="card__body">
+                    <h3 class="card__title">
+                        <a href="#" class="card__title-link">Контроль доступа</a>
+                    </h3>
+
+                    <div class="card__meta">12 товаров</div>
+
+                    <div class="card__excerpt text-reset">
+                        <p>Системы контроля доступа ограничивают посещение защищенной территории.</p>
+                    </div>
+                </div>
+
+                <a href="#" class="card__overlay-link" aria-label="Перейти в категорию Контроль доступа"></a>
+            </article>
+
+            <article class="card card--category card--category-circle-media card--category-compact card--interactive">
+                <div class="card__media">
+                    <picture class="img img--1-1 img--cover">
+                        <img
+                                src="https://corporate.hubsup.ru/upload/iblock/5f3/hjcu1tnzgjmh76epjxkokmm5swpus10v.jpg"
+                                alt="Манипуляторы"
+                                loading="lazy"
+                        >
+                    </picture>
+                </div>
+
+                <div class="card__body">
+                    <h3 class="card__title">
+                        <a href="#" class="card__title-link">Манипуляторы</a>
+                    </h3>
+
+                    <div class="card__meta">12 товаров</div>
+
+                    <div class="card__excerpt text-reset">
+                        <p>Манипуляторы для перевозки крупногабаритного груза: контейнеров, ларьков и другого.</p>
+                    </div>
+                </div>
+
+                <a href="#" class="card__overlay-link" aria-label="Перейти в категорию Манипуляторы"></a>
+            </article>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <section class="section">
+        <div class="grid-list grid-list-items-3 grid-list-xl-items-2 grid-list-md-items-1">
+        @include('./partials/element/card-blog-small.html', {
+        'date': '5 февраля 2026',
+        'section': 'Маркетинг',
+        'name': 'Повысьте коэффициент конверсии',
+        'text': '<p>Разберёмся, почему пользователи уходят с сайта, где теряются продажи и какие изменения действительно влияют на результат. Простые улучшения интерфейса, доверия и логики взаимодействия способны значительно увеличить количество заявок и покупок.</p>',
+        'author_name': 'Александр Васильев',
+        'author_img': 'https://premier-demo.ru/upload/iblock/063/n87ukmf2yy1ojw2y8ulhtq1goett7532.jpg',
+        'author_post': 'Сооснователь / CTO',
+        })
+
+        @include('./partials/element/card-blog-small.html', {
+        'date': '5 февраля 2026',
+        'section': 'Распродажа',
+        'name': 'Как использовать SEO для увеличения продаж',
+        'text': '<p>Поисковая оптимизация — это не только позиции в Google, но и стабильный поток клиентов. Рассмотрим, какие страницы продвигают продажи, как работать с коммерческими запросами и как превратить трафик в реальные заказы.</p>',
+        'author_name': 'Светлана Дьяченко',
+        'author_img': 'https://premier-demo.ru/upload/iblock/b71/gh5arkt0vo619ugj4mt3loqnptcb804x.jpg',
+        'author_post': 'Front-end разработчик',
+        })
+
+        @include('./partials/element/card-blog-small.html', {
+        'date': '5 февраля 2026',
+        'section': 'Маркетинг',
+        'name': 'Улучшите клиентский опыт',
+        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+        'author_name': 'Александр Васильев',
+        'author_img': 'https://premier-demo.ru/upload/iblock/253/bm9c0jl5t0ltxw97h1tg9oipve553y85.jpg',
+        'author_post': 'Сооснователь / CTO',
+        })
+    </div>
+    </section>
+
+    <section class="section">
+        <div class="grid-list grid-list-items-3 grid-list-xl-items-2 grid-list-md-items-1">
+            @include('./partials/element/card-blog-images.html', {
+                'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                'date': '5 февраля 2026',
+                'section': 'Маркетинг',
+                'name': 'Повысьте коэффициент конверсии',
+                'text': '<p>Разберёмся, почему пользователи уходят с сайта, где теряются продажи и какие изменения действительно влияют на результат. Простые улучшения интерфейса, доверия и логики взаимодействия способны значительно увеличить количество заявок и покупок.</p>',
+                'author_name': 'Александр Васильев',
+                'author_img': 'https://premier-demo.ru/upload/iblock/063/n87ukmf2yy1ojw2y8ulhtq1goett7532.jpg',
+                'author_post': 'Сооснователь / CTO',
+            })
+
+            @include('./partials/element/card-blog-images.html', {
+                'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                'date': '5 февраля 2026',
+                'section': 'Распродажа',
+                'name': 'Как использовать SEO для увеличения продаж',
+                'text': '<p>Поисковая оптимизация — это не только позиции в Google, но и стабильный поток клиентов. Рассмотрим, какие страницы продвигают продажи, как работать с коммерческими запросами и как превратить трафик в реальные заказы.</p>',
+                'author_name': 'Светлана Дьяченко',
+                'author_img': 'https://premier-demo.ru/upload/iblock/b71/gh5arkt0vo619ugj4mt3loqnptcb804x.jpg',
+                'author_post': 'Front-end разработчик',
+            })
+
+            @include('./partials/element/card-blog-images.html', {
+                'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                'date': '5 февраля 2026',
+                'section': 'Маркетинг',
+                'name': 'Улучшите клиентский опыт',
+                'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                'author_name': 'Александр Васильев',
+                'author_img': 'https://premier-demo.ru/upload/iblock/253/bm9c0jl5t0ltxw97h1tg9oipve553y85.jpg',
+                'author_post': 'Сооснователь / CTO',
+            })
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="grid-list grid-list-items-3 grid-list-xl-items-2 grid-list-md-items-1">
+            @include('./partials/element/card-blog-bg.html', {
+                'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                'date': '5 февраля 2026',
+                'section': 'Маркетинг',
+                'name': 'Повысьте коэффициент конверсии',
+                'text': '<p>Разберёмся, почему пользователи уходят с сайта, где теряются продажи и какие изменения действительно влияют на результат. Простые улучшения интерфейса, доверия и логики взаимодействия способны значительно увеличить количество заявок и покупок.</p>',
+                'author_name': 'Александр Васильев',
+                'author_img': 'https://premier-demo.ru/upload/iblock/063/n87ukmf2yy1ojw2y8ulhtq1goett7532.jpg',
+                'author_post': 'Сооснователь / CTO',
+            })
+
+            @include('./partials/element/card-blog-bg.html', {
+                'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                'date': '5 февраля 2026',
+                'section': 'Распродажа',
+                'name': 'Как использовать SEO для увеличения продаж',
+                'text': '<p>Поисковая оптимизация — это не только позиции в Google, но и стабильный поток клиентов. Рассмотрим, какие страницы продвигают продажи, как работать с коммерческими запросами и как превратить трафик в реальные заказы.</p>',
+                'author_name': 'Светлана Дьяченко',
+                'author_img': 'https://premier-demo.ru/upload/iblock/b71/gh5arkt0vo619ugj4mt3loqnptcb804x.jpg',
+                'author_post': 'Front-end разработчик',
+            })
+
+            @include('./partials/element/card-blog-bg.html', {
+                'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                'date': '5 февраля 2026',
+                'section': 'Маркетинг',
+                'name': 'Улучшите клиентский опыт',
+                'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                'author_name': 'Александр Васильев',
+                'author_img': 'https://premier-demo.ru/upload/iblock/253/bm9c0jl5t0ltxw97h1tg9oipve553y85.jpg',
+                'author_post': 'Сооснователь / CTO',
+            })
+        </div>
+    </section>
+
+    
+
+</div>
+@include('./partials/component/footer.html')

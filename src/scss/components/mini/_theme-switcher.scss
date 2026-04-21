@@ -1,0 +1,31 @@
+/* =========================================
+   Theme switcher
+   ========================================= */
+
+.theme-switcher {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid var(--color-border-default);
+  border-radius: 999px;
+  background: var(--color-bg-surface);
+
+  &__btn {
+    inline-size: 32px;
+    block-size: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: var(--transition-base);
+
+    &.is-active {
+      background: var(--color-bg-muted);
+      color: var(--color-text-primary);
+    }
+  }
+}

@@ -1,0 +1,260 @@
+@use "../base/mixins" as m;
+
+/* =========================================
+   Category tile
+   ========================================= */
+
+.category-tile {
+  --category-tile-radius: var(--radius-xl);
+  --category-tile-min-h: 220px;
+  --category-tile-padding-x: 22px;
+  --category-tile-padding-y: 24px;
+  --category-tile-color: var(--color-text-inverse);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: var(--category-tile-min-h);
+  aspect-ratio: 3 / 3.6;
+  overflow: hidden;
+  border-radius: var(--category-tile-radius);
+  color: var(--category-tile-color);
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.10);
+
+  @include m.media(sm) {
+    --category-tile-min-h: 260px;
+    --category-tile-padding-x: 16px;
+    --category-tile-padding-y: 20px;
+
+    aspect-ratio: 3 / 3.4;
+  }
+
+  &__state {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-color: var(--color-neutral-800);
+    background-size: cover;
+    background-position: center;
+    transition: transform .45s ease;
+  }
+
+  &__shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+                    180deg,
+                    rgba(15, 23, 42, 0.10) 0%,
+                    rgba(15, 23, 42, 0.26) 42%,
+                    rgba(15, 23, 42, 0.82) 100%
+    );
+  }
+
+  &__hit {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    padding: var(--category-tile-padding-y) var(--category-tile-padding-x) 22px;
+  }
+
+  &__stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: auto;
+    transition: transform .4s ease;
+  }
+
+  &__head {
+    width: 100%;
+  }
+
+  &__count {
+    display: block;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    opacity: .88;
+  }
+
+  &__title {
+    margin: 8px 0 0;
+    font-size: 22px;
+    line-height: 1.15;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-wrap: pretty;
+
+    @include m.media(sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__title-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__extra {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+    transition:
+            max-height .4s ease,
+            opacity .3s ease,
+            visibility .3s ease,
+            margin-top .35s ease;
+  }
+
+  &__sublist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    a {
+      color: inherit;
+      font-size: 14px;
+      line-height: 1.45;
+      text-decoration: underline;
+      text-decoration-color: color-mix(in srgb, #fff 35%, transparent);
+      text-underline-offset: 3px;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration-color: var(--color-brand);
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: .92;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+/* =========================================
+   Desktop / hover devices
+   ========================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .category-tile__hit {
+    display: none;
+  }
+
+  .category-tile__extra {
+    max-height: 0;
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .category-tile:hover .category-tile__stack,
+  .category-tile:focus-within .category-tile__stack {
+    transform: translateY(-6px);
+  }
+
+  .category-tile:hover .category-tile__bg,
+  .category-tile:focus-within .category-tile__bg {
+    transform: scale(1.05);
+  }
+
+  .category-tile:hover .category-tile__extra,
+  .category-tile:focus-within .category-tile__extra {
+    max-height: 400px;
+    margin-top: 10px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* =========================================
+   Touch devices
+   ========================================= */
+
+@media (hover: none), (pointer: coarse) {
+  .category-tile__hit {
+    inset: 0;
+  }
+
+  .category-tile__body {
+    pointer-events: none;
+  }
+
+  .category-tile__body a {
+    pointer-events: auto;
+  }
+
+  .category-tile__state:not(:checked) ~ .category-tile__body .category-tile__extra {
+    max-height: 0;
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .category-tile__state:checked ~ .category-tile__body .category-tile__extra {
+    max-height: 400px;
+    margin-top: 10px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .category-tile__state:checked ~ .category-tile__body .category-tile__stack {
+    transform: translateY(-6px);
+  }
+
+  .category-tile__state:checked ~ .category-tile__bg {
+    transform: scale(1.05);
+  }
+}

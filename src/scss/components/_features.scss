@@ -1,0 +1,125 @@
+@use "../base/mixins" as m;
+
+/* =========================================
+   Features list
+   ========================================= */
+
+.features {
+  display: grid;
+  gap: 32px;
+
+  &--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    @include m.media(lg) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include m.media(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @include m.media(lg) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include m.media(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* =========================================
+   Feature item
+   ========================================= */
+
+.feature {
+  --feature-gap: 16px;
+  --feature-icon-size: 48px;
+  --feature-title-size: 18px;
+
+  display: flex;
+  gap: var(--feature-gap);
+  min-width: 0;
+
+  &__icon {
+    flex: none;
+    inline-size: var(--feature-icon-size);
+    block-size: var(--feature-icon-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-brand);
+
+    .icon,
+    .svg,
+    svg {
+      inline-size: 100%;
+      block-size: 100%;
+      display: block;
+      color: inherit;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-size: var(--feature-title-size);
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-brand);
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* icon left */
+  &--left {
+    align-items: flex-start;
+  }
+
+  /* icon top */
+  &--top {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .feature__icon {
+      margin-bottom: 4px;
+    }
+  }
+
+  /* centered */
+  &--center {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .feature__body {
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

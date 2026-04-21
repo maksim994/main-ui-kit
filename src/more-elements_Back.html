@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('./partials/base/head.html', {
+    "title": "UI Demo - Элементы"
+})
+
+@include('./partials/component/header.html')
+
+<div class="wrapper">
+
+    <h1>Элементы</h1>
+
+    <div class="grid-list grid-list--items-2 grid-list-lg-items-1 mb-48">
+        <div>
+            <h2>Accordion</h2>
+
+            @include('./partials/component/accordion.html', {
+            'txt': [
+                {
+                    'title': 'Цена вопроса не важна, когда солнечных дней всё меньше',
+                    'text': '<p>Современные технологии достигли такого уровня, что современная методология разработки позволяет оценить значение прогресса профессионального сообщества. Как принято считать, сторонники тоталитаризма в науке, инициированные исключительно синтетически, ограничены исключительно образом мышления. А ещё стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть описаны максимально подробно.</p>'
+                },
+
+                {
+                    'title': 'Граница обучения кадров станет частью наших традиций',
+                    'text': '<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что предприниматели в сети интернет могут быть призваны к ответу! Банальные, но неопровержимые выводы, а также акционеры крупнейших компаний неоднозначны и будут призваны к ответу. А также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть разоблачены.</p>'
+                },
+
+                {
+                    'title': 'Допустим, героям были возданы соответствующие почести',
+                    'text': '<p>Лишь непосредственные участники технического прогресса, вне зависимости от их уровня, должны быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Не следует, однако, забывать, что экономическая повестка сегодняшнего дня в значительной степени обусловливает важность анализа существующих паттернов поведения! Идейные соображения высшего порядка, а также сложившаяся структура организации предопределяет высокую востребованность инновационных методов управления процессами.</p>'
+                },
+                {
+                    'title': 'Граница обучения кадров станет частью наших традиций',
+                    'text': '<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что предприниматели в сети интернет могут быть призваны к ответу! Банальные, но неопровержимые выводы, а также акционеры крупнейших компаний неоднозначны и будут призваны к ответу. А также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть разоблачены.</p>'
+                },
+
+                {
+                    'title': 'Допустим, героям были возданы соответствующие почести',
+                    'text': '<p>Лишь непосредственные участники технического прогресса, вне зависимости от их уровня, должны быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Не следует, однако, забывать, что экономическая повестка сегодняшнего дня в значительной степени обусловливает важность анализа существующих паттернов поведения! Идейные соображения высшего порядка, а также сложившаяся структура организации предопределяет высокую востребованность инновационных методов управления процессами.</p>'
+                },
+            ]
+            })
+        </div>
+        <div>
+            <h2>Хлебные крошки</h2>
+
+            <div class="mb-20">
+                <nav id="navigation" aria-label="Хлебные крошки">
+                    <ol class="breadcrumbs" role="list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/catalog">Каталог</a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/catalog/smartphones">Смартфоны</a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                      <span class="breadcrumbs__item-name">
+                        Очень длинное название текущей страницы для проверки обрезки по ellipsis
+                      </span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="mb-20">
+                <nav id="navigation" aria-label="Хлебные крошки">
+                <ol class="breadcrumbs breadcrumbs--icon" role="list">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="/">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="/blog">Блог</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__item-name">Статья</span>
+                    </li>
+                </ol>
+            </nav>
+            </div>
+            <div class="mb-20">
+                <ol class="breadcrumbs breadcrumbs--icon" role="list"
+                    style="--bc-separator-color:#bbb; --bc-sep-size:1.1em">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/docs">Документация</a></li>
+                    <li class="breadcrumbs__item"><span class="breadcrumbs__item-name">Компоненты</span></li>
+                </ol>
+            </div>
+            <div class="mb-20">
+                <nav id="navigation" aria-label="Хлебные крошки">
+                    <ol class="breadcrumbs breadcrumbs--icon" role="list"
+                        itemscope itemtype="https://schema.org/BreadcrumbList">
+
+                        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a class="breadcrumbs__link" itemprop="item" href="/">
+                                <span itemprop="name">Главная</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+
+                        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a class="breadcrumbs__link" itemprop="item" href="/catalog">
+                                <span itemprop="name">Каталог</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+
+                        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <span class="breadcrumbs__item-name" itemprop="name">Смартфоны</span>
+                            <meta itemprop="position" content="3" />
+                        </li>
+
+                    </ol>
+                </nav>
+            </div>
+
+            <h2>Навигация по страницам</h2>
+
+            <div class="mb-20">
+                <nav class="pagination pagination--center" aria-label="Навигация по страницам">
+                    <ol class="pagination__list">
+                        <li class="pagination__item pagination__item_prev pagination__item--disabled">
+                            <a class="pagination__link" href="#" aria-disabled="true">Предыдущая</a>
+                        </li>
+
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="?page=1"><span class="pagination__text">1</span></a>
+                        </li>
+                        <li class="pagination__item" aria-current="page">
+                            <a class="pagination__link" href="?page=2"><span class="pagination__text">2</span></a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="?page=3"><span class="pagination__text">3</span></a>
+                        </li>
+
+                        <li class="pagination__item pagination__item_next">
+                            <a class="pagination__link" href="?page=3">Следующая</a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+
+            <nav class="pagination pagination--lg" aria-label="Навигация по страницам">
+                <ol class="pagination__list">
+                    <li class="pagination__item pagination__item_prev">
+                        <a class="pagination__link" href="?page=4">Предыдущая</a>
+                    </li>
+
+                    <li class="pagination__item"><a class="pagination__link" href="?page=1"><span class="pagination__text">1</span></a></li>
+                    <li class="pagination__item pagination__item--ellipsis"><span class="pagination__text">…</span></li>
+                    <li class="pagination__item"><a class="pagination__link" href="?page=5"><span class="pagination__text">5</span></a></li>
+                    <li class="pagination__item" aria-current="page"><a class="pagination__link" href="?page=6"><span class="pagination__text">6</span></a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="?page=7"><span class="pagination__text">7</span></a></li>
+
+                    <li class="pagination__item pagination__item_next">
+                        <a class="pagination__link" href="?page=7">Следующая</a>
+                    </li>
+                </ol>
+            </nav>
+
+        </div>
+    </div>
+
+    <div class="grid-list grid-list--items-2 grid-list-lg-items-1">
+        <div class="">
+            <h2>Label</h2>
+            <div class="d-f gap-8 fw-w">
+                <span class="label label-success">Готово</span>
+                <span class="label label-primary --pill">New</span>
+                <span class="label label-warning --soft">Beta</span>
+                <span class="label label-transparent">
+              <svg class="icon"><use href="#info"/></svg> Info
+            </span>
+            </div>
+        </div>
+        <div class="">
+                <h2>Алерты</h2>
+
+                <div class="d-f fd-c gap-8 fw-w">
+                    <div class="alert alert-primary">
+                        <strong class="alert-title">Primary</strong>
+                        <p class="alert-desc">Информационное сообщение. <a>Подробнее</a></p>
+                    </div>
+
+                    <div class="alert alert-success alert--soft">
+                        <strong class="alert-title">Успех!</strong>
+                        <p class="alert-desc">Операция выполнена успешно.</p>
+                    </div>
+
+                    <div class="alert alert-warning alert--outline alert-sm">
+                        <strong class="alert-title">Внимание</strong>
+                        <p class="alert-desc">Проверьте данные перед продолжением.</p>
+                    </div>
+
+                    <div class="alert alert-danger alert-lg">
+                        <strong class="alert-title">Ошибка</strong>
+                        <p class="alert-desc">Нет доступа к ресурсу. <a>Запросить права</a></p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <h2>Категории</h2>
+        <div class="grid-list mb-48">
+            @include('./partials/element/card-projects-v1.html', {
+                'images': 'https://priority2-demo.ru/upload/iblock/f1f/nqy3wxpusnau7x8fq4y43ri5qsv84xct.jpg',
+                'section': 'Управление бизнесом',
+                'name': 'Внедрение корпоративных стандартов для ООО «Лаунш»',
+                'text': 'Мы выявили типичные ошибки в технологии работы и сформировали корпоративную культуру. В результате менеджеры стали работать с клиентами эффективнее, продажи увеличились, а руководство получило регламент для оценки результатов сотрудников.'
+            })
+
+            @include('./partials/element/card-projects-v1.html', {
+                'images': 'https://priority2-demo.ru/upload/iblock/9be/gn34mui7p9hqlz5wpfuv0nmxszowxwrj.jpg',
+                'section': 'Управление бизнесом',
+                'name': 'Разрешение спора в компании «Единогрупп»',
+                'text': 'Мы помогли двум владельцам бизнеса прийти к общему решению и остаться друзьями. На проведение медиации потребовалось всего два дня.'
+            })
+
+        </div>
+
+        <div class="grid-list grid-list-items-3 grid-list-xl-items-2">
+            @include('./partials/element/card-projects-v2.html', {
+                'images': 'https://priority2-demo.ru/upload/iblock/f1f/nqy3wxpusnau7x8fq4y43ri5qsv84xct.jpg',
+                'section': 'Управление бизнесом',
+                'name': 'Внедрение корпоративных стандартов для ООО «Лаунш»',
+                'text': 'Мы выявили типичные ошибки в технологии работы и сформировали корпоративную культуру. В результате менеджеры стали работать с клиентами эффективнее, продажи увеличились, а руководство получило регламент для оценки результатов сотрудников.'
+            })
+
+            @include('./partials/element/card-projects-v2.html', {
+                'images': 'https://priority2-demo.ru/upload/iblock/9be/gn34mui7p9hqlz5wpfuv0nmxszowxwrj.jpg',
+                'section': 'Управление бизнесом',
+                'name': 'Разрешение спора в компании «Единогрупп»',
+                'text': 'Мы помогли двум владельцам бизнеса прийти к общему решению и остаться друзьями. На проведение медиации потребовалось всего два дня.'
+            })
+        </div>
+
+    </section>
+
+    <div class="grid-list grid-list-items-3 grid-list-xl-items-2">
+        @include('./partials/element/card-articles.html', {
+            'images': 'https://priority2-demo.ru/upload/iblock/f1f/nqy3wxpusnau7x8fq4y43ri5qsv84xct.jpg',
+            'section': 'Управление бизнесом',
+            'name': 'Внедрение корпоративных стандартов для ООО «Лаунш»',
+            'text': 'Мы выявили типичные ошибки в технологии работы и сформировали корпоративную культуру. В результате менеджеры стали работать с клиентами эффективнее, продажи увеличились, а руководство получило регламент для оценки результатов сотрудников.'
+        })
+
+        @include('./partials/element/card-articles.html', {
+            'images': 'https://priority2-demo.ru/upload/iblock/f1f/nqy3wxpusnau7x8fq4y43ri5qsv84xct.jpg',
+            'section': 'Управление бизнесом',
+            'name': 'Внедрение корпоративных стандартов для ООО «Лаунш»',
+            'text': 'Мы выявили типичные ошибки в технологии работы и сформировали корпоративную культуру. '
+        })
+
+        @include('./partials/element/card-articles.html', {
+            'images': 'https://priority2-demo.ru/upload/iblock/f1f/nqy3wxpusnau7x8fq4y43ri5qsv84xct.jpg',
+            'section': 'Управление бизнесом',
+            'name': 'Внедрение корпоративных стандартов для ООО «Лаунш»',
+            'text': 'Мы выявили типичные ошибки в технологии работы и сформировали корпоративную культуру. В результате менеджеры стали работать с клиентами эффективнее, продажи увеличились, а руководство получило регламент для оценки результатов сотрудников.'
+        })
+    </div>
+
+    <div class="grid-list grid-list-items-3 grid-list-xl-items-2">
+        <div class="sections-list__wrapper">
+            <div class="relative overflow-hidden h-full dark-block-hover">
+                <div class="relative height-100 dark-block-after">
+                    <div class="shine aspect-height--100-to-600 height-100 aspect-ratio">
+                        <div class="absolute card-image" style="background-image: url(/upload/iblock/72d/xjb7lxuvpwl3186xs5wcruf4zresz0gm.jpg);"></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <section class="section">
+        <h2>Категории</h2>
+
+        <div class="grid-list grid-list--items-2 grid-list-xl-items-2 mobile-scrolled">
+            <div class="mobile-scrolled-item">
+                <div class="card-category card d-f fd-c gap p-16">
+                    <div class="card-category--images">
+                        <picture class="img img--1-1 rounded-full img-cover">
+                            <img src="https://corporate.hubsup.ru/upload/iblock/602/piz7pzf4893okzla9i7ogzx0zabq5hzz.jpg" alt="Аренда спецтехники">
+                        </picture>
+                    </div>
+                    <div class="card-category--inner d-f fd-c gap-12">
+                        <div class="card-category--name d-b text-lg fw-500 dark-link">
+                            <a href="#" class="dark-link">Аренда спецтехники</a>
+                        </div>
+
+                        <ul class="card-category--list-link list-reset d-f fw-w">
+                           <li><a href="#">Комплексная автоматизация</a> —</li>
+                            <li><a href="#">POS-системы</a> —</li>
+                            <li><a href="#">Автоматизация отдела продаж</a></li>
+                        </ul>
+
+                        <div class="card-category--text text-reset">
+                            <p>Аренда спецтехники для&nbsp;строительных мероприятий любой сложности.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+@include('./partials/component/footer.html')

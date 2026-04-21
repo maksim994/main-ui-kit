@@ -1,0 +1,246 @@
+@use "./mixins" as m;
+
+/* =========================================
+   Table
+   ========================================= */
+
+.table,
+table {
+  /* local tokens */
+  --tbl-pad-y: var(--table-cell-padding-y, 12px);
+  --tbl-pad-x: var(--table-cell-padding-x, 12px);
+  --tbl-radius: var(--table-radius, var(--radius-md));
+
+  --tbl-bg: var(--table-bg, var(--color-bg-surface));
+  --tbl-head-bg: var(--table-head-bg, var(--color-bg-muted));
+  --tbl-border-color: var(--table-border, var(--color-border-default));
+  --tbl-head-color: var(--table-head-text, var(--color-text-primary));
+  --tbl-cell-color: var(--table-cell-text, var(--color-text-primary));
+  --tbl-caption-color: var(--table-caption, var(--color-text-secondary));
+  --tbl-stripe-bg: var(--table-stripe-bg, var(--color-bg-muted));
+  --tbl-hover-bg: var(--table-hover-bg, var(--color-bg-surface-hover));
+
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  caption-side: bottom;
+  vertical-align: top;
+  background: transparent;
+
+  word-break: break-word;
+  overflow-wrap: anywhere;
+
+  @include m.media(sm) {
+    table-layout: auto;
+  }
+
+  /* =========================================
+     Caption
+     ========================================= */
+  caption {
+    padding: clamp(8px, 1vw, 12px) 0 0;
+    color: var(--tbl-caption-color);
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* =========================================
+     Cells
+     ========================================= */
+  th,
+  td {
+    padding-block: var(--tbl-pad-y);
+    padding-inline: var(--tbl-pad-x);
+    border-inline-end: 1px solid var(--tbl-border-color);
+    border-block-end: 1px solid var(--tbl-border-color);
+    background-color: var(--tbl-bg);
+    color: var(--tbl-cell-color);
+    text-align: left;
+    vertical-align: top;
+
+    &:first-child {
+      border-inline-start: 1px solid var(--tbl-border-color);
+    }
+  }
+
+  /* =========================================
+     Head
+     ========================================= */
+  thead {
+    th,
+    td {
+      background-color: var(--tbl-head-bg);
+      color: var(--tbl-head-color);
+      font-weight: 600;
+      line-height: 1.35;
+      border-block-start: 1px solid var(--tbl-border-color);
+    }
+
+    tr:first-child {
+      > *:first-child {
+        border-start-start-radius: var(--tbl-radius);
+      }
+
+      > *:last-child {
+        border-start-end-radius: var(--tbl-radius);
+      }
+    }
+  }
+
+  /* if table has no thead */
+  tbody:first-of-type > tr:first-of-type > * {
+    border-block-start: 1px solid var(--tbl-border-color);
+  }
+
+  /* bottom radius */
+  tbody:last-of-type > tr:last-child {
+    > *:first-child {
+      border-end-start-radius: var(--tbl-radius);
+    }
+
+    > *:last-child {
+      border-end-end-radius: var(--tbl-radius);
+    }
+  }
+
+  /* =========================================
+     Utilities / content in cells
+     ========================================= */
+  th {
+    font-weight: 600;
+  }
+
+  td {
+    color: var(--tbl-cell-color);
+  }
+
+  /* =========================================
+     Modifiers
+     ========================================= */
+
+  /* striped rows */
+  &.table-striped {
+    tbody > tr:nth-of-type(odd) > * {
+      background-color: var(--tbl-stripe-bg);
+    }
+  }
+
+  /* row hover */
+  &.table-hover {
+    tbody > tr {
+      transition: var(--transition-base);
+
+      &:hover > * {
+        background-color: var(--tbl-hover-bg);
+      }
+    }
+  }
+
+  /* compact */
+  &.table-compact {
+    --tbl-pad-y: var(--table-cell-padding-y-sm, 8px);
+    --tbl-pad-x: var(--table-cell-padding-x-sm, 10px);
+
+    th,
+    td {
+      font-size: 14px;
+      line-height: 1.45;
+    }
+  }
+
+  /* no-wrap columns when needed */
+  &.table-nowrap {
+    th,
+    td {
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+  }
+
+  /* centered cells */
+  &.table-center {
+    th,
+    td {
+      text-align: center;
+    }
+  }
+
+  /* right aligned cells, useful for prices/numbers */
+  &.table-numeric {
+    th,
+    td {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+  }
+}
+
+/* =========================================
+   Table wrapper
+   ========================================= */
+.table-responsive {
+  inline-size: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* =========================================
+   Mobile stacked table
+   Usage:
+   <table class="table table-mobile">
+   <td data-label="Price">100 ₽</td>
+   ========================================= */
+@include m.media(md) {
+  .table-mobile {
+    thead {
+      display: none;
+    }
+
+    tbody,
+    tr,
+    th,
+    td {
+      display: block;
+      width: 100%;
+    }
+
+    tr {
+      margin-bottom: m.em(10);
+    }
+
+    td,
+    th {
+      border-inline-start: 1px solid var(--tbl-border-color);
+      border-inline-end: 1px solid var(--tbl-border-color);
+      border-block-end: 1px solid var(--tbl-border-color);
+      background: var(--tbl-bg);
+
+      &:first-child {
+        border-block-start: 1px solid var(--tbl-border-color);
+        border-start-start-radius: var(--tbl-radius);
+        border-start-end-radius: var(--tbl-radius);
+      }
+
+      &:last-child {
+        border-end-start-radius: var(--tbl-radius);
+        border-end-end-radius: var(--tbl-radius);
+      }
+
+      &::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: m.em(4);
+        color: var(--color-text-secondary);
+        font-size: 12px;
+        line-height: 1.4;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+      }
+    }
+  }
+}

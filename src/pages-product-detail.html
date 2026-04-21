@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "Продуктовая карточка"
+})
+
+<body>
+@include('partials/component/header.html')
+
+<main class="main">
+    <div class="wrapper">
+        <div class="topic">
+            <div class="topic__heading">
+                <h1 id="pagetitle">Решетка-дробилка ТВД-234</h1>
+            </div>
+
+            <div id="navigation">
+                <div class="breadcrumbs breadcrumbs--icon">
+                    <div class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__link">Главная</a>
+                    </div>
+
+                    <div class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__link">Продукты</a>
+                    </div>
+
+                    <div class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__link">Промышленное оборудование</a>
+                    </div>
+
+                    <div class="breadcrumbs__item">
+                        <span class="breadcrumbs__item-name">Решетка-дробилка ТВД-234</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="product-detail section pt-0">
+            <div class="product-detail__main">
+                <div class="product-detail__gallery">
+                    <div class="product-gallery">
+                        <div thumbsSlider class="swiper product-gallery__thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide product-gallery__thumb">
+                                    <picture class="img img--1-1 img--contain">
+                                        <img src="https://priority2-demo.ru/upload/iblock/acb/eoosjlm61bhmokxlo8hahadutqwj8bx1.jpg" alt="Решетка-дробилка ТВД-234">
+                                    </picture>
+                                </div>
+
+                                <div class="swiper-slide product-gallery__thumb">
+                                    <picture class="img img--1-1 img--contain">
+                                        <img src="https://priority2-demo.ru/upload/iblock/2c9/gpsutxc0olkqu3263t45yqt43jq4x69s.jpg" alt="Решетка-дробилка ТВД-234">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper product-gallery__main-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide product-gallery__slide">
+                                    <picture
+                                            class="img img--1-1 img--contain product-gallery__zoom"
+                                            data-fancybox="product-gallery"
+                                            data-src="https://priority2-demo.ru/upload/iblock/acb/eoosjlm61bhmokxlo8hahadutqwj8bx1.jpg"
+                                    >
+                                        <img src="https://priority2-demo.ru/upload/iblock/acb/eoosjlm61bhmokxlo8hahadutqwj8bx1.jpg" alt="Решетка-дробилка ТВД-234">
+                                    </picture>
+                                </div>
+
+                                <div class="swiper-slide product-gallery__slide">
+                                    <picture
+                                            class="img img--1-1 img--contain product-gallery__zoom"
+                                            data-fancybox="product-gallery"
+                                            data-src="https://priority2-demo.ru/upload/iblock/2c9/gpsutxc0olkqu3263t45yqt43jq4x69s.jpg"
+                                    >
+                                        <img src="https://priority2-demo.ru/upload/iblock/2c9/gpsutxc0olkqu3263t45yqt43jq4x69s.jpg" alt="Решетка-дробилка ТВД-234">
+                                    </picture>
+                                </div>
+                            </div>
+
+                            <div class="swiper-button-prev product-gallery__nav product-gallery__nav--prev"></div>
+                            <div class="swiper-button-next product-gallery__nav product-gallery__nav--next"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-detail__content">
+                    <div class="product-detail__meta">
+                        <div class="product-detail__status is-success">В наличии</div>
+                        <div class="product-detail__sku">Арт. ЛТ-0000087</div>
+                    </div>
+
+                    <div class="product-detail__blocks">
+                        <section class="product-detail__block">
+                            <h2 class="product-detail__block-title">Характеристики</h2>
+
+                            <div class="product-properties">
+                                <div class="product-properties__item">
+                                    <div class="product-properties__name">Масса, кг</div>
+                                    <div class="product-properties__value">22</div>
+                                </div>
+
+                                <div class="product-properties__item">
+                                    <div class="product-properties__name">Гарантия, лет</div>
+                                    <div class="product-properties__value">1</div>
+                                </div>
+
+                                <div class="product-properties__item">
+                                    <div class="product-properties__name">Мощность, Вт</div>
+                                    <div class="product-properties__value">4</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="product-detail__block">
+                            <h2 class="product-detail__block-title">Описание</h2>
+
+                            <div class="text-reset text-sm color-secondary">
+                                <p>Сетка затеняющая 2х50/30-35% темно-зеленая</p>
+                            </div>
+                        </section>
+                    </div>
+
+                    <aside class="product-purchase card card--surface p-32">
+                        <div class="product-purchase__price">
+                            <div class="product-purchase__price-current">9 100 ₽</div>
+
+                            <div class="product-purchase__price-bottom">
+                                <div class="product-purchase__price-old">10 100 ₽</div>
+                                <div class="badge badge-info">− 1000 ₽</div>
+                            </div>
+                        </div>
+
+                        <div class="product-purchase__actions">
+                            <button class="btn btn-primary btn-block">Получить консультацию</button>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="product-detail__tabs">
+                <div class="tabs product-tabs">
+                    <div class="tabs-wrapper">
+                        <ul class="tabs-nav" role="tablist">
+                            <li><a href="#tab-1" class="tabs-btn active" data-toggle="tab" role="tab" aria-selected="true">Описание</a></li>
+                            <li><a href="#tab-2" class="tabs-btn" data-toggle="tab" role="tab" aria-selected="false">Характеристики</a></li>
+                            <li><a href="#tab-3" class="tabs-btn" data-toggle="tab" role="tab" aria-selected="false">Документы</a></li>
+                            <li><a href="#tab-4" class="tabs-btn" data-toggle="tab" role="tab" aria-selected="false">Доставка и оплата</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tabs-items">
+                        <div class="tabs-item active" id="tab-1">
+                            <div class="tabs-title">Решетка-дробилка ТВД-234</div>
+                            <div class="text-reset">
+                                <p>Решетка-дробилка предназначена для механической очистки сточных вод и подготовки потока перед дальнейшей обработкой. Компактная конструкция позволяет использовать оборудование на объектах различной производительности.</p>
+                                <p>Модель ТВД-234 отличается надёжностью, простотой обслуживания и адаптацией к непрерывной эксплуатации в промышленных условиях.</p>
+                            </div>
+                        </div>
+
+                        <div class="tabs-item" id="tab-2">
+                            <div class="tabs-title">Технические характеристики</div>
+
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <tbody>
+                                    <tr>
+                                        <td>Масса</td>
+                                        <td>22 кг</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Мощность</td>
+                                        <td>4 Вт</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Гарантия</td>
+                                        <td>1 год</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="tabs-item" id="tab-3">
+                            <div class="tabs-title">Документы</div>
+                            <div class="text-reset">
+                                <p>Здесь могут быть размещены сертификаты, паспорта изделия, инструкции по эксплуатации и техническая документация.</p>
+                            </div>
+                        </div>
+
+                        <div class="tabs-item" id="tab-4">
+                            <div class="tabs-title">Доставка и оплата</div>
+                            <div class="text-reset">
+                                <p>Доставка осуществляется по всей России. Доступны самовывоз, транспортные компании и индивидуальные условия поставки для юридических лиц.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+@include('partials/component/footer.html')
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.Fancybox) {
+            Fancybox.bind('[data-fancybox="product-gallery"]', {
+                Carousel: {
+                    Thumbs: {
+                        type: 'classic'
+                    }
+                }
+            });
+        }
+
+        const thumbsEl = document.querySelector('.product-gallery__thumbs');
+        const mainEl = document.querySelector('.product-gallery__main-slider');
+
+        let thumbsSwiper = null;
+
+        if (thumbsEl && mainEl && window.Swiper) {
+            thumbsSwiper = new Swiper(thumbsEl, {
+                direction: 'vertical',
+                spaceBetween: 8,
+                slidesPerView: 5,
+                freeMode: true,
+                watchSlidesProgress: true,
+                breakpoints: {
+                    0: {
+                        direction: 'horizontal',
+                        slidesPerView: 4
+                    },
+                    992: {
+                        direction: 'vertical',
+                        slidesPerView: 5
+                    }
+                }
+            });
+
+            new Swiper(mainEl, {
+                spaceBetween: 12,
+                loop: false,
+                navigation: {
+                    nextEl: '.product-gallery__nav--next',
+                    prevEl: '.product-gallery__nav--prev'
+                },
+                thumbs: {
+                    swiper: thumbsSwiper
+                }
+            });
+        }
+
+        const tabLinks = document.querySelectorAll('.tabs [data-toggle="tab"]');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+
+                const tabs = link.closest('.tabs');
+                if (!tabs) return;
+
+                const targetSelector = link.getAttribute('href');
+                const target = tabs.querySelector(targetSelector);
+                if (!target) return;
+
+                tabs.querySelectorAll('.tabs-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+
+                tabs.querySelectorAll('.tabs-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                link.classList.add('active');
+                link.setAttribute('aria-selected', 'true');
+                target.classList.add('active');
+            });
+        });
+    });
+</script>
+</body>
+</html>

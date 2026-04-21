@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+    "title": "UI Demo"
+})
+
+@include('partials/component/header.html')
+<main class="main">
+    <div class="wrapper">
+        <div class="topic">
+            <div class="topic__heading">
+                <h1 id="pagetitle">Блог</h1>
+            </div>
+        </div>
+
+        <div class="wrapper-content aside-pos-left">
+            <div class="aside_block">
+                <div class="aside-scroll-block">
+                    <ul class="side-menu aside-block">
+                        <li class="side-menu-item">
+                            <span class="side-menu-top-level">
+                                <a href="/blog/avtomobili/" class="dark-link" aria-current="page">Автомобили</a>
+                            </span>
+                        </li>
+                        <li class="side-menu-item">
+                            <span class="side-menu-top-level">
+                                <a href="/blog/zdorove/" class="dark-link" aria-current="page">Здоровье</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right_block">
+                <div class="detail-block d-f fd-c">
+                    <div class="detail-block images">
+                        <picture class="img img--cover">
+                            <source srcset="https://blog.bitrix-developers.ru/upload/iblock/0b7/9kopfip0if0zw361jv8qvzzr7d11j5i0.avif" type="image/avif">
+                            <source srcset="https://blog.bitrix-developers.ru/upload/iblock/0b7/9kopfip0if0zw361jv8qvzzr7d11j5i0.webp" type="image/webp">
+                            <img src="https://blog.bitrix-developers.ru/upload/iblock/0b7/9kopfip0if0zw361jv8qvzzr7d11j5i0.jpg" alt="Ночная рутина для кожи: ретинол, кислоты и пептиды — как сочетать без раздражения (план на 4 недели)" title="Ночная рутина для кожи: ретинол, кислоты и пептиды — как сочетать без раздражения (план на 4 недели)" loading="lazy">
+                        </picture>
+                    </div>
+
+                    <div class="detail-block info d-f ai-c fw-w gap-16 row-gap-4">
+                        <div class="news-detail__date d-f ai-c gap-4 info-item" title="Дата создания">
+                            <i class="svg inline date icons icons-24" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.2735 3.98437H18.3828V2.5H16.8985V3.98437H7.10156V2.5H5.61719V3.98437H4.72656C3.49884 3.98437 2.5 4.9832 2.5 6.21094V19.2735C2.5 20.5011 3.49884 21.5 4.72656 21.5H19.2735C20.5011 21.5 21.5 20.5011 21.5 19.2735V6.21094C21.5 4.9832 20.5011 3.98437 19.2735 3.98437ZM20.0156 19.2735C20.0156 19.6826 19.6826 20.0156 19.2735 20.0156H4.72656C4.31732 20.0156 3.98437 19.6826 3.98437 19.2735V9.47656H20.0156V19.2735ZM20.0156 7.99219H3.98437V6.21094C3.98437 5.8017 4.31732 5.46875 4.72656 5.46875H5.61719V6.95312H7.10156V5.46875H16.8985V6.95312H18.3828V5.46875H19.2735C19.6826 5.46875 20.0156 5.8017 20.0156 6.21094V7.99219Z" fill="currentColor"></path><path d="M5.32031 11.0352H6.8047V12.5195H5.32031V11.0352ZM8.28906 11.0352H9.77345V12.5195H8.28906V11.0352ZM11.2578 11.0352H12.7422V12.5195H11.2578V11.0352ZM14.2266 11.0352H15.711V12.5195H14.2266V11.0352ZM17.1953 11.0352H18.6797V12.5195H17.1953V11.0352ZM5.32031 14.0039H6.8047V15.4883H5.32031V14.0039ZM8.28906 14.0039H9.77345V15.4883H8.28906V14.0039ZM11.2578 14.0039H12.7422V15.4883H11.2578V14.0039ZM14.2266 14.0039H15.711V15.4883H14.2266V14.0039ZM5.32031 16.9727H6.8047V18.457H5.32031V16.9727ZM8.28906 16.9727H9.77345V18.457H8.28906V16.9727ZM11.2578 16.9727H12.7422V18.457H11.2578V16.9727ZM14.2266 16.9727H15.711V18.457H14.2266V16.9727ZM17.1953 14.0039H18.6797V15.4883H17.1953V14.0039Z" fill="currentColor"></path></svg></i>                02 октября 2025            </div>
+
+                        <div class="page-info-item d-f ai-c gap-4 info-item" title="Время чтения">
+                            <i class="svg inline time icons icons-24" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                <span>2 мин.</span>
+                        </div>
+
+                        <div class="page-info-item d-f ai-c gap-4 info-item" title="Количество просмотров">
+                            <i class="svg inline eye icons icons-24" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.45825 12C3.73253 7.94288 7.52281 5 12.0004 5C16.4781 5 20.2684 7.94291 21.5426 12C20.2684 16.0571 16.4781 19 12.0005 19C7.52281 19 3.73251 16.0571 2.45825 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                <span>63</span>
+                        </div>
+
+                        <div class="page-info-item d-f ai-c gap-4 info-item" title="Последнее изменение">
+                            <i class="svg inline update-time icons icons-24" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10.5279 14.1156C10.4681 14.0554 10.397 14.0075 10.3187 13.9749C10.2403 13.9423 10.1563 13.9255 10.0714 13.9255C9.98658 13.9255 9.90256 13.9423 9.82422 13.9749C9.74588 14.0075 9.67478 14.0554 9.61502 14.1156L9.46073 14.2763C9.51055 13.8609 9.661 13.4638 9.89904 13.1197C10.1371 12.7755 10.4555 12.4947 10.8267 12.3015C11.1979 12.1083 11.6106 12.0086 12.029 12.0111C12.4475 12.0135 12.859 12.1181 13.2279 12.3156C13.3779 12.4009 13.5557 12.423 13.722 12.3772C13.8884 12.3314 14.0298 12.2214 14.115 12.0713C14.2003 11.9213 14.2224 11.7435 14.1766 11.5772C14.1308 11.4108 14.0208 11.2694 13.8707 11.1842C13.3008 10.8666 12.6597 10.6987 12.0072 10.6963C11.3548 10.6939 10.7124 10.857 10.1402 11.1705C9.56795 11.4839 9.08457 11.9373 8.73526 12.4884C8.38595 13.0394 8.18214 13.6701 8.14288 14.3213L7.94359 14.1156C7.82254 13.9946 7.65836 13.9266 7.48716 13.9266C7.31597 13.9266 7.15179 13.9946 7.03073 14.1156C6.90968 14.2367 6.84167 14.4009 6.84167 14.572C6.84167 14.7432 6.90968 14.9074 7.03073 15.0285L8.31645 16.3142C8.37621 16.3744 8.44731 16.4223 8.52565 16.4549C8.60399 16.4875 8.68801 16.5043 8.77288 16.5043C8.85774 16.5043 8.94177 16.4875 9.0201 16.4549C9.09844 16.4223 9.16954 16.3744 9.2293 16.3142L10.515 15.0285C10.5761 14.9696 10.625 14.8991 10.6587 14.8213C10.6924 14.7434 10.7104 14.6596 10.7116 14.5747C10.7128 14.4899 10.6972 14.4056 10.6657 14.3268C10.6341 14.248 10.5873 14.1762 10.5279 14.1156Z" fill="CurrentColor"></path><path d="M19.7143 4.28571H18.4286V3.64286C18.4286 3.47236 18.3608 3.30885 18.2403 3.18829C18.1197 3.06773 17.9562 3 17.7857 3C17.6152 3 17.4517 3.06773 17.3311 3.18829C17.2106 3.30885 17.1429 3.47236 17.1429 3.64286V4.28571H14.5714V3.64286C14.5714 3.47236 14.5037 3.30885 14.3831 3.18829C14.2626 3.06773 14.0991 3 13.9286 3C13.7581 3 13.5946 3.06773 13.474 3.18829C13.3534 3.30885 13.2857 3.47236 13.2857 3.64286V4.28571H10.7143V3.64286C10.7143 3.47236 10.6466 3.30885 10.526 3.18829C10.4054 3.06773 10.2419 3 10.0714 3C9.90093 3 9.73742 3.06773 9.61686 3.18829C9.4963 3.30885 9.42857 3.47236 9.42857 3.64286V4.28571H6.85714V3.64286C6.85714 3.47236 6.78941 3.30885 6.66885 3.18829C6.5483 3.06773 6.38478 3 6.21429 3C6.04379 3 5.88028 3.06773 5.75972 3.18829C5.63916 3.30885 5.57143 3.47236 5.57143 3.64286V4.28571H4.28571C3.94472 4.28571 3.6177 4.42117 3.37658 4.66229C3.13546 4.90341 3 5.23044 3 5.57143V19.7143C3 20.0553 3.13546 20.3823 3.37658 20.6234C3.6177 20.8645 3.94472 21 4.28571 21H19.7143C20.0553 21 20.3823 20.8645 20.6234 20.6234C20.8645 20.3823 21 20.0553 21 19.7143V5.57143C21 5.23044 20.8645 4.90341 20.6234 4.66229C20.3823 4.42117 20.0553 4.28571 19.7143 4.28571ZM5.57143 5.57143C5.57143 5.74192 5.63916 5.90544 5.75972 6.026C5.88028 6.14656 6.04379 6.21429 6.21429 6.21429C6.38478 6.21429 6.5483 6.14656 6.66885 6.026C6.78941 5.90544 6.85714 5.74192 6.85714 5.57143H9.42857C9.42857 5.74192 9.4963 5.90544 9.61686 6.026C9.73742 6.14656 9.90093 6.21429 10.0714 6.21429C10.2419 6.21429 10.4054 6.14656 10.526 6.026C10.6466 5.90544 10.7143 5.74192 10.7143 5.57143H13.2857C13.2857 5.74192 13.3534 5.90544 13.474 6.026C13.5946 6.14656 13.7581 6.21429 13.9286 6.21429C14.0991 6.21429 14.2626 6.14656 14.3831 6.026C14.5037 5.90544 14.5714 5.74192 14.5714 5.57143H17.1429C17.1429 5.74192 17.2106 5.90544 17.3311 6.026C17.4517 6.14656 17.6152 6.21429 17.7857 6.21429C17.9562 6.21429 18.1197 6.14656 18.2403 6.026C18.3608 5.90544 18.4286 5.74192 18.4286 5.57143H19.7143V8.14286H4.28571V5.57143H5.57143ZM4.28571 19.7143V9.42857H19.7143V19.7143H4.28571Z" fill="CurrentColor"></path><path d="M16.9564 14.1155L15.6707 12.8298C15.6109 12.7696 15.5398 12.7217 15.4615 12.6891C15.3832 12.6565 15.2991 12.6396 15.2143 12.6396C15.1294 12.6396 15.0454 12.6565 14.967 12.6891C14.8887 12.7217 14.8176 12.7696 14.7578 12.8298L13.4721 14.1155C13.3511 14.2366 13.2831 14.4008 13.2831 14.5719C13.2831 14.7431 13.3511 14.9073 13.4721 15.0284C13.5932 15.1494 13.7574 15.2174 13.9286 15.2174C14.0998 15.2174 14.2639 15.1494 14.385 15.0284L14.5393 14.8677C14.467 15.4917 14.1689 16.0677 13.7011 16.4869C13.2333 16.9062 12.6282 17.1397 12 17.1434C11.5703 17.1467 11.1471 17.0382 10.7721 16.8284C10.6221 16.7431 10.4443 16.721 10.278 16.7668C10.1116 16.8126 9.97024 16.9226 9.88499 17.0727C9.79974 17.2227 9.77759 17.4005 9.8234 17.5668C9.86921 17.7332 9.97924 17.8746 10.1293 17.9598C10.6992 18.2774 11.3403 18.4453 11.9928 18.4477C12.6452 18.4501 13.2876 18.2869 13.8598 17.9735C14.4321 17.6601 14.9154 17.2067 15.2647 16.6556C15.6141 16.1046 15.8179 15.4739 15.8571 14.8227L16.0564 15.0284C16.1162 15.0886 16.1873 15.1365 16.2656 15.1691C16.344 15.2017 16.428 15.2185 16.5128 15.2185C16.5977 15.2185 16.6817 15.2017 16.7601 15.1691C16.8384 15.1365 16.9095 15.0886 16.9693 15.0284C17.0287 14.9678 17.0755 14.896 17.1071 14.8172C17.1386 14.7384 17.1542 14.6541 17.153 14.5693C17.1518 14.4844 17.1338 14.4006 17.1001 14.3227C17.0664 14.2449 17.0175 14.1744 16.9564 14.1155Z" fill="CurrentColor"></path></svg></i>                <span>08 октября 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-block text">
+                        <p>Ночью кожа активно восстанавливается: снижается влияние УФ, усиливаются процессы обновления. Грамотная ночная рутина — это простая последовательность «очищение → актив → смягчающий крем», к которой по плану добавляются ретиноиды, кислоты и пептиды. Ниже — таблицы совместимости, расписание на 4 недели, чек-листы и типичные ошибки.</p>
+
+                        <div class="detail-block detail-menu" data-collapsible="">
+                            <button class="detail-menu-toggle" type="button" aria-expanded="true" aria-controls="toc-list">
+                                <span class="fw-500 h5 detail-menu-title">Содержание</span>
+                                <!-- стрелка -->
+                                <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M8.12 9.29L12 13.17l3.88-3.88a1 1 0 1 1 1.41 1.41l-4.59 4.59a1 1 0 0 1-1.41 0L6.71 10.7a1 1 0 0 1 1.41-1.41z"></path>
+                                </svg>
+                            </button>
+
+                            <ul id="toc-list" class="detail-menu-list">
+
+                                <li class="lvl-1">
+                                    <a href="#baza-nocnoj-rutiny-cto-dela">
+                                        База ночной рутины (что делать каждый вечер)                                </a>
+                                </li>
+                                <li class="lvl-1">
+                                    <a href="#matrica-aktivov-i-sovmestim">
+                                        Матрица активов и совместимость                                </a>
+                                </li>
+                                <li class="lvl-1">
+                                    <a href="#pravilo-sendvica-dla-retino">
+                                        Правило «сэндвича» для ретиноида                                </a>
+                                </li>
+                                <li class="lvl-1">
+                                    <a href="#plan-na-4-nedeli-dla-novick">
+                                        План на 4 недели (для новичка)                                </a>
+                                </li>
+                                <li class="lvl-1">
+                                    <a href="#sloi-i-tekstury-poradok-nan">
+                                        Слои и текстуры: порядок нанесения                                </a>
+                                </li>
+                                <li class="lvl-1">
+                                    <a href="#podbor-pod-tip-kozi">
+                                        Подбор под тип кожи                                </a>
+                                </li>
+                                <li class="lvl-1">
+                                    <a href="#cek-list-bezopasnosti">
+                                        Чек-лист безопасности                                </a>
+                                </li>
+                                <li class="lvl-1">
+                                    <a href="#tipicnye-osibki-i-kak-ih-is">
+                                        Типичные ошибки и как их исправить                                </a>
+                                </li>
+                                <li class="lvl-1">
+                                    <a href="#mini-nabor-dla-starta">
+                                        Мини-набор для старта                                </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+                        <!--?xml encoding="UTF-8"--><section>
+                        <h2 id="baza-nocnoj-rutiny-cto-dela">База ночной рутины (что делать каждый вечер)</h2>
+                        <ul>
+                            <li><strong>Очищение:</strong> мягкий гель/крем, при макияже — сначала масло/бальзам, затем гель.</li>
+                            <li><strong>Увлажняющий промежуточный слой (по желанию):</strong> эссенция/тоник без спирта.</li>
+                            <li><strong>Актив:</strong> ретиноид <em>или</em> кислоты <em>или</em> пептиды — не всё сразу.</li>
+                            <li><strong>Крем:</strong> успокаивающий, с церамидами/скваланом/пантенолом.</li>
+                        </ul>
+                    </section><section>
+                        <h2 id="matrica-aktivov-i-sovmestim">Матрица активов и совместимость</h2>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Актив</th>
+                                <th>Цель</th>
+                                <th>Стартовая частота</th>
+                                <th>Совместим</th>
+                                <th>Осторожно/не сочетать</th>
+                                <th>Примечание</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Ретинол/ретиноид</td>
+                                <td>Текстура, морщины, пост-акне</td>
+                                <td>2 р/нед.</td>
+                                <td>Ниацинамид, пептиды, успокаивающий крем</td>
+                                <td>Кислоты той же ночью (для новичков)</td>
+                                <td>Правило «сэндвича» для снижения раздражения</td>
+                            </tr>
+                            <tr>
+                                <td>AHA (гликолевая/молочная)</td>
+                                <td>Рельеф, тусклость</td>
+                                <td>1–2 р/нед.</td>
+                                <td>Ниацинамид, увлажнение</td>
+                                <td>Ретиноид в ту же ночь</td>
+                                <td>Наносить на сухую кожу, избегать глаз</td>
+                            </tr>
+                            <tr>
+                                <td>BHA (салициловая)</td>
+                                <td>Поры, комедоны</td>
+                                <td>1–3 р/нед.</td>
+                                <td>Лёгкие увлажняющие слои</td>
+                                <td>Ретиноид в ту же ночь</td>
+                                <td>Жирная/комби кожа переносит лучше</td>
+                            </tr>
+                            <tr>
+                                <td>Пептиды</td>
+                                <td>Поддержка барьера, упругость</td>
+                                <td>Каждый вечер</td>
+                                <td>Совместимы почти со всем</td>
+                                <td>—</td>
+                                <td>Можно в ночи без активных эксфолиантов</td>
+                            </tr>
+                            <tr>
+                                <td>Ниацинамид 4–10%</td>
+                                <td>Барьер, себум, ровный тон</td>
+                                <td>Через вечер</td>
+                                <td>Ретиноид, кислоты (в разные слои/ночи)</td>
+                                <td>Высокие % при чувствительной коже</td>
+                                <td>Хорош как «подушка безопасности»</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </section><section>
+                        <h2 id="pravilo-sendvica-dla-retino">Правило «сэндвича» для ретиноида</h2>
+                        <ol>
+                            <li>Тонкий слой <strong>крема</strong> на сухую кожу → 5–10 минут пауза.</li>
+                            <li>Горошина <strong>ретиноида</strong> (лоб, щёки, подбородок) — не на веки и крылья носа.</li>
+                            <li>Сверху — ещё один тонкий слой <strong>крема</strong>.</li>
+                        </ol>
+                        <p>Так снижается риск раздражения без серьёзной потери эффективности.</p>
+                    </section><section>
+                        <h2 id="plan-na-4-nedeli-dla-novick">План на 4 недели (для новичка)</h2>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Неделя</th>
+                                <th>Пн</th>
+                                <th>Вт</th>
+                                <th>Ср</th>
+                                <th>Чт</th>
+                                <th>Пт</th>
+                                <th>Сб</th>
+                                <th>Вс</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>База + ниацинамид</td>
+                                <td>База</td>
+                                <td>AHA/BHA</td>
+                                <td>База</td>
+                                <td>Ретиноид (сэндвич)</td>
+                                <td>База</td>
+                                <td>База</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>База + пептиды</td>
+                                <td>Ретиноид</td>
+                                <td>База</td>
+                                <td>AHA/BHA</td>
+                                <td>База</td>
+                                <td>Ретиноид</td>
+                                <td>База</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Ретиноид</td>
+                                <td>База</td>
+                                <td>AHA/BHA</td>
+                                <td>База + пептиды</td>
+                                <td>Ретиноид</td>
+                                <td>База</td>
+                                <td>База</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ретиноид</td>
+                                <td>База</td>
+                                <td>База</td>
+                                <td>AHA/BHA</td>
+                                <td>Ретиноид</td>
+                                <td>База + пептиды</td>
+                                <td>База</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p><em>Дальше:</em> при хорошей переносимости можно поддерживать ретиноид 2–3 р/нед., кислоты — 1–2 р/нед.</p>
+                    </section><section>
+                        <h2 id="sloi-i-tekstury-poradok-nan">Слои и текстуры: порядок нанесения</h2>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Шаг</th>
+                                <th>Продукт</th>
+                                <th>Пример текстуры</th>
+                                <th>Комментарий</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Очищение</td>
+                                <td>Гель/крем/бальзам</td>
+                                <td>Без «скрипа», тёплая вода</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Лёгкий водный слой</td>
+                                <td>Эссенция/тоник</td>
+                                <td>По желанию, если не используете кислоты</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Актив</td>
+                                <td>Сыворотка/крем с ретиноидом или кислотой</td>
+                                <td>Один актив за ночь</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Крем</td>
+                                <td>Церамиды/сквалан/пантенол</td>
+                                <td>Запираем влагу, успокаиваем</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </section><section>
+                        <h2 id="podbor-pod-tip-kozi">Подбор под тип кожи</h2>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Тип</th>
+                                <th>Актив на ночь</th>
+                                <th>Крем</th>
+                                <th>Подсказка</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Жирная/комбинированная</td>
+                                <td>BHA или ретиноид</td>
+                                <td>Лёгкий гель-крем</td>
+                                <td>Избегать тяжёлых масел у корня волос</td>
+                            </tr>
+                            <tr>
+                                <td>Сухая</td>
+                                <td>Ретиноид через «сэндвич»</td>
+                                <td>Питательный крем с церамидами</td>
+                                <td>Добавить сыворотку с ГК/скваланом</td>
+                            </tr>
+                            <tr>
+                                <td>Чувствительная/реактивная</td>
+                                <td>Пептиды/ниацинамид, кислоты реже</td>
+                                <td>Успокаивающий без отдушек</td>
+                                <td>Патч-тест, растягивать интервалы</td>
+                            </tr>
+                            <tr>
+                                <td>Пост-акне/тусклость</td>
+                                <td>AHA 1 р/нед. + ретиноид 2 р/нед.</td>
+                                <td>Нейтральный крем</td>
+                                <td>Днём SPF обязательно</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </section><section>
+                        <h2 id="cek-list-bezopasnosti">Чек-лист безопасности</h2>
+                        <ul>
+                            <li><input type="checkbox"> Патч-тест нового средства за 48 ч до нанесения на лицо</li>
+                            <li><input type="checkbox"> Не смешиваю ретиноид и AHA/BHA в <em>одну</em> ночь</li>
+                            <li><input type="checkbox"> Наношу на полностью сухую кожу (особенно кислоты)</li>
+                            <li><input type="checkbox"> Беру объём ретиноида «горошина» на всё лицо</li>
+                            <li><input type="checkbox"> При дискомфорте — пауза 3–5 дней, база без активов</li>
+                            <li><input type="checkbox"> Днём — SPF 30–50, обновляю на улице</li>
+                        </ul>
+                    </section><section>
+                        <h2 id="tipicnye-osibki-i-kak-ih-is">Типичные ошибки и как их исправить</h2>
+                        <ul>
+                            <li><strong>«Всё и сразу»:</strong> раздражение → оставьте один актив на ночь.</li>
+                            <li><strong>Избыточный объём:</strong> «горошина» ретиноида достаточна на всё лицо.</li>
+                            <li><strong>Отсутствие увлажнения:</strong> добавьте простую сыворотку с ГК и крем с церамидами.</li>
+                            <li><strong>Нет фотофиксации:</strong> снимайте лицо раз в 2–4 недели при одинаковном свете.</li>
+                            <li><strong>Пренебрежение шеей/декольте:</strong> дублируйте схему с меньшими концентрациями.</li>
+                        </ul>
+                    </section><section>
+                        <h2 id="mini-nabor-dla-starta">Мини-набор для старта</h2>
+                        <ul>
+                            <li>Деликатный гель/крем-очищение</li>
+                            <li>Ниацинамид 4–5% (на ночи без активов)</li>
+                            <li>Ретиноид начальной силы (2–3 вечера в неделю)</li>
+                            <li>AHA или BHA (1–2 раза в неделю)</li>
+                            <li>Крем с церамидами/скваланом</li>
+                        </ul>
+                    </section><p><strong>Итог:</strong> вводите активы постепенно, не смешивайте сильные средства в одну ночь и поддерживайте барьер простыми увлажняющими слоями. Ночью — восстановление, днём — SPF: так рутина работает без откатов и раздражения.</p>
+
+
+
+
+
+                    </div>
+
+                    <div class="detail-block author">
+                        <div class="article-author d-f ai-c fd-sm-c ai-sm-fs gap-8">
+                            <a class="author-photo" href="/authors/anna-litvinova/" aria-label="Автор: /authors/anna-litvinova/">
+                                <picture class="img">
+                                    <source srcset="/upload/iblock/1c3/b0axysvfckhpw4aogoga46g70sys7ccv.avif" type="image/avif">
+                                    <source srcset="/upload/iblock/1c3/b0axysvfckhpw4aogoga46g70sys7ccv.webp" type="image/webp">
+                                    <img src="/upload/iblock/1c3/b0axysvfckhpw4aogoga46g70sys7ccv.jpg" alt="Анна Литвинова" loading="lazy" decoding="async">
+                                </picture>
+                            </a>
+
+                            <div class="author-info">
+                                <a class="author-name fw-500 text-xl dark-link" href="/authors/anna-litvinova/">
+                                    Анна Литвинова                </a>
+
+                                <div class="author-bio">
+                                    <p>Анна объясняет сложные медицинские темы человеческим языком: питание без крайностей, сон, витамины, анализы «по делу», уход за кожей и волосами.</p>                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-block articles">
+                        <div class="detail-block-title h3">Популярные статьи</div>
+
+
+
+                        <div class="swiper-nav-offset ">
+                            <div class="swiper js-slider" data-swiper="{&quot;slidesPerView&quot;: 3,&quot;spaceBetween&quot;: 20,&quot;loop&quot;: false,&quot;navigation&quot;: {&quot;nextEl&quot;: &quot;.swiper-button-next&quot;, &quot;prevEl&quot;: &quot;.swiper-button-prev&quot;},&quot;pagination&quot;: {&quot;el&quot;: &quot;.swiper-pagination&quot;, &quot;clickable&quot;: true}, &quot;breakpoints&quot;: {&quot;0&quot;: {&quot;slidesPerView&quot;: &quot;1.25&quot;}, &quot;576&quot;: {&quot;slidesPerView&quot;: &quot;1.85&quot;}, &quot;768&quot;: {&quot;slidesPerView&quot;: &quot;2&quot;}, &quot;991&quot;: {&quot;slidesPerView&quot;: &quot;3&quot;}, &quot;1024&quot;: {&quot;slidesPerView&quot;: &quot;3&quot;} } }">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+
+                                        <div class="card border d-f fd-c js-card-item" data-item="" id="bx_3218110189_9" onclick="window.location.href='/blog/top-7-sovetov-dlya-krasivykh-i-zdorovykh-volos-ot-mytya-do-staylinga/'">
+                                            <div class="card-images">
+                                                <picture>
+                                                    <source srcset="/upload/resize_cache/iblock/82b/900_900_1/3qtfr5kijfqpq9dfw9h9bvyt1zo0ln46.avif" type="image/avif">
+                                                    <source srcset="/upload/resize_cache/iblock/82b/900_900_1/3qtfr5kijfqpq9dfw9h9bvyt1zo0ln46.webp" type="image/webp">
+                                                    <img src="/upload/resize_cache/iblock/82b/900_900_1/3qtfr5kijfqpq9dfw9h9bvyt1zo0ln46.jpg" alt="ТОП-7 советов для красивых и здоровых волос: от мытья до стайлинга" title="ТОП-7 советов для красивых и здоровых волос: от мытья до стайлинга" loading="lazy">
+                                                </picture>
+                                            </div>
+                                            <div class="card-inner d-f fd-c">
+
+                                                <a href="/blog/zdorove/" class="card-category text-sm link-brand">
+                                                    Здоровье            </a>
+
+                                                <a href="/blog/top-7-sovetov-dlya-krasivykh-i-zdorovykh-volos-ot-mytya-do-staylinga/" class="card-name d-b text-lg fw-500 dark-link">
+                                                    ТОП-7 советов для красивых и здоровых волос: от мытья до стайлинга        </a>
+
+
+                                                <div class="card-info text-sm d-f fw-w ai-c gap-16 row-gap-4">
+                                                    <div class="card-date card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline date" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.2735 3.98437H18.3828V2.5H16.8985V3.98437H7.10156V2.5H5.61719V3.98437H4.72656C3.49884 3.98437 2.5 4.9832 2.5 6.21094V19.2735C2.5 20.5011 3.49884 21.5 4.72656 21.5H19.2735C20.5011 21.5 21.5 20.5011 21.5 19.2735V6.21094C21.5 4.9832 20.5011 3.98437 19.2735 3.98437ZM20.0156 19.2735C20.0156 19.6826 19.6826 20.0156 19.2735 20.0156H4.72656C4.31732 20.0156 3.98437 19.6826 3.98437 19.2735V9.47656H20.0156V19.2735ZM20.0156 7.99219H3.98437V6.21094C3.98437 5.8017 4.31732 5.46875 4.72656 5.46875H5.61719V6.95312H7.10156V5.46875H16.8985V6.95312H18.3828V5.46875H19.2735C19.6826 5.46875 20.0156 5.8017 20.0156 6.21094V7.99219Z" fill="currentColor"></path><path d="M5.32031 11.0352H6.8047V12.5195H5.32031V11.0352ZM8.28906 11.0352H9.77345V12.5195H8.28906V11.0352ZM11.2578 11.0352H12.7422V12.5195H11.2578V11.0352ZM14.2266 11.0352H15.711V12.5195H14.2266V11.0352ZM17.1953 11.0352H18.6797V12.5195H17.1953V11.0352ZM5.32031 14.0039H6.8047V15.4883H5.32031V14.0039ZM8.28906 14.0039H9.77345V15.4883H8.28906V14.0039ZM11.2578 14.0039H12.7422V15.4883H11.2578V14.0039ZM14.2266 14.0039H15.711V15.4883H14.2266V14.0039ZM5.32031 16.9727H6.8047V18.457H5.32031V16.9727ZM8.28906 16.9727H9.77345V18.457H8.28906V16.9727ZM11.2578 16.9727H12.7422V18.457H11.2578V16.9727ZM14.2266 16.9727H15.711V18.457H14.2266V16.9727ZM17.1953 14.0039H18.6797V15.4883H17.1953V14.0039Z" fill="currentColor"></path></svg></i>                    <span>02 октября 2025</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline time" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>1 мин.</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline eye" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.45825 12C3.73253 7.94288 7.52281 5 12.0004 5C16.4781 5 20.2684 7.94291 21.5426 12C20.2684 16.0571 16.4781 19 12.0005 19C7.52281 19 3.73251 16.0571 2.45825 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>175</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                        <div class="card border d-f fd-c js-card-item" data-item="" id="bx_3218110189_8" onclick="window.location.href='/blog/utrenniy-ukhod-za-kozhey-litsa-10-minutnaya-rutina-dlya-lyubogo-tipa-kozhi/'">
+                                            <div class="card-images">
+                                                <picture>
+                                                    <source srcset="/upload/resize_cache/iblock/178/900_900_1/yihxowplhxffy3fi6j5inlc7cwgywl7n.avif" type="image/avif">
+                                                    <source srcset="/upload/resize_cache/iblock/178/900_900_1/yihxowplhxffy3fi6j5inlc7cwgywl7n.webp" type="image/webp">
+                                                    <img src="/upload/resize_cache/iblock/178/900_900_1/yihxowplhxffy3fi6j5inlc7cwgywl7n.jpg" alt="Утренний уход за кожей лица: 10-минутная рутина для любого типа кожи" title="Утренний уход за кожей лица: 10-минутная рутина для любого типа кожи" loading="lazy">
+                                                </picture>
+                                            </div>
+                                            <div class="card-inner d-f fd-c">
+
+                                                <a href="/blog/zdorove/" class="card-category text-sm link-brand">
+                                                    Здоровье            </a>
+
+                                                <a href="/blog/utrenniy-ukhod-za-kozhey-litsa-10-minutnaya-rutina-dlya-lyubogo-tipa-kozhi/" class="card-name d-b text-lg fw-500 dark-link">
+                                                    Утренний уход за кожей лица: 10-минутная рутина для любого типа кожи        </a>
+
+
+                                                <div class="card-info text-sm d-f fw-w ai-c gap-16 row-gap-4">
+                                                    <div class="card-date card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline date" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.2735 3.98437H18.3828V2.5H16.8985V3.98437H7.10156V2.5H5.61719V3.98437H4.72656C3.49884 3.98437 2.5 4.9832 2.5 6.21094V19.2735C2.5 20.5011 3.49884 21.5 4.72656 21.5H19.2735C20.5011 21.5 21.5 20.5011 21.5 19.2735V6.21094C21.5 4.9832 20.5011 3.98437 19.2735 3.98437ZM20.0156 19.2735C20.0156 19.6826 19.6826 20.0156 19.2735 20.0156H4.72656C4.31732 20.0156 3.98437 19.6826 3.98437 19.2735V9.47656H20.0156V19.2735ZM20.0156 7.99219H3.98437V6.21094C3.98437 5.8017 4.31732 5.46875 4.72656 5.46875H5.61719V6.95312H7.10156V5.46875H16.8985V6.95312H18.3828V5.46875H19.2735C19.6826 5.46875 20.0156 5.8017 20.0156 6.21094V7.99219Z" fill="currentColor"></path><path d="M5.32031 11.0352H6.8047V12.5195H5.32031V11.0352ZM8.28906 11.0352H9.77345V12.5195H8.28906V11.0352ZM11.2578 11.0352H12.7422V12.5195H11.2578V11.0352ZM14.2266 11.0352H15.711V12.5195H14.2266V11.0352ZM17.1953 11.0352H18.6797V12.5195H17.1953V11.0352ZM5.32031 14.0039H6.8047V15.4883H5.32031V14.0039ZM8.28906 14.0039H9.77345V15.4883H8.28906V14.0039ZM11.2578 14.0039H12.7422V15.4883H11.2578V14.0039ZM14.2266 14.0039H15.711V15.4883H14.2266V14.0039ZM5.32031 16.9727H6.8047V18.457H5.32031V16.9727ZM8.28906 16.9727H9.77345V18.457H8.28906V16.9727ZM11.2578 16.9727H12.7422V18.457H11.2578V16.9727ZM14.2266 16.9727H15.711V18.457H14.2266V16.9727ZM17.1953 14.0039H18.6797V15.4883H17.1953V14.0039Z" fill="currentColor"></path></svg></i>                    <span>02 октября 2025</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline time" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>1 мин.</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline eye" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.45825 12C3.73253 7.94288 7.52281 5 12.0004 5C16.4781 5 20.2684 7.94291 21.5426 12C20.2684 16.0571 16.4781 19 12.0005 19C7.52281 19 3.73251 16.0571 2.45825 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>78</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                        <div class="card border d-f fd-c js-card-item" data-item="" id="bx_3218110189_7" onclick="window.location.href='/blog/remont-svoimi-rukami-s-chego-nachat-i-kak-ne-zavalit-sroki/'">
+                                            <div class="card-images">
+                                                <picture>
+                                                    <source srcset="/upload/resize_cache/iblock/66e/900_900_1/gxnfywpkqpd0uhor6jljh3sh0w2onag1.avif" type="image/avif">
+                                                    <source srcset="/upload/resize_cache/iblock/66e/900_900_1/gxnfywpkqpd0uhor6jljh3sh0w2onag1.webp" type="image/webp">
+                                                    <img src="/upload/resize_cache/iblock/66e/900_900_1/gxnfywpkqpd0uhor6jljh3sh0w2onag1.jpg" alt="Ремонт своими руками: с чего начать и как не завалить сроки" title="Ремонт своими руками: с чего начать и как не завалить сроки" loading="lazy">
+                                                </picture>
+                                            </div>
+                                            <div class="card-inner d-f fd-c">
+
+                                                <a href="/blog/remont/" class="card-category text-sm link-brand">
+                                                    Ремонт            </a>
+
+                                                <a href="/blog/remont-svoimi-rukami-s-chego-nachat-i-kak-ne-zavalit-sroki/" class="card-name d-b text-lg fw-500 dark-link">
+                                                    Ремонт своими руками: с чего начать и как не завалить сроки        </a>
+
+
+                                                <div class="card-info text-sm d-f fw-w ai-c gap-16 row-gap-4">
+                                                    <div class="card-date card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline date" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.2735 3.98437H18.3828V2.5H16.8985V3.98437H7.10156V2.5H5.61719V3.98437H4.72656C3.49884 3.98437 2.5 4.9832 2.5 6.21094V19.2735C2.5 20.5011 3.49884 21.5 4.72656 21.5H19.2735C20.5011 21.5 21.5 20.5011 21.5 19.2735V6.21094C21.5 4.9832 20.5011 3.98437 19.2735 3.98437ZM20.0156 19.2735C20.0156 19.6826 19.6826 20.0156 19.2735 20.0156H4.72656C4.31732 20.0156 3.98437 19.6826 3.98437 19.2735V9.47656H20.0156V19.2735ZM20.0156 7.99219H3.98437V6.21094C3.98437 5.8017 4.31732 5.46875 4.72656 5.46875H5.61719V6.95312H7.10156V5.46875H16.8985V6.95312H18.3828V5.46875H19.2735C19.6826 5.46875 20.0156 5.8017 20.0156 6.21094V7.99219Z" fill="currentColor"></path><path d="M5.32031 11.0352H6.8047V12.5195H5.32031V11.0352ZM8.28906 11.0352H9.77345V12.5195H8.28906V11.0352ZM11.2578 11.0352H12.7422V12.5195H11.2578V11.0352ZM14.2266 11.0352H15.711V12.5195H14.2266V11.0352ZM17.1953 11.0352H18.6797V12.5195H17.1953V11.0352ZM5.32031 14.0039H6.8047V15.4883H5.32031V14.0039ZM8.28906 14.0039H9.77345V15.4883H8.28906V14.0039ZM11.2578 14.0039H12.7422V15.4883H11.2578V14.0039ZM14.2266 14.0039H15.711V15.4883H14.2266V14.0039ZM5.32031 16.9727H6.8047V18.457H5.32031V16.9727ZM8.28906 16.9727H9.77345V18.457H8.28906V16.9727ZM11.2578 16.9727H12.7422V18.457H11.2578V16.9727ZM14.2266 16.9727H15.711V18.457H14.2266V16.9727ZM17.1953 14.0039H18.6797V15.4883H17.1953V14.0039Z" fill="currentColor"></path></svg></i>                    <span>02 октября 2025</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline time" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>1 мин.</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline eye" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.45825 12C3.73253 7.94288 7.52281 5 12.0004 5C16.4781 5 20.2684 7.94291 21.5426 12C20.2684 16.0571 16.4781 19 12.0005 19C7.52281 19 3.73251 16.0571 2.45825 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>57</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                        <div class="card border d-f fd-c js-card-item" data-item="" id="bx_3218110189_5" onclick="window.location.href='/blog/5-idey-dlya-remonta-kukhni-planirovka-svet-khranenie-fartuk-i-pol/'">
+                                            <div class="card-images">
+                                                <picture>
+                                                    <source srcset="/upload/resize_cache/iblock/cbe/900_900_1/ada0yr8hmp9rizo2r5fdqttagejzeltd.avif" type="image/avif">
+                                                    <source srcset="/upload/resize_cache/iblock/cbe/900_900_1/ada0yr8hmp9rizo2r5fdqttagejzeltd.webp" type="image/webp">
+                                                    <img src="/upload/resize_cache/iblock/cbe/900_900_1/ada0yr8hmp9rizo2r5fdqttagejzeltd.jpg" alt="5 идей для ремонта кухни: планировка, свет, хранение, фартук и пол" title="5 идей для ремонта кухни: планировка, свет, хранение, фартук и пол" loading="lazy">
+                                                </picture>
+                                            </div>
+                                            <div class="card-inner d-f fd-c">
+
+                                                <a href="/blog/remont/" class="card-category text-sm link-brand">
+                                                    Ремонт            </a>
+
+                                                <a href="/blog/5-idey-dlya-remonta-kukhni-planirovka-svet-khranenie-fartuk-i-pol/" class="card-name d-b text-lg fw-500 dark-link">
+                                                    5 идей для ремонта кухни: планировка, свет, хранение, фартук и пол        </a>
+
+
+                                                <div class="card-info text-sm d-f fw-w ai-c gap-16 row-gap-4">
+                                                    <div class="card-date card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline date" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.2735 3.98437H18.3828V2.5H16.8985V3.98437H7.10156V2.5H5.61719V3.98437H4.72656C3.49884 3.98437 2.5 4.9832 2.5 6.21094V19.2735C2.5 20.5011 3.49884 21.5 4.72656 21.5H19.2735C20.5011 21.5 21.5 20.5011 21.5 19.2735V6.21094C21.5 4.9832 20.5011 3.98437 19.2735 3.98437ZM20.0156 19.2735C20.0156 19.6826 19.6826 20.0156 19.2735 20.0156H4.72656C4.31732 20.0156 3.98437 19.6826 3.98437 19.2735V9.47656H20.0156V19.2735ZM20.0156 7.99219H3.98437V6.21094C3.98437 5.8017 4.31732 5.46875 4.72656 5.46875H5.61719V6.95312H7.10156V5.46875H16.8985V6.95312H18.3828V5.46875H19.2735C19.6826 5.46875 20.0156 5.8017 20.0156 6.21094V7.99219Z" fill="currentColor"></path><path d="M5.32031 11.0352H6.8047V12.5195H5.32031V11.0352ZM8.28906 11.0352H9.77345V12.5195H8.28906V11.0352ZM11.2578 11.0352H12.7422V12.5195H11.2578V11.0352ZM14.2266 11.0352H15.711V12.5195H14.2266V11.0352ZM17.1953 11.0352H18.6797V12.5195H17.1953V11.0352ZM5.32031 14.0039H6.8047V15.4883H5.32031V14.0039ZM8.28906 14.0039H9.77345V15.4883H8.28906V14.0039ZM11.2578 14.0039H12.7422V15.4883H11.2578V14.0039ZM14.2266 14.0039H15.711V15.4883H14.2266V14.0039ZM5.32031 16.9727H6.8047V18.457H5.32031V16.9727ZM8.28906 16.9727H9.77345V18.457H8.28906V16.9727ZM11.2578 16.9727H12.7422V18.457H11.2578V16.9727ZM14.2266 16.9727H15.711V18.457H14.2266V16.9727ZM17.1953 14.0039H18.6797V15.4883H17.1953V14.0039Z" fill="currentColor"></path></svg></i>                    <span>02 октября 2025</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline time" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>1 мин.</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline eye" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.45825 12C3.73253 7.94288 7.52281 5 12.0004 5C16.4781 5 20.2684 7.94291 21.5426 12C20.2684 16.0571 16.4781 19 12.0005 19C7.52281 19 3.73251 16.0571 2.45825 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>66</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+
+                                        <div class="card border d-f fd-c js-card-item" data-item="" id="bx_3218110189_3" onclick="window.location.href='/blog/top-5-oshibok-pri-stroitelstve-dachi-kak-ne-poteryat-sezon-i-byudzhet/'">
+                                            <div class="card-images">
+                                                <picture>
+                                                    <source srcset="/upload/resize_cache/iblock/c7c/900_900_1/35o41lx1atyogrvumavab51h5xxm7zfp.avif" type="image/avif">
+                                                    <source srcset="/upload/resize_cache/iblock/c7c/900_900_1/35o41lx1atyogrvumavab51h5xxm7zfp.webp" type="image/webp">
+                                                    <img src="/upload/resize_cache/iblock/c7c/900_900_1/35o41lx1atyogrvumavab51h5xxm7zfp.jpg" alt="Топ-5 ошибок при строительстве дачи: как не потерять сезон и бюджет" title="Топ-5 ошибок при строительстве дачи: как не потерять сезон и бюджет" loading="lazy">
+                                                </picture>
+                                            </div>
+                                            <div class="card-inner d-f fd-c">
+
+                                                <a href="/blog/stroitelstvo/" class="card-category text-sm link-brand">
+                                                    Строительство            </a>
+
+                                                <a href="/blog/top-5-oshibok-pri-stroitelstve-dachi-kak-ne-poteryat-sezon-i-byudzhet/" class="card-name d-b text-lg fw-500 dark-link">
+                                                    Топ-5 ошибок при строительстве дачи: как не потерять сезон и бюджет        </a>
+
+
+                                                <div class="card-info text-sm d-f fw-w ai-c gap-16 row-gap-4">
+                                                    <div class="card-date card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline date" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.2735 3.98437H18.3828V2.5H16.8985V3.98437H7.10156V2.5H5.61719V3.98437H4.72656C3.49884 3.98437 2.5 4.9832 2.5 6.21094V19.2735C2.5 20.5011 3.49884 21.5 4.72656 21.5H19.2735C20.5011 21.5 21.5 20.5011 21.5 19.2735V6.21094C21.5 4.9832 20.5011 3.98437 19.2735 3.98437ZM20.0156 19.2735C20.0156 19.6826 19.6826 20.0156 19.2735 20.0156H4.72656C4.31732 20.0156 3.98437 19.6826 3.98437 19.2735V9.47656H20.0156V19.2735ZM20.0156 7.99219H3.98437V6.21094C3.98437 5.8017 4.31732 5.46875 4.72656 5.46875H5.61719V6.95312H7.10156V5.46875H16.8985V6.95312H18.3828V5.46875H19.2735C19.6826 5.46875 20.0156 5.8017 20.0156 6.21094V7.99219Z" fill="currentColor"></path><path d="M5.32031 11.0352H6.8047V12.5195H5.32031V11.0352ZM8.28906 11.0352H9.77345V12.5195H8.28906V11.0352ZM11.2578 11.0352H12.7422V12.5195H11.2578V11.0352ZM14.2266 11.0352H15.711V12.5195H14.2266V11.0352ZM17.1953 11.0352H18.6797V12.5195H17.1953V11.0352ZM5.32031 14.0039H6.8047V15.4883H5.32031V14.0039ZM8.28906 14.0039H9.77345V15.4883H8.28906V14.0039ZM11.2578 14.0039H12.7422V15.4883H11.2578V14.0039ZM14.2266 14.0039H15.711V15.4883H14.2266V14.0039ZM5.32031 16.9727H6.8047V18.457H5.32031V16.9727ZM8.28906 16.9727H9.77345V18.457H8.28906V16.9727ZM11.2578 16.9727H12.7422V18.457H11.2578V16.9727ZM14.2266 16.9727H15.711V18.457H14.2266V16.9727ZM17.1953 14.0039H18.6797V15.4883H17.1953V14.0039Z" fill="currentColor"></path></svg></i>                    <span>02 октября 2025</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline time" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>2 мин.</span>
+                                                    </div>
+
+                                                    <div class="card-info-item d-f ai-c gap-4">
+                                                        <i class="svg inline eye" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.45825 12C3.73253 7.94288 7.52281 5 12.0004 5C16.4781 5 20.2684 7.94291 21.5426 12C20.2684 16.0571 16.4781 19 12.0005 19C7.52281 19 3.73251 16.0571 2.45825 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>                    <span>52</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev slider-button-prev">
+                                <i class="svg inline arrow icons icons-18" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>    </div>
+                            <div class="swiper-button-next slider-button-next">
+                                <i class="svg inline arrow icons icons-18" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>    </div>
+                        </div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@include('partials/component/footer.html')

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+"title": "Раздел лицензии v.1"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+    <div class="wrapper">
+        <div class="topic">
+            <div class="topic__heading">
+                @include('partials/base/breadcrumb.html')
+                <div class="topic__heading-top">
+                    <h1 class="topic__title">Раздел лицензии v.2</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper-content content-layout content-layout--aside-left">
+            <aside class="aside_block">
+
+            </aside>
+
+            <div class="right_block content-layout__main">
+                <div class="d-f fd-c gap">
+                    <div class="item">
+                        <div class="item__header h2">Раздел лицензий 1</div>
+                        <div class="item__text text-reset mb-20 text-muted">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi cupiditate dolore eos excepturi iste obcaecati quibusdam suscipit? Aperiam, veniam.</p>
+                        </div>
+                        <div class="grid-list grid-list-items-3 grid-list-lg-items-2 grid-list-md-items-1">
+                            @include('./partials/element/card/card-document-compact.html')
+                            @include('./partials/element/card/card-document-compact.html')
+                            @include('./partials/element/card/card-document-compact.html')
+                            @include('./partials/element/card/card-document-compact.html')
+                            @include('./partials/element/card/card-document-compact.html')
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item__header h2">Раздел лицензий 2</div>
+                        <div class="grid-list grid-list-items-3 grid-list-lg-items-2 grid-list-md-items-1">
+                            @include('./partials/element/card/card-document-centered.html')
+                            @include('./partials/element/card/card-document-centered.html')
+                            @include('./partials/element/card/card-document-centered.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@include('partials/component/footer.html')

@@ -1,0 +1,57 @@
+@use "../base/mixins" as m;
+
+/* =========================================
+   Content layout
+   ========================================= */
+
+.content-layout {
+  --content-layout-gap: 32px;
+  --content-layout-aside-width: 320px;
+  --content-layout-main-min: 0;
+
+  display: grid;
+  grid-template-columns: minmax(var(--content-layout-main-min), 1fr) var(--content-layout-aside-width);
+  gap: var(--content-layout-gap);
+  align-items: start;
+
+  &__aside {
+    min-width: 0;
+  }
+
+  &__main {
+    min-width: 0;
+  }
+
+  &--aside-left {
+    grid-template-columns: var(--content-layout-aside-width) minmax(var(--content-layout-main-min), 1fr);
+  }
+
+  &--aside-right {
+    grid-template-columns: minmax(var(--content-layout-main-min), 1fr) var(--content-layout-aside-width);
+  }
+
+  &--narrow-aside {
+    --content-layout-aside-width: 280px;
+  }
+
+  &--wide-aside {
+    --content-layout-aside-width: 360px;
+  }
+
+  @include m.media(xl) {
+    --content-layout-gap: 24px;
+    --content-layout-aside-width: 280px;
+  }
+
+  @include m.media(lg) {
+    grid-template-columns: 1fr;
+
+    &__aside {
+      order: 2;
+    }
+
+    &__main {
+      order: 1;
+    }
+  }
+}

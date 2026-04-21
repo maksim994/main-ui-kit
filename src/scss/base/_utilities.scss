@@ -1,0 +1,200 @@
+//@use "sass:map";
+//@use "mixins" as m;
+//
+///* Tag */
+//.tags{
+//  a{
+//    display: inline-block;
+//    padding: m.em(8) m.em(12);
+//    border: 1px solid var(--stroke_black);
+//
+//    &:hover{
+//      color: inherit;
+//      background-color: var(--lite_bg_black);
+//    }
+//  }
+//}
+//
+///* ================================
+//   shadow (генерация размеров)
+//   ================================ */
+//$shadows: (
+//    "": (0 1px 3px 0 rgba(0,0,0,.10), 0 1px 2px 0 rgba(0,0,0,.06)),
+//    "sm": (0 1px 2px 0 rgba(0,0,0,.05)),
+//    "md": (0 4px 6px -1px rgba(0,0,0,.10), 0 2px 4px -1px rgba(0,0,0,.06)),
+//    "lg": (0 10px 15px -3px rgba(0,0,0,.10), 0 4px 6px -2px rgba(0,0,0,.05)),
+//    "xl": (0 20px 25px -5px rgba(0,0,0,.10), 0 10px 10px -5px rgba(0,0,0,.04)),
+//    "2xl": (0 25px 50px -12px rgba(0,0,0,.25)),
+//    "inner": (inset 0 2px 4px 0 rgba(0,0,0,.06))
+//);
+//
+//.shadow{
+//  box-shadow: map.get($shadows, "");
+//
+//  // .shadow-sm / .shadow-md / .shadow-lg / .shadow-xl / .shadow-2xl / .shadow-inner
+//  @each $name, $value in $shadows {
+//    @if $name != "" {
+//      &-#{$name}{ box-shadow: $value; }
+//    }
+//  }
+//}
+//
+///* ================================
+//   rounded (генерация размеров)
+//   ================================ */
+//$rounded: (
+//  none: 0,
+//  sm: 2px,
+//  md: 6px,
+//  lg: 8px,
+//  xl: 12px,
+//  xxl: 24px,
+//  full: 1000px
+//);
+//
+//.rounded{
+//  border-radius: var(--radius);
+//
+//  // .rounded-none / .rounded-sm / ... / .rounded-full
+//  @each $name, $value in $rounded {
+//    &-#{$name}{ border-radius: $value; }
+//  }
+//}
+//
+///* ================================
+//   .svg и .icon (унификация и размеры)
+//   ================================ */
+//
+///* База для инлайновых SVG-иконок */
+//.svg{
+//  position: relative;
+//  top: 1px; /* лёгкое выравнивание по шрифтовой строке */
+//  display: inline-block;
+//  vertical-align: middle;
+//  text-rendering: auto;
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
+//  background-repeat: no-repeat;
+//  background-position: center;
+//
+//  /* снимаем ранее заданные min- размеры */
+//  min-width: auto;
+//  min-height: auto;
+//
+//  > svg{
+//    inline-size: 100%;
+//    block-size: 100%;
+//    display: block;
+//  }
+//}
+//
+///* .icon — универсальный класс и утилиты размеров */
+//.icon{
+//  color: currentColor;
+//  inline-size: 1em;
+//  block-size: 1em;
+//  display: inline-block;
+//
+//  > svg{
+//    inline-size: 100%;
+//    block-size: 100%;
+//    display: block;
+//  }
+//}
+//
+///* Генерация размеров для .icon и совместимые алиасы .icons-XX */
+//$icon-sizes: (8, 12, 18, 20, 24, 32, 48, 64);
+//
+//@each $s in $icon-sizes {
+//  .icon--#{$s}{inline-size: $s * 1px; block-size: $s * 1px;}
+//
+//  /* Совместимость с существующей разметкой: .icons .icons-24 */
+//  .icons.icons-#{$s}{inline-size: $s * 1px; block-size: $s * 1px;}
+//}
+//
+///* Поддержка старого класса .icons */
+//.icons{
+//  color: var(--lite_basic_text_black);
+//  inline-size: auto;
+//  block-size:  auto;
+//
+//  .svg, svg{
+//    inline-size: 100%;
+//    block-size: 100%;
+//  }
+//
+//  &.icons-color-thems{
+//    svg{ color: var(--color-primary-500); }
+//  }
+//}
+//
+//
+//.fill-dark-light,
+//.fill-dark-light path,
+//.fill-dark-light-block path {
+//  fill: var(--color-secondinary-900);
+//}
+//
+//.fill-theme svg *,
+//.fill-theme-svg,
+//.fill-theme-use-svg svg {
+//  fill: var(--color-primary-500);
+//}
+//
+//.stroke-theme *,
+//.stroke-theme-use-svg svg,
+//.stroke-theme-svg{
+//  stroke: var(--color-primary-500);
+//}
+//
+///* ================================
+//   avatar (через токены, с размерами)
+//   ================================ */
+//
+//.avatar{
+//  --avatar-size: #{m.em(48)};
+//  inline-size: var(--avatar-size);
+//  block-size:  var(--avatar-size);
+//  border-radius: 1000px;
+//  overflow: hidden;
+//  display: inline-block;
+//
+//  &.--text{
+//    background-color: var(--color-primary-500);
+//    display: inline-flex;
+//    align-items: center;
+//    justify-content: center;
+//    color: var(--white_text_black_reverse);
+//    font-weight: 800;
+//    /* размер шрифта пропорционален аватару */
+//    font-size: calc(var(--avatar-size) * .42);
+//    line-height: 1;
+//  }
+//
+//  img{
+//    object-fit: cover;
+//    object-position: center;
+//    inline-size: 100%;
+//    block-size: 100%;
+//    display: block;
+//  }
+//
+//  // .avatar-sm
+//  &-sm{ --avatar-size: 32px; &.--text{ font-weight: 600; font-size: 12px; } }
+//
+//  // .avatar-lg
+//  &-lg{ --avatar-size: 56px; &.--text{ font-weight: 600; font-size: 32px; } }
+//
+//  // .avatar-xl
+//  &-xl{ --avatar-size: 144px; &.--text{ font-weight: 700; font-size: 80px; } }
+//}
+
+.is-lock {
+  overflow: hidden;
+}
+
+html.is-lock,
+body.is-lock {
+  overflow: hidden;
+}
+

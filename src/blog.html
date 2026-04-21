@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/base/head.html', {
+    "title": "Список страниц"
+})
+
+@include('partials/component/header.html')
+
+<main class="main">
+    <div class="wrapper">
+        <div class="topic">
+            <div class="topic__heading">
+                @include('partials/base/breadcrumb.html')
+                <div class="topic__heading-top">
+                    <h1 class="topic__title">Заголовок h1</h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="wrapper-content content-layout content-layout--aside-left">
+            <aside class="aside_block content-layout__aside">
+                @include('./partials/component/aside-menu-1.html')
+            </aside>
+
+            <div class="right_block content-layout__main">
+                <div class="grid-list grid-list-items-3 grid-list-xl-items-2 grid-list-md-items-1">
+                    @include('./partials/element/card/card-article.html', {
+                        'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                        'date': '5 февраля 2026',
+                        'section': 'Маркетинг',
+                        'name': 'Улучшите клиентский опыт',
+                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                    })
+
+                    @include('./partials/element/card/card-article.html', {
+                        'images': 'https://bitrix-sl.ru/upload/resize_cache/iblock/aab/800_800_1/cpenmalcb7yas3l6pu5ylj90s633q5m2.jpg',
+                        'date': '5 февраля 2026',
+                        'section': 'Маркетинг',
+                        'name': 'Использование арматуры в строительстве',
+                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                    })
+
+                    @include('./partials/element/card/card-article.html', {
+                        'images': 'https://bitrix-sl.ru/upload/resize_cache/iblock/509/800_800_1/c68k8vd66xuixsa996khybbmk8gh6p4o.jpg',
+                        'date': '5 февраля 2026',
+                        'section': 'Маркетинг',
+                        'name': 'Как увеличить продажи на 30% с помощью триггерных рассылок',
+                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                    })
+
+                    @include('./partials/element/card/card-article.html', {
+                        'images': 'https://premier-demo.ru/upload/iblock/b45/gtswttsrxl4gv7ku38e9id772k0f7j2a.jpg',
+                        'date': '5 февраля 2026',
+                        'section': 'Маркетинг',
+                        'name': 'Улучшите клиентский опыт',
+                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                    })
+
+                    @include('./partials/element/card/card-article.html', {
+                        'images': 'https://bitrix-sl.ru/upload/resize_cache/iblock/aab/800_800_1/cpenmalcb7yas3l6pu5ylj90s633q5m2.jpg',
+                        'date': '5 февраля 2026',
+                        'section': 'Маркетинг',
+                        'name': 'Использование арматуры в строительстве',
+                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                    })
+
+                    @include('./partials/element/card/card-article.html', {
+                        'images': 'https://bitrix-sl.ru/upload/resize_cache/iblock/509/800_800_1/c68k8vd66xuixsa996khybbmk8gh6p4o.jpg',
+                        'date': '5 февраля 2026',
+                        'section': 'Маркетинг',
+                        'name': 'Как увеличить продажи на 30% с помощью триггерных рассылок',
+                        'text': '<p>Лояльность клиентов формируется не скидками, а удобством. Поговорим о точках контакта, ожиданиях пользователей и о том, как сделать сервис таким, к которому хочется возвращаться.</p>',
+                    })
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@include('partials/component/footer.html')

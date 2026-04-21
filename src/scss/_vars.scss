@@ -1,0 +1,231 @@
+:root {
+  color-scheme: light dark;
+
+  /* ========== Typography ========== */
+  --font-family-base: 'Manrope', system-ui, sans-serif;
+  --font-family-heading: 'Manrope', system-ui, sans-serif;
+
+  /* ========== Layout ========== */
+  --container-width: 1440px;
+  --layout-gap: 20px;
+  --transition-base: all 0.25s ease-out;
+
+  /* ========== Radius ========== */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* ========== Primitive colors ========== */
+  --color-white: var(--light, #FFFFFF) var(--dark, #FFFFFF);
+  --color-black: var(--light, #0F172A) var(--dark, #020617);
+
+  --color-link-inverse: var(--light, #FFFFFF) var(--dark, #FFFFFF);
+  --color-link-inverse-hover: var(--light, #FFFFFF) var(--dark, #FFFFFF);
+
+  /* ========== Primary ========== */
+  --color-primary-900: var(--light, #102457) var(--dark, #C7D7FF);
+  --color-primary-800: var(--light, #18307D) var(--dark, #A9C2FF);
+  --color-primary-700: var(--light, #1F3FA3) var(--dark, #8FB0FF);
+  --color-primary-600: var(--light, #2954CC) var(--dark, #6D95FF);
+  --color-primary-500: var(--light, #3563E9) var(--dark, #5B8CFF);
+  --color-primary-400: var(--light, #7EA1FF) var(--dark, #3F6AE0);
+  --color-primary-300: var(--light, #9FBBFF) var(--dark, #3559C2);
+  --color-primary-200: var(--light, #C2D6FF) var(--dark, #2A469E);
+  --color-primary-100: var(--light, #EDF4FF) var(--dark, #1D326E);
+
+  /* ========== Neutral ========== */
+  --color-neutral-900: var(--light, #0F172A) var(--dark, #F1F5F9);
+  --color-neutral-800: var(--light, #1E293B) var(--dark, #E2E8F0);
+  --color-neutral-700: var(--light, #334155) var(--dark, #CBD5E1);
+  --color-neutral-600: var(--light, #475569) var(--dark, #94A3B8);
+  --color-neutral-500: var(--light, #64748B) var(--dark, #64748B);
+  --color-neutral-400: var(--light, #94A3B8) var(--dark, #475569);
+  --color-neutral-300: var(--light, #CBD5E1) var(--dark, #334155);
+  --color-neutral-200: var(--light, #E2E8F0) var(--dark, #1E293B);
+  --color-neutral-100: var(--light, #F1F5F9) var(--dark, #0F172A);
+  --color-neutral-50: var(--light, #F8FAFC) var(--dark, #020617);
+  --color-neutral-0: var(--light, #FFFFFF) var(--dark, #020617);
+
+  /* ========== Success ========== */
+  --color-success-900: var(--light, #14532D) var(--dark, #BBF7D0);
+  --color-success-700: var(--light, #15803D) var(--dark, #4ADE80);
+  --color-success-500: var(--light, #22C55E) var(--dark, #16A34A);
+  --color-success-100: var(--light, #DCFCE7) var(--dark, #052E16);
+
+  /* ========== Warning ========== */
+  --color-warning-900: var(--light, #78350F) var(--dark, #FEF3C7);
+  --color-warning-700: var(--light, #B45309) var(--dark, #FCD34D);
+  --color-warning-500: var(--light, #F59E0B) var(--dark, #F59E0B);
+  --color-warning-100: var(--light, #FEF3C7) var(--dark, #451A03);
+
+  /* ========== Error ========== */
+  --color-error-900: var(--light, #7F1D1D) var(--dark, #FECACA);
+  --color-error-700: var(--light, #B91C1C) var(--dark, #F87171);
+  --color-error-500: var(--light, #EF4444) var(--dark, #DC2626);
+  --color-error-100: var(--light, #FEE2E2) var(--dark, #450A0A);
+
+  /* ========== Info ========== */
+  --color-info-900: var(--light, #1E3A8A) var(--dark, #BFDBFE);
+  --color-info-700: var(--light, #2563EB) var(--dark, #60A5FA);
+  --color-info-500: var(--light, #60A5FA) var(--dark, #2563EB);
+  --color-info-100: var(--light, #EFF6FF) var(--dark, #0B1A3A);
+
+  /* ========== Semantic: Background ========== */
+  --color-bg-page: var(--light, #F8FAFC) var(--dark, #020617);
+  --color-bg-surface: var(--light, #FFFFFF) var(--dark, #0F172A);
+  --color-bg-surface-hover: var(--light, #F8FAFC) var(--dark, #1E293B);
+  --color-bg-muted: var(--light, #F1F5F9) var(--dark, #111827);
+  --color-bg-inverse: var(--light, #0F172A) var(--dark, #F8FAFC);
+
+  /* ========== Semantic: Text ========== */
+  --color-text-primary: var(--light, #0F172A) var(--dark, #F8FAFC);
+  --color-text-secondary: var(--light, #475569) var(--dark, #94A3B8);
+  --color-text-muted: var(--light, #64748B) var(--dark, #64748B);
+  --color-text-inverse: var(--light, #FFFFFF) var(--dark, #0F172A);
+  --color-text-disabled: var(--light, #94A3B8) var(--dark, #475569);
+
+  /* ========== Semantic: Border ========== */
+  --color-border-default: var(--light, #E2E8F0) var(--dark, #1E293B);
+  --color-border-strong: var(--light, #CBD5E1) var(--dark, #334155);
+  --color-border-hover: var(--light, #94A3B8) var(--dark, #475569);
+  --color-border-focus: var(--light, #3563E9) var(--dark, #5B8CFF);
+
+  /* ========== Semantic: Icon ========== */
+  --color-icon-primary: var(--light, #334155) var(--dark, #E2E8F0);
+  --color-icon-secondary: var(--light, #64748B) var(--dark, #94A3B8);
+  --color-icon-inverse: var(--light, #FFFFFF) var(--dark, #0F172A);
+
+  /* ========== Semantic: Brand ========== */
+  --color-brand: var(--color-primary-500);
+  --color-brand-hover: var(--color-primary-600);
+  --color-brand-active: var(--color-primary-700);
+  --color-brand-subtle: var(--color-primary-100);
+
+  /* ========== Semantic: States ========== */
+  --color-state-success: var(--color-success-500);
+  --color-state-success-bg: var(--color-success-100);
+  --color-state-warning: var(--color-warning-500);
+  --color-state-warning-bg: var(--color-warning-100);
+  --color-state-error: var(--color-error-500);
+  --color-state-error-bg: var(--color-error-100);
+  --color-state-info: var(--color-info-500);
+  --color-state-info-bg: var(--color-info-100);
+
+  /* ========== Component: Button ========== */
+  --button-radius: var(--radius-sm);
+  --button-primary-bg: var(--color-brand);
+  --button-primary-bg-hover: var(--color-brand-hover);
+  --button-primary-text: var(--color-text-inverse);
+  --button-secondary-bg: var(--color-bg-surface);
+  --button-secondary-bg-hover: var(--color-bg-surface-hover);
+  --button-secondary-text: var(--color-text-primary);
+  --button-secondary-border: var(--color-border-default);
+
+  --button-height-sm: 36px;
+  --button-height-md: 44px;
+  --button-height-lg: 52px;
+
+  --button-padding-x-sm: 12px;
+  --button-padding-x-md: 16px;
+  --button-padding-x-lg: 20px;
+
+  --button-font-size-sm: 14px;
+  --button-font-size-md: 14px;
+  --button-font-size-lg: 16px;
+
+  --button-icon-size-sm: 14px;
+  --button-icon-size-md: 16px;
+  --button-icon-size-lg: 18px;
+
+  --button-focus-ring: 0 0 0 3px color-mix(in srgb, var(--color-brand) 20%, transparent);
+  --button-disabled-opacity: .55;
+
+
+  /* ========== Component: Card ========== */
+  --card-bg: var(--color-bg-surface);
+  --card-bg-hover: var(--color-bg-surface-hover);
+  --card-border: var(--color-border-default);
+  --card-radius: var(--radius-md);
+
+  ///* ========== Component: Input ========== */
+  //--input-text: var(--color-text-primary);
+  //--input-placeholder: var(--color-text-muted);
+  //--input-bg: var(--color-bg-surface);
+  //--input-bg-hover: var(--color-bg-surface);
+  //--input-bg-focus: var(--color-bg-surface);
+  //--input-border: var(--color-border-default);
+  //--input-border-hover: var(--color-border-strong);
+  //--input-border-focus: var(--color-border-focus);
+  //--input-radius: var(--radius-sm);
+
+  /* ========== Component: Field ========== */
+  --field-height-md: 48px;
+  --field-height-sm: 40px;
+  --field-height-lg: 56px;
+
+  --field-padding-x: 14px;
+  --field-padding-y: 10px;
+
+  --field-radius: var(--radius-sm);
+  --field-radius-lg: var(--radius-md);
+
+  --field-font-size: 14px;
+  --field-line-height: 1.5;
+
+  --field-bg: var(--color-bg-surface);
+  --field-bg-hover: var(--color-bg-surface);
+  --field-bg-focus: var(--color-bg-surface);
+  --field-bg-disabled: var(--color-bg-muted);
+
+  --field-text: var(--color-text-primary);
+  --field-placeholder: var(--color-text-muted);
+
+  --field-border: var(--color-border-default);
+  --field-border-hover: var(--color-border-strong);
+  --field-border-focus: var(--color-border-focus);
+  --field-border-error: var(--color-state-error);
+  --field-border-success: var(--color-state-success);
+
+  --field-shadow-focus: 0 0 0 3px color-mix(in srgb, var(--color-brand) 16%, transparent);
+  --field-shadow-error: 0 0 0 3px color-mix(in srgb, var(--color-state-error) 14%, transparent);
+
+  --field-label-color: var(--color-text-primary);
+  --field-hint-color: var(--color-text-secondary);
+  --field-error-color: var(--color-state-error);
+  --field-success-color: var(--color-state-success);
+
+  --control-size: 20px;
+  --switch-width: 40px;
+  --switch-height: 24px;
+  --switch-thumb-size: 18px;
+
+  /* ========== Component: Table ========== */
+  --table-radius: var(--radius-md);
+  --table-cell-padding-x: 12px;
+  --table-cell-padding-y: 12px;
+  --table-cell-padding-x-sm: 10px;
+  --table-cell-padding-y-sm: 8px;
+
+  --table-bg: var(--color-bg-surface);
+  --table-head-bg: var(--color-bg-muted);
+  --table-border: var(--color-border-default);
+  --table-caption: var(--color-text-secondary);
+  --table-head-text: var(--color-text-primary);
+  --table-cell-text: var(--color-text-primary);
+  --table-stripe-bg: color-mix(in srgb, var(--color-bg-muted) 65%, var(--color-bg-surface));
+  --table-hover-bg: var(--color-bg-surface-hover);
+
+  /* ========== Shadow ========== */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 10px 24px rgba(15, 23, 42, 0.12);
+
+  /* ========== Vendor ========== */
+  --swiper-theme-color: var(--color-brand);
+  --swiper-pagination-bullet-inactive-color: var(--color-neutral-300);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-time-animate: 1.2s;
+  --f-button-border-radius: var(--radius-sm);
+}

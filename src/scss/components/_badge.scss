@@ -1,0 +1,67 @@
+@use "../base/mixins" as m;
+
+/* =========================================
+   Badge
+   ========================================= */
+
+.badge {
+  --badge-bg: var(--color-bg-muted);
+  --badge-color: var(--color-text-primary);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 24px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background-color: var(--badge-bg);
+  color: var(--badge-color);
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  &--sm {
+    min-height: 20px;
+    padding: 2px 6px;
+    font-size: 11px;
+  }
+
+  &--lg {
+    min-height: 28px;
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  &--neutral {
+    --badge-bg: var(--color-neutral-100);
+    --badge-color: var(--color-neutral-800);
+  }
+
+  &--brand {
+    --badge-bg: var(--color-brand-subtle);
+    --badge-color: var(--color-brand);
+  }
+
+  &--info {
+    --badge-bg: var(--color-state-info-bg);
+    --badge-color: var(--color-state-info);
+  }
+
+  &--success {
+    --badge-bg: var(--color-state-success-bg);
+    --badge-color: var(--color-state-success);
+  }
+
+  &--warning {
+    --badge-bg: var(--color-state-warning-bg);
+    --badge-color: var(--color-state-warning);
+  }
+
+  &--error {
+    --badge-bg: var(--color-state-error-bg);
+    --badge-color: var(--color-state-error);
+  }
+}

@@ -1,0 +1,123 @@
+@use "../base/mixins" as m;
+
+/* =========================================
+   Navigation
+   ========================================= */
+
+.nav {
+  &__list,
+  &__dropdown,
+  &__subdropdown {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__item,
+  &__dropdown-item,
+  &__subdropdown-item {
+    position: relative;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-base);
+
+    &:hover {
+      color: var(--color-brand);
+    }
+  }
+
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    flex: none;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      display: block;
+    }
+
+    &--sub {
+      margin-left: auto;
+    }
+  }
+
+  &__dropdown,
+  &__subdropdown {
+    min-width: 240px;
+    padding: 10px;
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-base);
+    z-index: 20;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    transform: translateY(4px);
+  }
+
+  &__subdropdown {
+    position: absolute;
+    top: -10px;
+    left: calc(100% + 8px);
+    transform: translateX(4px);
+    z-index: 21;
+  }
+
+  &__item:hover > &__dropdown,
+  &__item.is-open > &__dropdown,
+  &__item:focus-within > &__dropdown,
+  &__dropdown-item:hover > &__subdropdown,
+  &__dropdown-item.is-open > &__subdropdown,
+  &__dropdown-item:focus-within > &__subdropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+
+  &__dropdown-link,
+  &__subdropdown-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: var(--transition-base);
+
+    &:hover {
+      background: var(--color-bg-muted);
+      color: var(--color-brand);
+    }
+  }
+
+  @include m.media(lg) {
+    &__list {
+      display: none;
+    }
+  }
+}

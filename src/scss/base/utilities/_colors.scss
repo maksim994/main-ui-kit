@@ -1,0 +1,67 @@
+/* =========================================
+   Color utilities
+   Semantic utility layer
+   ========================================= */
+
+/* --- Background --- */
+.bg-transparent   { background-color: transparent !important; }
+.bg-page          { background-color: var(--color-bg-page) !important; }
+.bg-surface       { background-color: var(--color-bg-surface) !important; }
+.bg-surface-hover { background-color: var(--color-bg-surface-hover) !important; }
+.bg-muted         { background-color: var(--color-bg-muted) !important; }
+.bg-inverse       { background-color: var(--color-bg-inverse) !important; }
+
+.bg-brand         { background-color: var(--color-brand) !important; }
+.bg-brand-subtle  { background-color: var(--color-brand-subtle) !important; }
+
+.bg-success       { background-color: var(--color-state-success) !important; }
+.bg-success-subtle{ background-color: var(--color-state-success-bg) !important; }
+
+.bg-warning       { background-color: var(--color-state-warning) !important; }
+.bg-warning-subtle{ background-color: var(--color-state-warning-bg) !important; }
+
+.bg-error         { background-color: var(--color-state-error) !important; }
+.bg-error-subtle  { background-color: var(--color-state-error-bg) !important; }
+
+.bg-info          { background-color: var(--color-state-info) !important; }
+.bg-info-subtle   { background-color: var(--color-state-info-bg) !important; }
+
+/* --- Text --- */
+.text-primary     { color: var(--color-text-primary) !important; }
+.text-secondary   { color: var(--color-text-secondary) !important; }
+.text-muted       { color: var(--color-text-muted) !important; }
+.text-inverse     { color: var(--color-text-inverse) !important; }
+
+.text-brand       { color: var(--color-brand) !important; }
+.text-success     { color: var(--color-state-success) !important; }
+.text-warning     { color: var(--color-state-warning) !important; }
+.text-error       { color: var(--color-state-error) !important; }
+.text-info        { color: var(--color-state-info) !important; }
+
+/* --- Border base --- */
+.border           { border: 1px solid var(--color-border-default) !important; }
+.border-t         { border-top: 1px solid var(--color-border-default) !important; }
+.border-b         { border-bottom: 1px solid var(--color-border-default) !important; }
+.border-l         { border-left: 1px solid var(--color-border-default) !important; }
+.border-r         { border-right: 1px solid var(--color-border-default) !important; }
+
+/* --- Border color --- */
+.border-default     { border-color: var(--color-border-default) !important; }
+.border-strong      { border-color: var(--color-border-strong) !important; }
+.border-brand       { border-color: var(--color-brand) !important; }
+.border-success     { border-color: var(--color-state-success) !important; }
+.border-warning     { border-color: var(--color-state-warning) !important; }
+.border-error       { border-color: var(--color-state-error) !important; }
+.border-info        { border-color: var(--color-state-info) !important; }
+.border-transparent { border-color: transparent !important; }
+
+/* --- Hover modifiers --- */
+.hover\:bg-surface-hover:hover { background-color: var(--color-bg-surface-hover) !important; }
+.hover\:bg-muted:hover         { background-color: var(--color-bg-muted) !important; }
+
+.hover\:text-brand:hover       { color: var(--color-brand-hover) !important; }
+.hover\:text-primary:hover     { color: var(--color-text-primary) !important; }
+.hover\:text-secondary:hover   { color: var(--color-text-secondary) !important; }
+
+.hover\:border-strong:hover    { border-color: var(--color-border-strong) !important; }
+.hover\:border-brand:hover     { border-color: var(--color-brand) !important; }
