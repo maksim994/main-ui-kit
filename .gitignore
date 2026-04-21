@@ -1,0 +1,10 @@
+/.idea
+.idea
+/node_modules/
+/node_modules
+/app/
+/app
+package-lock.json
+.profile
+.DS_Store
+**.DS_Store
